@@ -1,0 +1,46 @@
+.features-content {
+  .title-content{
+    display: flex;
+    justify-content: space-around;
+    
+    .title {
+      margin-bottom: 50px;
+      font-size: 34px;
+      font-weight: 700;
+      color: var(--color-primary);
+      line-height: 40px;
+    }
+  
+    .mock{
+      width: 550px;
+    }
+  }
+
+  .features {
+    display: flex;
+    justify-content: space-around;
+    .features-group {
+      display: flex;
+      flex-direction: column;
+      height: 394px;
+      width: 362px;
+
+      .feature-element {
+        margin: 50px;
+        .feature-title {
+          font-weight: 900;
+          font-size: 20px;
+          line-height: 36px;
+          color: var(--color-primary);
+        }
+
+        .feature-description {
+          font-size: 18px;
+          font-weight: 400;
+          line-height: 27px;
+          color: var(--color-grey-medium);
+        }
+      }
+    }
+  }
+}

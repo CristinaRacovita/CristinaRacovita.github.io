@@ -16,11 +16,40 @@
         a.appendChild(r);
       })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
     </script>
+
+    <script type="module">
+
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-analytics.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyDBinS6CbtKtptEE-idN7AfYuMuOk5SV00",
+        authDomain: "odin-ai-1d452.firebaseapp.com",
+        projectId: "odin-ai-1d452",
+        storageBucket: "odin-ai-1d452.appspot.com",
+        messagingSenderId: "108799986020",
+        appId: "1:108799986020:web:70d99216c4541c54c89271",
+        measurementId: "G-TX38SQQDKQ",
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+
     <meta charset="utf-8" />
     <title>Odin AI</title>
     <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="favicon-01.png" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <app-root></app-root>

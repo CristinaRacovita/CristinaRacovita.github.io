@@ -1,0 +1,28 @@
+.home {
+  display: flex;
+  flex-direction: column;
+
+  .sticky {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+  }
+}
+
+.features{
+  padding-top: 70px;
+}
+
+.info{
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+    margin-bottom: 400px;
+    margin-top: 450px;
+    padding-top: 70px;
+}
+
+.contact{
+  width: 550px;
+  height: 60px;
+}

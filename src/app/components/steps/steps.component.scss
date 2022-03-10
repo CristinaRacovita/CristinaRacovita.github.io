@@ -1,0 +1,16 @@
+.how-it-works-content{
+    margin-top: 400px;
+    .title {
+        margin-left: 110px;
+        margin-bottom: 50px;
+        font-size: 34px;
+        font-weight: 700;
+        color: var(--color-primary);
+        line-height: 40px;
+    }
+
+    .divider-content{
+        display:flex;
+        justify-content: center;
+    }
+}

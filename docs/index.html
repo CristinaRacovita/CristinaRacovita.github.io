@@ -14,14 +14,37 @@
         a.appendChild(r);
       })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
     </script>
+
+    <script type="module">
+
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.8/firebase-analytics.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyDBinS6CbtKtptEE-idN7AfYuMuOk5SV00",
+        authDomain: "odin-ai-1d452.firebaseapp.com",
+        projectId: "odin-ai-1d452",
+        storageBucket: "odin-ai-1d452.appspot.com",
+        messagingSenderId: "108799986020",
+        appId: "1:108799986020:web:70d99216c4541c54c89271",
+        measurementId: "G-TX38SQQDKQ",
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+
     <meta charset="utf-8">
     <title>Odin AI</title>
     <base href="/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-  <link rel="stylesheet" href="styles.31d6cfe0d16ae931b73c.css"></head>
+    <link rel="icon" type="image/x-icon" href="favicon-01.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <style type="text/css">@font-face{font-family:'Material Icons';font-style:normal;font-weight:400;src:url(https://fonts.gstatic.com/s/materialicons/v126/flUhRq6tzZclQEJ-Vdg-IuiaDsNcIhQ8tQ.woff2) format('woff2');}.material-icons{font-family:'Material Icons';font-weight:normal;font-style:normal;font-size:24px;line-height:1;letter-spacing:normal;text-transform:none;display:inline-block;white-space:nowrap;word-wrap:normal;direction:ltr;-webkit-font-feature-settings:'liga';-webkit-font-smoothing:antialiased;}</style>
+    <style type="text/css">@font-face{font-family:'Raleway';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/raleway/v26/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCFPrcVIT9d0c-dYA.woff) format('woff');unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;}@font-face{font-family:'Raleway';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/raleway/v26/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCMPrcVIT9d0c-dYA.woff) format('woff');unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;}@font-face{font-family:'Raleway';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/raleway/v26/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCHPrcVIT9d0c-dYA.woff) format('woff');unicode-range:U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+1EA0-1EF9, U+20AB;}@font-face{font-family:'Raleway';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/raleway/v26/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCGPrcVIT9d0c-dYA.woff) format('woff');unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF;}@font-face{font-family:'Raleway';font-style:normal;font-weight:400;font-display:swap;src:url(https://fonts.gstatic.com/s/raleway/v26/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCIPrcVIT9d0c8.woff) format('woff');unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;}</style>
+  <style>:root{--color-primary:#203568;--color-secondary:#01adee;--color-success:#40bbad;--color-error:#d1345b;--color-warning:#ffd151;--color-grey-light:#f2f5ff;--color-grey-light-medium:#e2e5ef;--color-grey-medium:#a9adbd;--color-grey-medium-dark:#656b7d;--color-grey-dark:#1a1c24;--color-white:#fff;--color-gradient-primary:#f6f8ff;--color-gradient-secondary:#f2f5ff}body,html{height:100%}body{margin:0;font-family:Raleway}</style><link rel="stylesheet" href="styles.7c852554d607b86fc666.css" media="print" onload="this.media='all'"><noscript><link rel="stylesheet" href="styles.7c852554d607b86fc666.css"></noscript></head>
   <body>
     <app-root></app-root>
-  <script src="runtime.4dbdca152d3906eb37f8.js" defer></script><script src="polyfills.5801ca78fe72d7a5063b.js" defer></script><script src="main.9e690b6db5b97754c048.js" defer></script>
+  <script src="runtime.4dbdca152d3906eb37f8.js" defer></script><script src="polyfills.5801ca78fe72d7a5063b.js" defer></script><script src="main.9a4b14563418fa8f8437.js" defer></script>
 
 </body></html>

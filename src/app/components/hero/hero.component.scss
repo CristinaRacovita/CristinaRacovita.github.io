@@ -1,0 +1,70 @@
+.hero {
+  padding-top: 110px;
+  background: linear-gradient(
+    var(--color-gradient-primary),
+    var(--color-white),
+    var(--color-gradient-secondary),
+    var(--color-white)
+  );
+  display: flex;
+  justify-content: space-around;
+
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    padding-top: 200px;
+    width: 490px;
+    height: 135px;
+
+    .tagline {
+      font-size: 48px;
+      color: var(--color-primary);
+      font-weight: 700;
+      margin-bottom: 40px;
+      .border-line {
+        border-bottom: 8px solid var(--color-secondary);
+        border-radius: 8px;
+      }
+    }
+
+    .tool-description {
+      font-size: 18px;
+      font-weight: 800;
+      line-height: 27px;
+      color: var(--color-primary);
+
+      span {
+        color: var(--color-secondary);
+      }
+    }
+
+    .buttons {
+      margin-top: 32px;
+
+      .button {
+        border-radius: 24px;
+        font-size: 18px;
+        padding: 10px 32px 10px 32px;
+        margin-left: 16px;
+        cursor: pointer;
+      }
+
+      .demo {
+        color: var(--color-grey-light);
+        background-color: var(--color-secondary);
+        border: none;
+      }
+
+      .subscribe {
+        border: 2px solid var(--color-secondary);
+        color: var(--color-secondary);
+        background-color: var(--color-grey-light);
+      }
+    }
+  }
+
+  .hero-image {
+    width: 550px;
+    height: 720px;
+  }
+}

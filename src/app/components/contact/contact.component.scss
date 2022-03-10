@@ -1,0 +1,69 @@
+.contact-content {
+  .profiles {
+    background-color: var(--color-white);
+    border-radius: 16px;
+    box-shadow: 6px 6px 6px hsl(0deg 0% 0% / 0.1);
+    z-index: 2;
+    position: absolute;
+    width: 379px;
+    height: 315px;
+    margin-top: 50px;
+    margin-left: 230px;
+    transform: skewX(-5deg);
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+
+    .first{
+        margin-left: 55px;
+        transform: skewX(5deg);
+    }
+
+    .second{
+        margin-bottom: 50px;
+        margin-right: 55px;
+        transform: skewX(5deg);
+    }
+  }
+
+  .form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    z-index: 2;
+    box-shadow: 6px 6px 6px hsl(0deg 0% 0% / 0.1);
+    border-radius: 57px;
+    width: 404px;
+    height: 61px;
+    background-color: var(--color-white);
+    margin-top: 415px;
+    margin-left: 40px;
+
+    .question{
+        font-size: 16px;
+        line-height: 28.8px;
+        font-weight: 800;
+        color: var(--color-primary);
+    }
+
+    button{
+        background-color: var(--color-secondary);
+        color: var(--color-white);
+        border: none;
+        border-radius: 24px;
+        font-size: 16px;
+        line-height: 28.8px;
+        cursor: pointer;
+        font-weight: 800;
+        padding: 8px 16px 8px 16px;
+    }
+  }
+
+  img {
+    z-index: 1;
+    position: absolute;
+  }
+}

@@ -1,0 +1,13 @@
+<div class="contact-content">
+    <img src="../../../assets/Shapes.svg" />
+    <div class="profiles">
+        <app-profile-picture (click)="openSite(bogdanLinkedinUrl)" class="first" [imageUrl]="urls[1]" [name]="names[1]"></app-profile-picture>
+        <app-profile-picture (click)="openSite(cristinaLinkedinUrl)" class="second" [imageUrl]="urls[0]" [name]="names[0]"></app-profile-picture>
+    </div>
+    <div class="form">
+        <div class="question">
+            Do you want to help us?
+        </div>
+        <button (click)="openSite(formUrl)">Fill in our form</button>
+    </div>
+</div>
