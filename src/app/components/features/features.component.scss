@@ -1,21 +1,13 @@
 .features-content {
   height: 750px;
+  margin-left: 128px;
 
-  .title-content{
-    display: flex;
-    justify-content: space-around;
-    
-    .title {
-      margin-bottom: 50px;
-      font-size: 34px;
-      font-weight: 700;
-      color: var(--color-primary);
-      line-height: 40px;
-    }
-  
-    .mock{
-      width: 550px;
-    }
+  .title {
+    margin-bottom: 50px;
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--color-primary);
+    line-height: 40px;
   }
 
   .features {
