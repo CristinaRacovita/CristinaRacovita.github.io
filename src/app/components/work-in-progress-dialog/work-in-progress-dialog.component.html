@@ -10,9 +10,13 @@
       type="text"
       class="email-box"
       placeholder="Type in your email"
+      [(ngModel)]="email"
     />
-    <button class="subscribe-button" type="submit" (click)="subscribe()">
+    <button class="subscribe-button" (click)="requestDemo()">
       Subscribe
     </button>
+  </div>
+  <div class="error" *ngIf="isEmailErrorsVisibile()">
+    We are sorry, but the email you introduced is not valid!
   </div>
 </div>

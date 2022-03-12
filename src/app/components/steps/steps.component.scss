@@ -1,16 +1,27 @@
-.how-it-works-content{
-    margin-top: 400px;
+.how-it-works-content {
+  margin-top: 100px;
+  padding-top: 20px;
+  
+  .title-content {
+    display: flex;
+    justify-content: space-around;
     .title {
-        margin-left: 110px;
-        margin-bottom: 50px;
-        font-size: 34px;
-        font-weight: 700;
-        color: var(--color-primary);
-        line-height: 40px;
+      margin-bottom: 50px;
+      font-size: 34px;
+      font-weight: 700;
+      color: var(--color-primary);
+      line-height: 40px;
     }
+    .mock {
+      width: 570px;
+    }
+  }
 
-    .divider-content{
-        display:flex;
-        justify-content: center;
+  .steps-content {
+    display: flex;
+    justify-content: center;
+    img {
+      height: 500px;
     }
+  }
 }

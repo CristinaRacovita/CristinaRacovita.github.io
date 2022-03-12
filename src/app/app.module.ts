@@ -16,6 +16,10 @@ import { RequestDemoDialogComponent } from './components/request-demo-dialog/req
 import { WorkInProgressDialogComponent } from './components/work-in-progress-dialog/work-in-progress-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AngularFireModule} from '@angular/fire/compat';
+import { environment } from 'src/environments/environment';
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database'
 
 @NgModule({
   declarations: [
@@ -37,6 +41,10 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     BrowserAnimationsModule,
     MatDialogModule,
     MatSnackBarModule,
+    ReactiveFormsModule,
+    FormsModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireDatabaseModule
   ],
   providers: [],
   bootstrap: [AppComponent],
