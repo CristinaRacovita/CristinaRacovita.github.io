@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { MatDialog } from '@angular/material/dialog';
 import { RequestDemoDialogComponent } from '../request-demo-dialog/request-demo-dialog.component';
 
@@ -8,7 +9,10 @@ import { RequestDemoDialogComponent } from '../request-demo-dialog/request-demo-
   styleUrls: ['./toolbar.component.scss'],
 })
 export class ToolbarComponent {
-  public constructor(public dialog: MatDialog) {}
+  public constructor(
+    public dialog: MatDialog,
+    private db: AngularFireDatabase
+  ) {}
 
   public goToSection(section: string) {
     window.location.hash = '';
@@ -16,6 +20,7 @@ export class ToolbarComponent {
   }
 
   public openDialog(): void {
+    this.db.list('demo').push('Press demo ' + new Date());
     this.dialog.open(RequestDemoDialogComponent);
   }
 }

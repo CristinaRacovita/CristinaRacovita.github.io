@@ -23,7 +23,6 @@ export class WorkInProgressDialogComponent {
   ) {}
 
   public requestDemo(): void {
-    this.db.list('demo').push('Press demo ' + new Date());
     this.isVisible = true;
 
     if (this.isEmailValid()) {

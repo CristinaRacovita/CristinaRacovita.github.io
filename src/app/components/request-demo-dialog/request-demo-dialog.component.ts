@@ -22,7 +22,6 @@ export class RequestDemoDialogComponent {
   ) {}
 
   public subscribe() {
-    this.db.list('subscribe').push('Press subscribe ' + new Date());
     this.isVisible = true;
 
     if (this.isEmailValid()) {
