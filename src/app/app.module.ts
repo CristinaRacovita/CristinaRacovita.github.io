@@ -42,7 +42,7 @@ import { NgxJsonLdModule } from '@ngx-lite/json-ld';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatDialogModule,
+    MatDialogModule, 
     MatSnackBarModule,
     ReactiveFormsModule,
     FormsModule,
