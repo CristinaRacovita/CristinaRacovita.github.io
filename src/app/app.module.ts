@@ -21,6 +21,7 @@ import { AngularFireModule} from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database'
 import { SiteService } from './shared/services/site.service';
+import { ScullyLibModule } from '@scullyio/ng-lib';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { SiteService } from './shared/services/site.service';
     ReactiveFormsModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    ScullyLibModule
   ],
   providers: [SiteService],
   bootstrap: [AppComponent],
