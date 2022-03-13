@@ -1,4 +1,4 @@
-name: Scully Publish to GH-Pages
+name: Scully Publish
 
 on:
   push:
@@ -13,5 +13,3 @@ jobs:
       - uses: cmgriffing/scully-gh-pages-action@v9
         with:
           access-token: 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
-          deploy-branch: main
-          build-args: --base-href /odin-ai.net/
