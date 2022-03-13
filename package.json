@@ -1,6 +1,7 @@
 {
   "name": "odin-ai",
   "version": "0.0.0",
+  "main": "dist/index.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",

@@ -4,10 +4,8 @@ import { ScullyConfig } from '@scullyio/scully';
 
 
 export const config: ScullyConfig = {
-  projectRoot: "./src",
-  projectName: "odin-ai",
-  spsModulePath: './src/app',
+  projectRoot: './src',
+  projectName: 'odin-ai',
   outDir: './dist/static',
-  routes: {
-  }
+  routes: {},
 };
