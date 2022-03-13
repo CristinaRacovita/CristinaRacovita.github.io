@@ -137,6 +137,9 @@ Apache-2.0
 @firebase/util
 Apache-2.0
 
+@ngx-lite/json-ld
+MIT
+
 @scullyio/ng-lib
 
 firebase/analytics
