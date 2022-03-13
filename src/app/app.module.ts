@@ -47,7 +47,7 @@ import { NgxJsonLdModule } from '@ngx-lite/json-ld';
     ReactiveFormsModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireDatabaseModule,
+    AngularFireDatabaseModule, 
     ScullyLibModule,
     NgxJsonLdModule
   ],
