@@ -13,5 +13,5 @@ jobs:
       - uses: cmgriffing/scully-gh-pages-action@v9
         with:
           access-token: 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
-          deploy-branch: publish
+          deploy-branch: gh-pages
           build-args: --base-href /odin-ai.net/
