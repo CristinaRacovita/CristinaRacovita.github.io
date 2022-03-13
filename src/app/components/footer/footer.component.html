@@ -7,7 +7,7 @@
       Your
       <span class="tool-description">no-code automated machine learning</span>
       web application that automatically solves supervised learning problems
-      without any programming knowledge.
+      without any programming knowledge required.
     </div>
     <div class="legal text">
       <div>© 2022 Odin AI. All rights reserved.</div>
@@ -15,5 +15,20 @@
     </div>
   </div>
 
-  <div class="overview"></div>
+  <div class="overview">
+    <div class="contact-title">Contact</div>
+    <div class="details">
+      <div (click)="openBogdanLinkedln()" class="contact-image">
+        <span><img src="../../../assets/linkedln.svg" /></span> Bogdan Bîndilă
+      </div>
+      <div (click)="openCristinaLinkedln()" class="contact-image">
+        <span><img src="../../../assets/linkedln.svg" /></span> Cristina
+        Racoviță
+      </div>
+      <div class="contact-image">
+        <span><img class="email" src="../../../assets/email.png" /></span>
+        <a href="mailto:{{email}}">{{ email }}</a>
+      </div>
+    </div>
+  </div>
 </div>

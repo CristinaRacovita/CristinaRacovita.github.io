@@ -1,6 +1,5 @@
 .features-content {
   height: 750px;
-  margin-left: 128px;
 
   .title {
     margin-bottom: 50px;
@@ -8,6 +7,7 @@
     font-weight: 700;
     color: var(--color-primary);
     line-height: 40px;
+    margin-left: 115px;
   }
 
   .features {
@@ -21,6 +21,7 @@
 
       .feature-element {
         margin: 50px;
+
         .feature-title {
           font-weight: 900;
           font-size: 20px;
@@ -34,6 +35,10 @@
           line-height: 27px;
           color: var(--color-grey-medium);
         }
+      }
+
+      .margin-top{
+        margin-top: 77px;
       }
     }
   }

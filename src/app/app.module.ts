@@ -20,6 +20,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule} from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database'
+import { SiteService } from './shared/services/site.service';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database'
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule
   ],
-  providers: [],
+  providers: [SiteService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
