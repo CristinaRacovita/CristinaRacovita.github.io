@@ -1,5 +1,6 @@
 .features-content {
   height: 750px;
+  z-index: 1;
 
   .title {
     margin-bottom: 50px;
@@ -7,7 +8,7 @@
     font-weight: 700;
     color: var(--color-primary);
     line-height: 40px;
-    margin-left: 115px;
+    margin-left: 125px;
   }
 
   .features {

@@ -38,5 +38,8 @@
     padding: 8px 24px 8px 24px;
     margin-bottom: 50px;
     cursor: pointer;
+    &:hover{
+      opacity: 70%;
+    }
   }
 }

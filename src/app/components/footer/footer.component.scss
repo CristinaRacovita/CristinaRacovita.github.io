@@ -41,7 +41,7 @@
   .overview {
     margin-right: 305px;
 
-    .contact-title{
+    .contact-title {
       margin-bottom: 24px;
       font-size: 24px;
       font-weight: 800;
@@ -56,10 +56,13 @@
       color: var(--color-primary);
 
       .contact-image {
+        &:hover {
+          opacity: 70%;
+        }
         cursor: pointer;
         display: flex;
 
-        img{
+        img {
           padding-right: 10px;
         }
 
@@ -67,7 +70,6 @@
           height: 26px;
           width: 26px;
         }
-
       }
     }
   }

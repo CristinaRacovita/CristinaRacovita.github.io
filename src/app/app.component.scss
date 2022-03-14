@@ -1,9 +1,15 @@
 .home {
   display: flex;
   flex-direction: column;
+  background: linear-gradient(
+    var(--color-gradient-primary),
+    var(--color-white),
+    var(--color-gradient-secondary),
+    var(--color-white)
+  );
 
   .sticky {
-    position: sticky;
+    position: fixed;
     top: 0;
     z-index: 1000;
   }
@@ -15,15 +21,19 @@
   .info{
       display: flex;
       align-items: baseline;
-      justify-content: space-around;
+      justify-content: space-between;
       margin-bottom: 400px;
       margin-top: 50px;
       padding-top: 70px;
 
+      .our-story{
+        margin-left: 113px;
+      }
+
       .contact{
         width: 550px;
         height: 60px;
-        margin-right: 95px;
+        margin-right: 187px;
       }
   }
 }
