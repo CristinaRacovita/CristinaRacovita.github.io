@@ -7,7 +7,7 @@
   <app-steps id="steps"></app-steps>
   <div id="story" class="info">
     <app-our-story class="our-story"></app-our-story>
-    <div class="contact">
+    <div *ngIf="!isSmallScreen" class="contact">
       <app-contact></app-contact>
     </div>
   </div>

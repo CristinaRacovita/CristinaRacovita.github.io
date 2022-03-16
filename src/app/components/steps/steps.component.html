@@ -3,6 +3,7 @@
     How it works<sub><img src="../../../assets/triangle.svg" /></sub>
   </div>
   <div class="steps-content">
-    <img src="../../../assets/diagram.png" />
+    <img *ngIf="!isSmallScreen" src="../../../assets/diagram.png" />
+    <img *ngIf="isSmallScreen" src="../../../assets/schema_mobile 1.svg" />
   </div>
 </div>

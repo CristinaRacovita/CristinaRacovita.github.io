@@ -1,3 +1,4 @@
+import { BreakpointObserver } from '@angular/cdk/layout';
 import { Component } from '@angular/core';
 import { LinkedIn } from 'src/app/shared/models/linkedIns.enum';
 import { Name } from 'src/app/shared/models/names.enum';
@@ -12,7 +13,11 @@ const formUrl = 'https://forms.gle/Aw9i53FDkYWd3KXr9';
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent {
-  constructor(private siteService: SiteService){}  
+  public isSmallScreen = false;
+  
+  constructor(private siteService: SiteService, breakpointObserver: BreakpointObserver){
+    this.isSmallScreen = breakpointObserver.isMatched('(max-width: 599px)');
+  }  
 
   public openForm(): void{
     this.siteService.openSite(formUrl);

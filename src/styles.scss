@@ -33,8 +33,7 @@ $my-custom-typography: mat.define-typography-config(
 }
 html,
 body {
-  min-height: 100%;
-  z-index: 1;
+  width: 100%;
 }
 body {
   margin: 0;

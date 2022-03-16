@@ -1,3 +1,4 @@
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { MatDialog } from '@angular/material/dialog';
@@ -9,10 +10,15 @@ import { RequestDemoDialogComponent } from '../request-demo-dialog/request-demo-
   styleUrls: ['./toolbar.component.scss'],
 })
 export class ToolbarComponent {
+  public isSmallScreen = false;
+
   public constructor(
     public dialog: MatDialog,
-    private db: AngularFireDatabase
-  ) {}
+    private db: AngularFireDatabase,
+    breakpointObserver: BreakpointObserver
+  ) {
+    this.isSmallScreen = breakpointObserver.isMatched('(max-width: 599px)');
+  }
 
   public goToSection(section: string) {
     window.location.hash = '';

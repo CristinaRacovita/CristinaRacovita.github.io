@@ -13,30 +13,29 @@
     top: 0;
     z-index: 1000;
   }
-
-  .features{
-    padding-top: 70px;
-  }
-  
-  .info{
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      margin-bottom: 400px;
-      margin-top: 50px;
-      padding-top: 70px;
-
-      .our-story{
-        margin-left: 113px;
-      }
-
-      .contact{
-        width: 550px;
-        height: 60px;
-        margin-right: 187px;
-      }
-  }
 }
 
+@media only screen and (min-width: 768px) {
+  .features {
+    padding-top: 70px;
+  }
 
+  .info {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 400px;
+    margin-top: 50px;
+    padding-top: 70px;
 
+    .our-story {
+      margin-left: 113px;
+    }
+
+    .contact {
+      width: 550px;
+      height: 60px;
+      margin-right: 187px;
+    }
+  }
+}

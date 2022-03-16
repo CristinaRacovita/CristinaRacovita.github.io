@@ -1,45 +1,81 @@
-.features-content {
-  height: 750px;
-  z-index: 1;
+@media only screen and (min-width: 768px) {
+  .features-content {
+    height: 750px;
+    z-index: 1;
 
-  .title {
-    margin-bottom: 50px;
-    font-size: 34px;
-    font-weight: 700;
-    color: var(--color-primary);
-    line-height: 40px;
-    margin-left: 125px;
-  }
+    .title {
+      margin-bottom: 50px;
+      font-size: 34px;
+      font-weight: 700;
+      color: var(--color-primary);
+      line-height: 40px;
+      margin-left: 125px;
+    }
 
-  .features {
-    display: flex;
-    justify-content: space-around;
-    .features-group {
+    .features {
       display: flex;
-      flex-direction: column;
-      height: 394px;
-      width: 362px;
+      justify-content: space-around;
+      .features-group {
+        display: flex;
+        flex-direction: column;
+        height: 394px;
+        width: 362px;
 
-      .feature-element {
-        margin: 50px;
+        .feature-element {
+          margin: 50px;
 
-        .feature-title {
-          font-weight: 900;
-          font-size: 20px;
-          line-height: 36px;
-          color: var(--color-primary);
+          .feature-title {
+            font-weight: 900;
+            font-size: 20px;
+            line-height: 36px;
+            color: var(--color-primary);
+          }
+
+          .feature-description {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 27px;
+            color: var(--color-grey-medium);
+          }
         }
 
-        .feature-description {
-          font-size: 18px;
-          font-weight: 400;
-          line-height: 27px;
-          color: var(--color-grey-medium);
+        .margin-top {
+          margin-top: 77px;
         }
       }
+    }
+  }
+}
 
-      .margin-top{
-        margin-top: 77px;
+@media only screen and (max-width: 600px) {
+  .features-content {
+    z-index: 1;
+    margin-left: 35px;
+
+    .title {
+      margin-bottom: 50px;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--color-primary);
+      line-height: 40px;
+    }
+
+    .feature-element {
+      width: 327px;
+      margin-bottom: 50px;
+
+      .feature-title {
+        font-weight: 900;
+        font-size: 20px;
+        line-height: 36px;
+        color: var(--color-primary);
+      }
+
+      .feature-description {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 27px;
+        color: var(--color-grey-medium);
       }
     }
   }

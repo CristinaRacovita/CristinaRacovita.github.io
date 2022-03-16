@@ -1,16 +1,102 @@
-.footer {
-  display: flex;
-  justify-content: space-between;
-  background-color: var(--color-grey-light);
-  padding-top: 50px;
-  align-items: baseline;
+@media only screen and (min-width: 768px) {
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--color-grey-light);
+    padding-top: 50px;
+    align-items: baseline;
 
-  .footer-content {
-    margin-left: 125px;
-    .logo {
-      width: 140px;
-      height: 35px;
-      margin-bottom: 20px;
+    .footer-content {
+      margin-left: 125px;
+      .logo {
+        width: 140px;
+        height: 35px;
+        margin-bottom: 20px;
+      }
+
+      .text {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        color: var(--color-primary);
+        width: 368px;
+        height: 116px;
+      }
+
+      .tool-description {
+        color: var(--color-secondary);
+      }
+
+      .legal {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        font-weight: 800;
+
+        div {
+          margin-right: 30px;
+        }
+      }
+    }
+
+    .overview {
+      margin-right: 305px;
+
+      .contact-title {
+        margin-bottom: 24px;
+        font-size: 24px;
+        font-weight: 800;
+        line-height: 24px;
+        color: var(--color-primary);
+      }
+
+      .details {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 32px;
+        color: var(--color-primary);
+
+        .contact-image {
+          &:hover {
+            opacity: 70%;
+          }
+          cursor: pointer;
+          display: flex;
+
+          img {
+            padding-right: 10px;
+          }
+
+          .email {
+            height: 26px;
+            width: 26px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-grey-light);
+    padding-top: 50px;
+    align-items: baseline;
+    padding-left: 35px;
+
+    .footer-content {
+      .logo {
+        width: 140px;
+        height: 35px;
+        margin-bottom: 20px;
+      }
+
+      .tool-description {
+        color: var(--color-secondary);
+      }
+     
     }
 
     .text {
@@ -18,57 +104,43 @@
       font-weight: 400;
       line-height: 24px;
       color: var(--color-primary);
-      width: 368px;
-      height: 116px;
-    }
-
-    .tool-description {
-      color: var(--color-secondary);
+      width: 327px;
     }
 
     .legal {
-      display: flex;
-      flex-direction: row;
-      width: 100%;
       font-weight: 800;
+      font-size: 14px;
+      padding-bottom: 30px;
+    }
 
-      div {
-        margin-right: 30px;
+    .overview {
+      .contact-title {
+        margin-bottom: 10px;
+        margin-top: 20px;
+        font-size: 16px;
+        font-weight: 800;
+        line-height: 24px;
+        color: var(--color-primary);
       }
-    }
-  }
 
-  .overview {
-    margin-right: 305px;
+      .details {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 32px;
+        margin-bottom: 20px;
+        color: var(--color-primary);
 
-    .contact-title {
-      margin-bottom: 24px;
-      font-size: 24px;
-      font-weight: 800;
-      line-height: 24px;
-      color: var(--color-primary);
-    }
+        .contact-image {
+          display: flex;
 
-    .details {
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 32px;
-      color: var(--color-primary);
+          img {
+            padding-right: 10px;
+          }
 
-      .contact-image {
-        &:hover {
-          opacity: 70%;
-        }
-        cursor: pointer;
-        display: flex;
-
-        img {
-          padding-right: 10px;
-        }
-
-        .email {
-          height: 26px;
-          width: 26px;
+          .email {
+            height: 26px;
+            width: 26px;
+          }
         }
       }
     }

@@ -9,7 +9,7 @@
       web application that automatically solves supervised learning problems
       without any programming knowledge required.
     </div>
-    <div class="legal text">
+    <div *ngIf="!isSmallScreen" class="legal text">
       <div>© 2022 Odin AI. All rights reserved.</div>
       <div>Terms of Use & Privacy</div>
     </div>
@@ -30,5 +30,10 @@
         <a href="mailto:{{email}}">{{ email }}</a>
       </div>
     </div>
+  </div>
+
+  <div *ngIf="isSmallScreen" class="legal text">
+    <div>© 2022 Odin AI. All rights reserved.</div>
+    <div>Terms of Use & Privacy</div>
   </div>
 </div>

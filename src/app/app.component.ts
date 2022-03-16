@@ -1,3 +1,4 @@
+import { BreakpointObserver } from '@angular/cdk/layout';
 import { Component } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
 
@@ -14,7 +15,10 @@ export class AppComponent {
     url: 'https://odin-ai.net'
   };
 
-  public constructor(private db: AngularFireDatabase){
+  public isSmallScreen = false;
+
+  public constructor(private db: AngularFireDatabase, breakpointObserver: BreakpointObserver){
     this.db.list('homePage').push('Home ' + new Date());
+    this.isSmallScreen = breakpointObserver.isMatched('(max-width: 599px)');
   }
 }

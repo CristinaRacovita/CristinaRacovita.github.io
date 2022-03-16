@@ -23,6 +23,7 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database'
 import { SiteService } from './shared/services/site.service';
 import { ScullyLibModule } from '@scullyio/ng-lib';
 import { NgxJsonLdModule } from '@ngx-lite/json-ld';
+import {LayoutModule} from '@angular/cdk/layout'; 
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { NgxJsonLdModule } from '@ngx-lite/json-ld';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFireDatabaseModule, 
     ScullyLibModule,
-    NgxJsonLdModule
+    NgxJsonLdModule,
+    LayoutModule
   ],
   providers: [SiteService],
   bootstrap: [AppComponent],

@@ -1,45 +1,90 @@
-.story-content {
-  width: 466px;
-  height: 315px;
-  margin-left: 15px;
+@media only screen and (min-width: 768px) {
+  .story-content {
+    width: 466px;
+    height: 315px;
+    margin-left: 15px;
 
-  .title {
-    margin-bottom: 50px;
-    font-size: 34px;
-    font-weight: 700;
-    color: var(--color-primary);
-    line-height: 40px;
+    .title {
+      margin-bottom: 50px;
+      font-size: 34px;
+      font-weight: 700;
+      color: var(--color-primary);
+      line-height: 40px;
+    }
+
+    .past-description {
+      color: var(--color-primary);
+      font-size: 18px;
+      line-height: 28.8px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .future-description {
+      color: var(--color-grey-medium);
+      font-size: 18px;
+      line-height: 27px;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+
+    .subscribe {
+      background-color: var(--color-secondary);
+      color: var(--color-white);
+      border: none;
+      border-radius: 24px;
+      font-size: 18px;
+      line-height: 28.8px;
+      font-weight: 800;
+      padding: 8px 24px 8px 24px;
+      margin-bottom: 50px;
+      cursor: pointer;
+      &:hover {
+        opacity: 70%;
+      }
+    }
   }
+}
 
-  .past-description {
-    color: var(--color-primary);
-    font-size: 18px;
-    line-height: 28.8px;
-    font-weight: 800;
-    margin-bottom: 20px;
-  }
+@media only screen and (max-width: 600px) {
+  .story-content {
+    width: 327px;
+    margin-left: 35px;
 
-  .future-description {
-    color: var(--color-grey-medium);
-    font-size: 18px;
-    line-height: 27px;
-    font-weight: 400;
-    margin-bottom: 20px;
-  }
+    .title {
+      margin-bottom: 50px;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--color-primary);
+      line-height: 40px;
+    }
 
-  .subscribe {
-    background-color: var(--color-secondary);
-    color: var(--color-white);
-    border: none;
-    border-radius: 24px;
-    font-size: 18px;
-    line-height: 28.8px;
-    font-weight: 800;
-    padding: 8px 24px 8px 24px;
-    margin-bottom: 50px;
-    cursor: pointer;
-    &:hover{
-      opacity: 70%;
+    .past-description {
+      color: var(--color-primary);
+      font-size: 18px;
+      line-height: 28.8px;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .future-description {
+      color: var(--color-grey-medium);
+      font-size: 18px;
+      line-height: 27px;
+      font-weight: 400;
+      margin-bottom: 20px;
+    }
+
+    .subscribe {
+      background-color: var(--color-secondary);
+      color: var(--color-white);
+      border: none;
+      border-radius: 24px;
+      font-size: 18px;
+      line-height: 28.8px;
+      font-weight: 800;
+      padding: 8px 24px 8px 24px;
+      margin-bottom: 50px;
     }
   }
 }

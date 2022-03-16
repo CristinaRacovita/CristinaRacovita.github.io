@@ -1,3 +1,4 @@
+import { BreakpointObserver } from '@angular/cdk/layout';
 import { Component } from '@angular/core';
 import { LinkedIn } from 'src/app/shared/models/linkedIns.enum';
 import { SiteService } from 'src/app/shared/services/site.service';
@@ -9,13 +10,20 @@ import { SiteService } from 'src/app/shared/services/site.service';
 })
 export class FooterComponent {
   public email: string = 'odin.automl.ai@gmail.com';
-  public constructor(private siteService: SiteService){}
+  public isSmallScreen = false;
 
-  public openCristinaLinkedln(): void{
+  public constructor(
+    private siteService: SiteService,
+    breakpointObserver: BreakpointObserver
+  ) {
+    this.isSmallScreen = breakpointObserver.isMatched('(max-width: 599px)');
+  }
+
+  public openCristinaLinkedln(): void {
     this.siteService.openSite(LinkedIn.Cristina);
   }
 
-  public openBogdanLinkedln(): void{
+  public openBogdanLinkedln(): void {
     this.siteService.openSite(LinkedIn.Bogdan);
   }
 }

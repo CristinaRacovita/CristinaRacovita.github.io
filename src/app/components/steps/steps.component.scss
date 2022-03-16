@@ -1,8 +1,9 @@
-.how-it-works-content {
-  margin-top: 100px;
-  padding-top: 20px;
-  margin-left: 125px;
-  
+@media only screen and (min-width: 768px) {
+  .how-it-works-content {
+    margin-top: 100px;
+    padding-top: 20px;
+    margin-left: 125px;
+
     .title {
       margin-bottom: 50px;
       font-size: 34px;
@@ -11,11 +12,37 @@
       line-height: 40px;
     }
 
-  .steps-content {
-    display: flex;
-    justify-content: center;
-    img {
-      height: 500px;
+    .steps-content {
+      display: flex;
+      justify-content: center;
+      img {
+        height: 500px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .how-it-works-content {
+    margin-left: 35px;
+
+    .title {
+      margin-bottom: 50px;
+      font-size: 24px;
+      font-weight: 700;
+      color: var(--color-primary);
+      line-height: 40px;
+    }
+
+    .steps-content {
+      width: 300px;
+      display: flex;
+      align-items: center;
+
+      img{
+        max-width: 100%;
+        max-height: 100%;
+      }
     }
   }
 }

@@ -1,3 +1,4 @@
+import { BreakpointObserver } from '@angular/cdk/layout';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -5,4 +6,10 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './steps.component.html',
   styleUrls: ['./steps.component.scss'],
 })
-export class StepsComponent {}
+export class StepsComponent {
+  public isSmallScreen = false;
+
+  public constructor(breakpointObserver: BreakpointObserver) {
+    this.isSmallScreen = breakpointObserver.isMatched('(max-width: 599px)');
+  }
+}
