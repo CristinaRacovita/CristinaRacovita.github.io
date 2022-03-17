@@ -16,7 +16,7 @@ export class ContactComponent {
   public isSmallScreen = false;
   
   constructor(private siteService: SiteService, breakpointObserver: BreakpointObserver){
-    this.isSmallScreen = breakpointObserver.isMatched('(max-width: 599px)');
+    this.isSmallScreen = breakpointObserver.isMatched('(max-width: 765px)');
   }  
 
   public openForm(): void{

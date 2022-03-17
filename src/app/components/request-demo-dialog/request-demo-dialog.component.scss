@@ -42,7 +42,6 @@
     }
 
     .email-box {
-      padding: 10px 15px;
       border-color: var(--color-grey-medium);
       border-radius: 24px;
       color: var(--color-grey-medium);
@@ -55,6 +54,7 @@
   .error{
     margin-top: 15px;
     color: var(--color-error);
+    text-align: center;
   }
 }
 
@@ -66,17 +66,24 @@
     .subscribe-input {
       position: relative;
       display: inline-flex;
+
+      .email-box {
+        padding: 10px 15px;
+      }
     }
   }
 }
 
 @media only screen and (max-width: 765px) {
   .dialog-content{
-    width: fit-content;
     align-content: center;
 
     .subscribe-button{
       margin-top: 20px;
+    }
+
+    .email-box {
+      padding: 10px 5px 10px 5px;
     }
   }
 }

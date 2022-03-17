@@ -17,7 +17,7 @@ export class ToolbarComponent {
     private db: AngularFireDatabase,
     breakpointObserver: BreakpointObserver
   ) {
-    this.isSmallScreen = breakpointObserver.isMatched('(max-width: 599px)');
+    this.isSmallScreen = breakpointObserver.isMatched('(max-width: 765px)');
   }
 
   public goToSection(section: string) {

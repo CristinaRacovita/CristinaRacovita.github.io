@@ -21,9 +21,9 @@
   <div [matMenuTriggerFor]="menu" class="menu">
     <img src="../../../assets/menu.svg" />
   </div>
-  <mat-menu #menu="matMenu">
-    <button class="option-menu-text" mat-menu-item (click)="goToSection('features')">Features</button>
-    <button class="option-menu-text" mat-menu-item (click)="goToSection('steps')">How it works</button>
-    <button class="option-menu-text" mat-menu-item (click)="goToSection('story')">Our story</button>
+  <mat-menu class="my-menu" #menu="matMenu">
+    <button class="option-menu" mat-menu-item (click)="goToSection('features')">Features</button>
+    <button class="option-menu" mat-menu-item (click)="goToSection('steps')">How it works</button>
+    <button class="option-menu" mat-menu-item (click)="goToSection('story')">Our story</button>
   </mat-menu>
 </div>

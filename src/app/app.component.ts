@@ -19,6 +19,6 @@ export class AppComponent {
 
   public constructor(private db: AngularFireDatabase, breakpointObserver: BreakpointObserver){
     this.db.list('homePage').push('Home ' + new Date());
-    this.isSmallScreen = breakpointObserver.isMatched('(max-width: 599px)');
+    this.isSmallScreen = breakpointObserver.isMatched('(max-width: 765px)');
   }
 }

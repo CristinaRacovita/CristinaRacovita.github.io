@@ -16,7 +16,7 @@ export class FooterComponent {
     private siteService: SiteService,
     breakpointObserver: BreakpointObserver
   ) {
-    this.isSmallScreen = breakpointObserver.isMatched('(max-width: 599px)');
+    this.isSmallScreen = breakpointObserver.isMatched('(max-width: 765px)');
   }
 
   public openCristinaLinkedln(): void {

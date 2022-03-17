@@ -61,7 +61,7 @@
     justify-content: space-between;
     font-size: 14px;
     font-weight: 750;
-    
+
     .logo {
       margin-left: 10px;
     }
@@ -71,5 +71,25 @@
       justify-content: flex-end;
       margin-right: 10px;
     }
+
+    .mat-menu-panel.ng-trigger {
+      background-color: aqua;
+
+      // .option-menu ::ng-deep {
+      //   font-size: 14px;
+      //   color: var(--color-primary);
+      //   font-weight: 800;
+      // }
+    }
+  }
+
+  ::ng-deep.mat-menu-content:not(:empty){
+    background-color: var(--color-grey-light);
+  }
+
+  ::ng-deep.mat-menu-item{
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--color-primary);
   }
 }
