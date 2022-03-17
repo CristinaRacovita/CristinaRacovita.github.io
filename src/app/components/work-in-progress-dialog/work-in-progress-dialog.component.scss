@@ -3,8 +3,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 500px;
-  padding: 30px;
 
   .subscribe-text {
     color: var(--color-grey-medium);
@@ -16,9 +14,7 @@
   }
 
   .subscribe-input {
-      margin-top: 32px;
-    position: relative;
-    display: inline-flex;
+    margin-top: 32px;
 
     .subscribe-button {
       padding: 10px 15px;
@@ -43,8 +39,36 @@
     }
   }
 
-  .error{
+  .error {
     margin-top: 15px;
     color: var(--color-error);
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .dialog-content {
+    width: 500px;
+    padding: 30px;
+
+    .subscribe-input {
+      position: relative;
+      display: inline-flex;
+    }
+  }
+}
+
+@media only screen and (max-width: 765px) {
+  .dialog-content {
+    width: fit-content;
+    align-content: center;
+
+    .subscribe-input {
+      display: flex;
+      flex-direction: column;
+
+      .subscribe-button {
+        margin-top: 20px;
+      }
+    }
   }
 }

@@ -47,10 +47,11 @@
   }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 765px) {
   .features-content {
     z-index: 1;
     margin-left: 35px;
+    padding-top: 50px;
 
     .title {
       margin-bottom: 50px;

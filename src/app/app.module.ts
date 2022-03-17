@@ -24,6 +24,7 @@ import { SiteService } from './shared/services/site.service';
 import { ScullyLibModule } from '@scullyio/ng-lib';
 import { NgxJsonLdModule } from '@ngx-lite/json-ld';
 import {LayoutModule} from '@angular/cdk/layout'; 
+import {MatMenuModule} from '@angular/material/menu'; 
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import {LayoutModule} from '@angular/cdk/layout';
     AngularFireDatabaseModule, 
     ScullyLibModule,
     NgxJsonLdModule,
-    LayoutModule
+    LayoutModule,
+    MatMenuModule
   ],
   providers: [SiteService],
   bootstrap: [AppComponent],
