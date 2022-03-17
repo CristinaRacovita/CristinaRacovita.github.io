@@ -1,12 +1,13 @@
 <div class="contact-content">
-    <img src="../../../assets/Shapes.svg" />
+    <img *ngIf="!isSmallScreen" src="../../../assets/Shapes.svg" />
+    <img class="graphics" *ngIf="isSmallScreen" src="../../../assets/Graphics.png" />
     <div *ngIf="!isSmallScreen" class="profiles">
         <app-profile-picture (click)="openBogdanLinkeIn()" class="first" [imageUrl]="bogdansPicture" [name]="bogdansName"></app-profile-picture>
         <app-profile-picture (click)="openCristinaLinkeIn()" class="second" [imageUrl]="cristinasPicture" [name]="cristinasName"></app-profile-picture>
     </div>
     <div *ngIf="isSmallScreen" class="profiles">
-        <img src="../../../assets/Group 354.svg" />
-        <img src="../../../assets/Group 355.svg" />
+        <img class="first" src="../../../assets/Group 354.svg" />
+        <img class="second" src="../../../assets/Group 355.svg" />
     </div>
     <div class="form">
         <div class="question">
