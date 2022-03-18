@@ -6,8 +6,8 @@
         <app-profile-picture (click)="openCristinaLinkeIn()" class="second" [imageUrl]="cristinasPicture" [name]="cristinasName"></app-profile-picture>
     </div>
     <div *ngIf="isSmallScreen" class="profiles">
-        <img class="first" src="../../../assets/Group 354.svg" />
-        <img class="second" src="../../../assets/Group 355.svg" />
+        <img class="first" (click)="openBogdanLinkeIn()" src="../../../assets/Group 354.svg" />
+        <img class="second" (click)="openCristinaLinkeIn()" src="../../../assets/Group 355.svg" />
     </div>
     <div class="form">
         <div class="question">
