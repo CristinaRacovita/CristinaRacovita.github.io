@@ -1,20 +1,8 @@
 @use "@angular/material" as mat;
+@import '~@angular/material/theming';
 
-@font-face {
-  font-family: 'Avenir';
-  src: url(https://www.myfonts.com/fonts/linotype/avenir/);
-}
-
-@font-face {
-  font-family: 'Raleway';
-  src: url(https://fonts.google.com/specimen/Raleway);
-}
-
-$my-custom-typography: mat.define-typography-config(
-  $font-family: "Raleway",
-);
-
-@include mat.core($my-custom-typography);
+$custom-typography: mat-typography-config($font-family: 'avenir');
+@include mat.core($custom-typography);
 
 :root {
   --color-primary: #203568;

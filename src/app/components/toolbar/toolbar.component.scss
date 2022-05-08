@@ -48,6 +48,31 @@
       cursor: pointer;
     }
   }
+
+  .menu-item{
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--color-primary);
+    cursor: pointer;
+    margin-right: 32px;
+    margin-left: 16px;
+    align-items: center;
+    display: flex;
+    font-family: 'Arial';
+  }
+
+  ::ng-deep.mat-menu-content:not(:empty){
+    background-color: var(--color-grey-light);
+    font-family: 'Arial';
+  }
+
+  ::ng-deep.mat-menu-item{
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--color-primary);
+    font-family: 'Arial';
+  }
 }
 
 @media only screen and (max-width: 765px) {
@@ -74,12 +99,6 @@
 
     .mat-menu-panel.ng-trigger {
       background-color: aqua;
-
-      // .option-menu ::ng-deep {
-      //   font-size: 14px;
-      //   color: var(--color-primary);
-      //   font-weight: 800;
-      // }
     }
   }
 

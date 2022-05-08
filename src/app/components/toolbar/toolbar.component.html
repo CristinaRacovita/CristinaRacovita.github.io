@@ -10,6 +10,12 @@
     <button class="option-menu-text" (click)="goToSection('story')">
       Our story
     </button>
+    <div [matMenuTriggerFor]="languageMenu" class="menu-item">
+      {{ languageOption }}
+    </div>
+    <mat-menu class="my-menu" #languageMenu="matMenu" [hasBackdrop]="false">
+      <button class="option-menu" *ngFor="let language of languages" mat-menu-item  (click)="chooseLanguage(language)">{{ language }}</button>
+    </mat-menu>
     <button class="option-menu-button" (click)="openDialog()">DEMO</button>
   </div>
 </div>
