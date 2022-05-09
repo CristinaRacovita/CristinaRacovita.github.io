@@ -1,5 +1,5 @@
 export const environment = {
-  baseUrl: 'http://localhost:4200',
+  baseUrl: 'https://odin-ai.net',
   production: true,
   firebaseConfig : {
     apiKey: "AIzaSyDBinS6CbtKtptEE-idN7AfYuMuOk5SV00",
