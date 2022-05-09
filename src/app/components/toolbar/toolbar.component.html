@@ -4,11 +4,11 @@
   </div>
   <div class="menu">
     <button class="option-menu-text" (click)="goToSection('features')">
-      Features
+      {{ 'features' | transloco }}
     </button>
-    <button class="option-menu-text" (click)="goToSection('steps')">How it works</button>
+    <button class="option-menu-text" (click)="goToSection('steps')">{{ 'how-it-works' | transloco }}</button>
     <button class="option-menu-text" (click)="goToSection('story')">
-      Our story
+      {{ 'our-story' | transloco }}
     </button>
     <div [matMenuTriggerFor]="languageMenu" class="menu-item">
       {{ languageOption }}
@@ -16,7 +16,7 @@
     <mat-menu class="my-menu" #languageMenu="matMenu" [hasBackdrop]="false">
       <button class="option-menu" *ngFor="let language of languages" mat-menu-item  (click)="chooseLanguage(language)">{{ language }}</button>
     </mat-menu>
-    <button class="option-menu-button" (click)="openDialog()">DEMO</button>
+    <button class="option-menu-button" (click)="openDialog()">{{ 'demo' | transloco }}</button>
   </div>
 </div>
 
@@ -28,8 +28,8 @@
     <img src="../../../assets/menu.svg" />
   </div>
   <mat-menu class="my-menu" #menu="matMenu">
-    <button class="option-menu" mat-menu-item (click)="goToSection('features')">Features</button>
-    <button class="option-menu" mat-menu-item (click)="goToSection('steps')">How it works</button>
-    <button class="option-menu" mat-menu-item (click)="goToSection('story')">Our story</button>
+    <button class="option-menu" mat-menu-item (click)="goToSection('features')">{{ 'features' | transloco }}</button>
+    <button class="option-menu" mat-menu-item (click)="goToSection('steps')">{{ 'how-it-works' | transloco }}</button>
+    <button class="option-menu" mat-menu-item (click)="goToSection('story')">{{ 'our-story' | transloco }}</button>
   </mat-menu>
 </div>

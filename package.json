@@ -26,6 +26,7 @@
     "@angular/platform-server": "^12",
     "@angular/router": "~12.2.0",
     "@material/theme": "^13.0.0",
+    "@ngneat/transloco": "^4.0.0",
     "@ngx-lite/json-ld": "^0.6.4",
     "@scullyio/init": "^2.1.25",
     "@scullyio/ng-lib": "^2.1.0",

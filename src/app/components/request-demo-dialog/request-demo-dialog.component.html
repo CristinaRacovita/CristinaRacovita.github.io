@@ -1,22 +1,22 @@
 <div class="dialog-content">
-  <div class="title">Request a demo</div>
+  <div class="title">{{ 'demo-request' | transloco }}</div>
   <img src="../../../assets/demo.svg" />
   <div class="questions">
-    Introduce your email address and we'll contact you soon as possible with more details
+    {{ 'email-contact' | transloco }}
   </div>
   <div class="subscribe-input">
     <input
       name="email"
       type="text"
       class="email-box"
-      placeholder="Type in your email"
+      placeholder="{{ 'email-typing' | transloco }}"
       [(ngModel)]="email"
     />
     <button class="subscribe-button" (click)="subscribe()">
-      Request
+      {{ 'request' | transloco }}
     </button>
   </div>
   <div class="error" *ngIf="isEmailErrorsVisibile()">
-    We are sorry, but the email you introduced is not valid!
+    {{ 'email-invalid' | transloco }}
   </div>
 </div>

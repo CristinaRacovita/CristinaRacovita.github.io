@@ -10,7 +10,7 @@
       without any programming knowledge required.
     </div>
     <div *ngIf="!isSmallScreen" class="legal text">
-      <div>© 2022 Odin AI. All rights reserved.</div>
+      <div>© 2022 Odin AI. {{ 'all-rights-reserved' | transloco }}</div>
     </div>
   </div>
 
@@ -32,6 +32,6 @@
   </div>
 
   <div *ngIf="isSmallScreen" class="legal text">
-    <div>© 2022 Odin AI. All rights reserved.</div>
+    <div>© 2022 Odin AI. {{ 'all-rights-reserved' | transloco }}</div>
   </div>
 </div>

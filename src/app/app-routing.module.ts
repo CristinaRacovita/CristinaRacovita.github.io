@@ -4,7 +4,7 @@ import { AppComponent } from './app.component';
 
 const routes: Routes = [
   { path: 'ro', component: AppComponent },
-  { path: 'en', component: AppComponent },
+  { path: 'en', redirectTo:'' },
 ];
 
 @NgModule({

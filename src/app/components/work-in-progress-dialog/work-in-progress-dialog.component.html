@@ -1,7 +1,6 @@
 <div class="dialog-content">
   <div class="subscribe-text">
-    At the moment, we’re working hard on finishing our beta. Subscribe and
-    you’ll be the first to know when we’re ready to launch.
+    {{ 'subscribe-text' | transloco }}
   </div>
   <img src="../../../assets/demo.svg" />
   <div class="subscribe-input">
@@ -9,14 +8,14 @@
       name="search"
       type="text"
       class="email-box"
-      placeholder="Type in your email"
+      placeholder="{{ 'email-typing' | transloco }}"
       [(ngModel)]="email"
     />
     <button class="subscribe-button" (click)="requestDemo()">
-      Subscribe
+      {{ 'subscribe' | transloco }}
     </button>
   </div>
   <div class="error" *ngIf="isEmailErrorsVisibile()">
-    We are sorry, but the email you introduced is not valid!
+    {{ 'email-invalid' | transloco }}
   </div>
 </div>

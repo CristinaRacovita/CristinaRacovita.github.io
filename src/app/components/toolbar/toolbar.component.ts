@@ -5,6 +5,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { Languages } from 'src/app/shared/models/languages.enum';
 import { RequestDemoDialogComponent } from '../request-demo-dialog/request-demo-dialog.component';
 import { Router } from '@angular/router';
+import { TranslocoService } from '@ngneat/transloco';
 
 @Component({
   selector: 'app-toolbar',
@@ -20,7 +21,8 @@ export class ToolbarComponent {
     public dialog: MatDialog,
     private db: AngularFireDatabase,
     breakpointObserver: BreakpointObserver,
-    private router: Router
+    private router: Router,
+    private service: TranslocoService
   ) {
     this.isSmallScreen = breakpointObserver.isMatched('(max-width: 765px)');
   }
@@ -35,7 +37,8 @@ export class ToolbarComponent {
     this.dialog.open(RequestDemoDialogComponent);
   }
 
-  public chooseLanguage(option: string): void{
+  public chooseLanguage(option: string): void {
+    this.service.setActiveLang(option.toLowerCase());
     this.languageOption = option;
     this.router.navigateByUrl(`/${option.toLowerCase()}`);
   }

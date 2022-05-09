@@ -24,7 +24,9 @@ import { SiteService } from './shared/services/site.service';
 import { ScullyLibModule } from '@scullyio/ng-lib';
 import { NgxJsonLdModule } from '@ngx-lite/json-ld';
 import {LayoutModule} from '@angular/cdk/layout'; 
-import {MatMenuModule} from '@angular/material/menu'; 
+import {MatMenuModule} from '@angular/material/menu';
+import { HttpClientModule } from '@angular/common/http';
+import { TranslocoRootModule } from './transloco-root.module'; 
 
 @NgModule({
   declarations: [
@@ -53,7 +55,9 @@ import {MatMenuModule} from '@angular/material/menu';
     ScullyLibModule,
     NgxJsonLdModule,
     LayoutModule,
-    MatMenuModule
+    MatMenuModule,
+    HttpClientModule,
+    TranslocoRootModule
   ],
   providers: [SiteService],
   bootstrap: [AppComponent],
