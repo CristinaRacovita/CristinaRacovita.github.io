@@ -3,8 +3,8 @@
     "form": "Fill in our form",
     "all-rights-reserved": "All rights reserved.",
     "tool-description-1": "Odin AI helps the development of small and medium enterprises go through digital transformation. Our web platform ",
-    "tool-description-2": "optimizes products and business processes ",
-    "tool-description-3": "by automatically generating in a few minutes, artificial intelligence-based solutions that solve data prediction problems in tabular format. This whole process is a replacement for experts in the field.",
+    "tool-description-2": "optimizes products and business processes",
+    "tool-description-3": " by automatically generating in a few minutes, artificial intelligence-based solutions that solve data prediction problems in tabular format. This whole process is a replacement for experts in the field.",
     "subscribe": "Subscribe",
     "demo": "Get the demo",
     "our-story": "Our story",
@@ -31,5 +31,9 @@
     "email-typing": "Type in your email",
     "demo-request": "Request a demo",
     "request": "Request",
-    "email-contact": "Introduce your email address and we'll contact you soon as possible with more details"
+    "email-contact": "Introduce your email address and we'll contact you soon as possible with more details",
+    "footer-description" : "Your web platform that optimizes products and business processes by automatically generating AI-based solutions for predictive problems.",
+    "tagline-1": "Hassle-free ",
+    "tagline-2": "AI-based",
+    "tagline-3": "digital transformation"
 }

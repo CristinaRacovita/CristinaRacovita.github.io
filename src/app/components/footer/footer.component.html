@@ -4,10 +4,7 @@
       <img src="../../../assets/logo.svg" />
     </div>
     <div class="text">
-      Your
-      <span class="tool-description">no-code automated machine learning</span>
-      web application that automatically solves supervised learning problems
-      without any programming knowledge required.
+      {{ 'footer-description' | transloco }}
     </div>
     <div *ngIf="!isSmallScreen" class="legal text">
       <div>© 2022 Odin AI. {{ 'all-rights-reserved' | transloco }}</div>

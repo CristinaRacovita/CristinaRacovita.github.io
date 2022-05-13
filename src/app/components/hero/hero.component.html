@@ -1,9 +1,10 @@
 <div class="hero">
   <div class="hero-content">
     <div class="tagline">
-      <span>Hassle-free </span>
-      <span class="border-line">AI-based<br /></span>
-      <span> digital transformation</span>
+      <span>{{ 'tagline-1' | transloco }}</span>
+      <span class="border-line">{{ 'tagline-2' | transloco }}</span><span *ngIf="!isEnglishActive()">{{ 'tagline-4' | transloco }}</span>
+      <br/>
+      <span>{{ 'tagline-3' | transloco }}</span>
     </div>
     <div class="tool-description">
       {{ 'tool-description-1' | transloco }}<span>{{ 'tool-description-2' | transloco }}</span>{{ 'tool-description-3' | transloco }}

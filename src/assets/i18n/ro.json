@@ -3,8 +3,8 @@
     "form": "Completează formular",
     "all-rights-reserved": "Toate drepturile sunt rezervate.",
     "tool-description-1": "Odin AI ajută la dezvoltarea întreprinderilor mici și mijloci în curs de transformare digitală. Platforma noastră web ",
-    "tool-description-2": "optimizează produsele și procesele de business ",
-    "tool-description-3": "prin generarea automată, în câteva minute, a soluțiilor bazate pe inteligență artificială care rezolvă probleme de predicție pe date în format tabelar. Tot acest proces înlocuiește experții din domeniu.",
+    "tool-description-2": "optimizează produsele și procesele de business",
+    "tool-description-3": " prin generarea automată, în câteva minute, a soluțiilor bazate pe inteligență artificială care rezolvă probleme de predicție pe date în format tabelar. Tot acest proces înlocuiește experții din domeniu.",
     "subscribe": "Abonează-te",
     "demo": "Obține un demo",
     "our-story": "Povestea noastră",
@@ -31,5 +31,10 @@
     "email-typing": "Introdu adresa de e-mail",
     "demo-request": "Cere un demo",
     "request": "Cere",
-    "email-contact": "Introduți adresa de e-mail și te vom contacta cât mai curând cu mai multe detalii"
+    "email-contact": "Introduți adresa de e-mail și te vom contacta cât mai curând cu mai multe detalii",
+    "footer-description" : "Platforma ta wev care îți optimizează produsele și procesele de business, prin generarea a soluțiilor bazate pe inteligență artificială care rezolvă probleme de predicție.",
+    "tagline-1": "Fii ",
+    "tagline-2": "inteligent",
+    "tagline-4": " în ",
+    "tagline-3": "transformarea digitală"
 }
