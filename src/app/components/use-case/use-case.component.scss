@@ -1,0 +1,35 @@
+.useCasesSection {
+  margin-top: 150px;
+  .title {
+    margin-bottom: 30px;
+    font-size: 34px;
+    font-weight: 700;
+    color: var(--color-primary);
+    line-height: 40px;
+    margin-left: 125px;
+  }
+
+  .useCases {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-left: 120px;
+    margin-right: 120px;
+
+    .othersCard {
+      ::ng-deep {
+        .useCase {
+          line-height: 20px;
+          font-size: 18px;
+          font-weight: 800;
+          text-align: center;
+          margin-left: 0;
+        }
+
+        .more-details {
+          margin-top: 170px;
+        }
+      }
+    }
+  }
+}

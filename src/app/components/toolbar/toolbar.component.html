@@ -6,6 +6,7 @@
     <button class="option-menu-text" (click)="goToSection('features')">
       {{ 'features' | transloco }}
     </button>
+    <button class="option-menu-text" (click)="goToSection('use-cases')">{{ 'use-cases' | transloco }}</button>
     <button class="option-menu-text" (click)="goToSection('steps')">{{ 'how-it-works' | transloco }}</button>
     <button class="option-menu-text" (click)="goToSection('story')">
       {{ 'our-story' | transloco }}
@@ -37,6 +38,7 @@
     </div>
     <mat-menu class="my-menu" #menu="matMenu">
       <button class="option-menu" mat-menu-item (click)="goToSection('features')">{{ 'features' | transloco }}</button>
+      <button class="option-menu" mat-menu-item (click)="goToSection('use-case')">{{ 'use-cases' | transloco }}</button>
       <button class="option-menu" mat-menu-item (click)="goToSection('steps')">{{ 'how-it-works' | transloco }}</button>
       <button class="option-menu" mat-menu-item (click)="goToSection('story')">{{ 'our-story' | transloco }}</button>
     </mat-menu>

@@ -1,0 +1,20 @@
+<div class="useCasesSection">
+  <div class="title">
+    {{ "use-cases" | transloco
+    }}<sub><img src="../../../assets/triangle.svg" /></sub>
+  </div>
+  <div class="useCases">
+    <app-industry-card
+      *ngFor="let industry of industries$ | async"
+      [cardTitle]="industry.name"
+      [cardUseCases]="industry.useCases"
+    ></app-industry-card>
+    <app-industry-card
+      class="othersCard"
+      [cardTitle]="othersCard.name"
+      [cardUseCases]="othersCard.useCases"
+      [buttonText]="contactButtonText"
+    >
+    </app-industry-card>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<div class="card">
+  <div class="title">{{ cardTitle | transloco }}</div>
+  <div *ngFor="let useCase of cardUseCases" class="useCase">
+    {{ useCase.name | transloco }}
+  </div>
+  <button class="more-details">{{ buttonText | transloco }}</button>
+</div>

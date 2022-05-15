@@ -28,6 +28,10 @@ import {MatMenuModule} from '@angular/material/menu';
 import { HttpClientModule } from '@angular/common/http';
 import { TranslocoRootModule } from './transloco-root.module'; 
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { IndustryCardComponent } from './components/industry-card/industry-card.component';
+import { UseCaseComponent } from './components/use-case/use-case.component';
+import { IndustryService } from './shared/services/industry.service';
+import { LanguageService } from './shared/services/language.service';
 
 @NgModule({
   declarations: [
@@ -42,6 +46,8 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     ProfilePictureComponent,
     RequestDemoDialogComponent,
     WorkInProgressDialogComponent,
+    IndustryCardComponent,
+    UseCaseComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,7 +66,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     HttpClientModule,
     TranslocoRootModule
   ],
-  providers: [SiteService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [SiteService, IndustryService, LanguageService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
