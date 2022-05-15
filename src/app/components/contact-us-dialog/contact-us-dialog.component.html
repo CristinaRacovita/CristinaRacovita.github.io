@@ -1,0 +1,24 @@
+<div class="dialog-content">
+    <div class="subscribe-text">
+      {{ 'no-industry' | transloco }}
+    </div>
+    <div class="email-text">
+        {{ 'enter-your-email' | transloco }}
+    </div>
+    <div class="subscribe-input">
+      <input
+        name="search"
+        type="text"
+        class="email-box"
+        placeholder="{{ 'email-typing' | transloco }}"
+        [(ngModel)]="email"
+      />
+      <button class="subscribe-button" (click)="requestDemo()">
+        {{ 'sent' | transloco }}
+      </button>
+    </div>
+    <div class="error" *ngIf="isEmailErrorsVisibile()">
+      {{ 'email-invalid' | transloco }}
+    </div>
+  </div>
+  

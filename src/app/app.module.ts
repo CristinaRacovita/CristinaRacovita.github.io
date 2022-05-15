@@ -32,6 +32,7 @@ import { IndustryCardComponent } from './components/industry-card/industry-card.
 import { UseCaseComponent } from './components/use-case/use-case.component';
 import { IndustryService } from './shared/services/industry.service';
 import { LanguageService } from './shared/services/language.service';
+import { ContactUsDialogComponent } from './components/contact-us-dialog/contact-us-dialog.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { LanguageService } from './shared/services/language.service';
     WorkInProgressDialogComponent,
     IndustryCardComponent,
     UseCaseComponent,
+    ContactUsDialogComponent,
   ],
   imports: [
     BrowserModule,

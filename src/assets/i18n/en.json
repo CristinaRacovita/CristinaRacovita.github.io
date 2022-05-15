@@ -60,5 +60,8 @@
     "marketing-3": "Targeted advertisement",
     "marketing-4": "Predict channels' ROI",
     "others": "Others",
-    "others-1": "Odin can be adapted for any industry"
+    "others-1": "Odin can be adapted for any industry",
+    "no-industry": "Can't find use cases for your industry?",
+    "enter-your-email": "Please enter your email and we can have a chat to see what’s fit best for you!",
+    "sent": "Send"
 }

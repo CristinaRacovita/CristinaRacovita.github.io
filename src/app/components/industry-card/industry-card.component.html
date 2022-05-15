@@ -3,5 +3,5 @@
   <div *ngFor="let useCase of cardUseCases" class="useCase">
     {{ useCase.name | transloco }}
   </div>
-  <button class="more-details">{{ buttonText | transloco }}</button>
+  <button class="more-details" (click)="onClick()">{{ buttonText | transloco }}</button>
 </div>
