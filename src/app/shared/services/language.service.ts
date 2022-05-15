@@ -3,5 +3,5 @@ import { BehaviorSubject } from "rxjs";
 
 @Injectable()
 export class LanguageService {
-    public activeLanguage = new BehaviorSubject<string>('');
+    public activeLanguage = new BehaviorSubject<string>('EN');
 }
