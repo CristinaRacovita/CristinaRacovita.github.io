@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { take } from 'rxjs/operators';
 import { IndustryCsv } from 'src/app/shared/models/industry-csv.enum';
 import { Industry } from 'src/app/shared/models/industry.enum';
 import { IIndustry } from 'src/app/shared/models/industry.model';
