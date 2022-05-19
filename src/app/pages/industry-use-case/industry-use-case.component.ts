@@ -9,7 +9,7 @@ import { CsvService } from 'src/app/shared/services/csv.service';
 })
 export class IndustryUseCaseComponent {
   public data: Observable<any> = this.csvService.processFile(
-    'targeted_advertisement_demo'
+    'predictive_maintenance_demo'
   );
 
   public constructor(private csvService: CsvService) {}
