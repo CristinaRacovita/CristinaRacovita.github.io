@@ -11,39 +11,11 @@ import { LanguageService } from './shared/services/language.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   public schema = {
     '@context': 'https://odin-ai.net',
     '@type': 'WebSite',
     name: 'odin-ai',
     url: 'https://odin-ai.net',
   };
-
-  public isSmallScreen = false;
-
-  public constructor(
-    private db: AngularFireDatabase,
-    breakpointObserver: BreakpointObserver,
-    private router: Router,
-    private service: TranslocoService,
-    private languageService: LanguageService
-  ) {
-    this.db.list('homePage').push('Home ' + new Date());
-    this.isSmallScreen = breakpointObserver.isMatched('(max-width: 765px)');
-  }
-
-  ngOnInit(): void {
-    this.router.events.subscribe((event) => {
-      if (event instanceof NavigationEnd) {
-        if (event.url.includes(Languages.Romanian.toLowerCase())) {
-          this.service.setActiveLang(Languages.Romanian.toLowerCase());
-          this.languageService.activeLanguage.next(Languages.Romanian);
-        }
-        if (event.url.includes(Languages.English.toLowerCase())) {
-          this.service.setActiveLang(Languages.English.toLowerCase());
-          this.languageService.activeLanguage.next(Languages.English);
-        }
-      }
-    });
-  }
 }

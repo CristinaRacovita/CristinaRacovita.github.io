@@ -1,0 +1,26 @@
+.table{
+    display: block;
+    overflow: auto;
+    height: 70vh;
+    width: 1080px;
+    margin-left: 50px;
+    overflow-x: scroll;
+    min-width: 100px;
+
+    mat-header-cell {
+        padding: 20px;
+        text-align: center;
+        overflow: visible;
+    }
+
+    mat-cell{
+        padding: 20px;
+        text-align: center;
+        overflow: visible;
+    }
+
+    mat-header-row mat-row{
+        min-width: 1000px;
+        text-align: left;
+    }
+}

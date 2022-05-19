@@ -17,22 +17,29 @@ import { WorkInProgressDialogComponent } from './components/work-in-progress-dia
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { AngularFireModule} from '@angular/fire/compat';
+import { AngularFireModule } from '@angular/fire/compat';
 import { environment } from 'src/environments/environment';
-import { AngularFireDatabaseModule } from '@angular/fire/compat/database'
+import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { SiteService } from './shared/services/site.service';
 import { ScullyLibModule } from '@scullyio/ng-lib';
 import { NgxJsonLdModule } from '@ngx-lite/json-ld';
-import {LayoutModule} from '@angular/cdk/layout'; 
-import {MatMenuModule} from '@angular/material/menu';
+import { LayoutModule } from '@angular/cdk/layout';
+import { MatMenuModule } from '@angular/material/menu';
 import { HttpClientModule } from '@angular/common/http';
-import { TranslocoRootModule } from './transloco-root.module'; 
+import { TranslocoRootModule } from './transloco-root.module';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { IndustryCardComponent } from './components/industry-card/industry-card.component';
 import { UseCaseComponent } from './components/use-case/use-case.component';
 import { IndustryService } from './shared/services/industry.service';
 import { LanguageService } from './shared/services/language.service';
 import { ContactUsDialogComponent } from './components/contact-us-dialog/contact-us-dialog.component';
+import { GenericTableComponent } from './components/generic-table/generic-table.component';
+import { IndustryUseCaseComponent } from './pages/industry-use-case/industry-use-case.component';
+import { HomeComponent } from './pages/home/home.component';
+import { SectionService } from './shared/services/section.service';
+import { CsvService } from './shared/services/csv.service';
+import {MatTableModule} from '@angular/material/table';
+import { CdkTableModule } from '@angular/cdk/table';
 
 @NgModule({
   declarations: [
@@ -50,25 +57,39 @@ import { ContactUsDialogComponent } from './components/contact-us-dialog/contact
     IndustryCardComponent,
     UseCaseComponent,
     ContactUsDialogComponent,
+    GenericTableComponent,
+    IndustryUseCaseComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatDialogModule, 
+    MatDialogModule,
     MatSnackBarModule,
     ReactiveFormsModule,
     FormsModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireDatabaseModule, 
+    AngularFireDatabaseModule,
     ScullyLibModule,
     NgxJsonLdModule,
     LayoutModule,
     MatMenuModule,
     HttpClientModule,
-    TranslocoRootModule
+    TranslocoRootModule,
+    MatTableModule,
+    BrowserAnimationsModule,
+    HttpClientModule,
+    CdkTableModule,
   ],
-  providers: [SiteService, IndustryService, LanguageService, {provide: LocationStrategy, useClass: HashLocationStrategy}],
+  providers: [
+    SiteService,
+    IndustryService,
+    LanguageService,
+    SectionService,
+    CsvService,
+    { provide: LocationStrategy, useClass: HashLocationStrategy },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

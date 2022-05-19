@@ -1,0 +1,21 @@
+.use-case{
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(
+      var(--color-gradient-primary),
+      var(--color-white),
+      var(--color-gradient-secondary),
+      var(--color-white)
+    );
+  
+    .sticky {
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .table{
+      padding-top: 150px;
+    }
+
+}
