@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { CsvService } from 'src/app/shared/services/csv.service';
+import { SectionService } from 'src/app/shared/services/section.service';
 
 @Component({
   selector: 'app-industry-use-case',
@@ -9,8 +10,8 @@ import { CsvService } from 'src/app/shared/services/csv.service';
 })
 export class IndustryUseCaseComponent {
   public data: Observable<any> = this.csvService.processFile(
-    'predictive_maintenance_demo'
+    this.sectionService.activeUseCase.value
   );
 
-  public constructor(private csvService: CsvService) {}
+  public constructor(private csvService: CsvService, private sectionService: SectionService) {}
 }

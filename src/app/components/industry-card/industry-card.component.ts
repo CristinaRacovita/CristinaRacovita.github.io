@@ -10,9 +10,9 @@ export class IndustryCardComponent {
   @Input() cardTitle = '';
   @Input() cardUseCases: IUseCase[] = [];
   @Input() buttonText = 'more-details';
-  @Output() onClickButton = new EventEmitter<void>();
+  @Output() onClickButton = new EventEmitter<string>();
 
   public onClick(): void {
-    this.onClickButton.emit();
+    this.onClickButton.emit(this.cardTitle);
   }
 }
