@@ -94,5 +94,6 @@
     "marketing-use-case": "targeted advertisement",
     "marketing-problem": "Marketers cannot know for sure, without running actual tests, which is the best type of advertisement, where to place it, and what is the most valuable kind of audience.",
     "marketing-solution-data": "To find out if an advertisement will be clicked by a person, Odin will initially learn from a data set of historical records that consists of 798 ad placement scenarios. The data includes details about the user as daily site and internet usage, age and gender, and demographic features such as area income, city, and country. Also, information like date, time, ad topic, and if the user clicked it are characteristics registered in the data.",
-    "marketing-benefits": "After assimilating all the necessary details Odin can predict with an accuracy of 97.52% if a targeted person will click a particular ad. Thus Odin can understand the behavior of real users and predict the actions of new ones, leading to better ad placement without actually testing campaigns."
+    "marketing-benefits": "After assimilating all the necessary details Odin can predict with an accuracy of 97.52% if a targeted person will click a particular ad. Thus Odin can understand the behavior of real users and predict the actions of new ones, leading to better ad placement without actually testing campaigns.",
+    "procent-details": "64% of companies in the manufacturing industry have recorded a cost decrease up to 19% due to AI adoption"
 }
