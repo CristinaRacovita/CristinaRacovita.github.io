@@ -4,9 +4,6 @@ import { Observable, of } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { IIndustry } from '../models/industry.model';
 import { IUseCase } from '../models/useCase.model';
-import { collection, query, where } from 'firebase/firestore';
-import { IndustryCsv } from '../models/industry-csv.enum';
-import { Industry } from '../models/industry.enum';
 
 @Injectable()
 export class IndustryService {

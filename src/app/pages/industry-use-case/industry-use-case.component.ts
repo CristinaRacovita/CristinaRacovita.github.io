@@ -42,6 +42,14 @@ export class IndustryUseCaseComponent implements OnInit, OnDestroy {
     }
   }
 
+  public getFirstUsecase(): string {
+    if (this.useCases && this.useCases[0]) {
+      return this.useCases[0].name;
+    }
+
+    return '';
+  }
+
   private subscribeToUseCases(industryName: string): void {
     this.subscription = this.industryService
       .getUseCasesByIndustryName(industryName.toLowerCase())
