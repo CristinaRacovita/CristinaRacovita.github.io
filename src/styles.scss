@@ -1,7 +1,9 @@
 @use "@angular/material" as mat;
-@import '~@angular/material/theming';
+@import "~@angular/material/theming";
 
-$custom-typography: mat-typography-config($font-family: 'avenir');
+$custom-typography: mat-typography-config(
+  $font-family: "avenir",
+);
 @include mat.core($custom-typography);
 
 :root {
@@ -16,8 +18,8 @@ $custom-typography: mat-typography-config($font-family: 'avenir');
   --color-grey-medium-dark: #656b7d;
   --color-grey-dark: #1a1c24;
   --color-white: #ffffff;
-  --color-gradient-primary:#f6f8ff;
-  --color-gradient-secondary:#f2f5ff;
+  --color-gradient-primary: #f6f8ff;
+  --color-gradient-secondary: #f2f5ff;
 }
 
 body {
@@ -25,25 +27,21 @@ body {
   font-family: Raleway;
 }
 
-.snackbar button{
+.snackbar button {
   color: var(--color-secondary) !important;
 }
 
-.snackbar{
+.snackbar {
   background-color: var(--color-white);
   color: var(--color-primary);
 }
 
 html {
-  overflow: hidden;
   height: 100%;
   width: 100%;
 }
 
 body {
-  overflow: auto;
   height: 100%;
   width: 100%;
 }
-
-
