@@ -80,9 +80,16 @@
 }
 
 @media only screen and (max-width: 765px) {
+  .homePage{
+    width: 100%;
+  }
+
+  .usecasePage{
+    width: 90%;
+  }
+
   .nav {
     position: fixed;
-    width: 100%;
     height: 56px;
     background: transparent;
     align-items: center;
@@ -119,10 +126,6 @@
       justify-content: flex-end;
       margin-right: 10px;
     }
-
-    .mat-menu-panel.ng-trigger {
-      background-color: aqua;
-    }
   }
 
   ::ng-deep.mat-menu-content:not(:empty) {
@@ -133,5 +136,6 @@
     font-size: 16px;
     font-weight: 700;
     color: var(--color-primary);
+    margin-right: 30px;
   }
 }

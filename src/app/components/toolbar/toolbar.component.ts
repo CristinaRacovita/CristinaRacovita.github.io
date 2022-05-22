@@ -9,17 +9,18 @@ import { TranslocoService } from '@ngneat/transloco';
 import { Subscription } from 'rxjs';
 import { LanguageService } from 'src/app/shared/services/language.service';
 import { SectionService } from 'src/app/shared/services/section.service';
+import { Page } from 'src/app/shared/models/page.enum';
 
 @Component({
   selector: 'app-toolbar',
   templateUrl: './toolbar.component.html',
   styleUrls: ['./toolbar.component.scss'],
 })
-export class ToolbarComponent implements OnInit, OnDestroy{
+export class ToolbarComponent implements OnInit, OnDestroy {
   public isSmallScreen = false;
   public languageOption: string = '';
   public languages = Object.values(Languages);
-  private subscription= new Subscription();
+  private subscription = new Subscription();
   private activeRoute = '';
 
   public constructor(
@@ -33,7 +34,7 @@ export class ToolbarComponent implements OnInit, OnDestroy{
   ) {
     this.isSmallScreen = breakpointObserver.isMatched('(max-width: 765px)');
   }
- 
+
   public ngOnInit(): void {
     this.subscribeToActiveLanguage();
     this.activeRoute = this.router.routerState.snapshot.url;
@@ -52,10 +53,15 @@ export class ToolbarComponent implements OnInit, OnDestroy{
   }
 
   public isOnHomePage(): boolean {
-    return (
-      this.activeRoute === '/' ||
-      this.activeRoute === '/ro'
-    );
+    return this.activeRoute === '/' || this.activeRoute === '/ro';
+  }
+
+  public getPageClass(): string {
+    if (this.isOnHomePage()) {
+      return Page.Home;
+    }
+
+    return Page.Usecase;
   }
 
   public chooseLanguage(option: string): void {
@@ -64,8 +70,10 @@ export class ToolbarComponent implements OnInit, OnDestroy{
     this.router.navigateByUrl(`/${option.toLowerCase()}`);
   }
 
-  private subscribeToActiveLanguage(): void{
-    this.subscription = this.languageService.activeLanguage.subscribe(lang => this.languageOption = lang);
+  private subscribeToActiveLanguage(): void {
+    this.subscription = this.languageService.activeLanguage.subscribe(
+      (lang) => (this.languageOption = lang)
+    );
   }
 
   ngOnDestroy(): void {

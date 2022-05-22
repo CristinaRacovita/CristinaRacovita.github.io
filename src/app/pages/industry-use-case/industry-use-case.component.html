@@ -1,74 +1,82 @@
-<div class="use-case">
-  <div class="title">
-    {{ industryName | transloco
-    }}<sub><img src="../../../assets/triangle.svg" /></sub>
-  </div>
-  <div class="industry-description">
-    <div class="industry-problem">
-      <div class="subtitle">
-        {{ "industry-problems" | transloco }}
-      </div>
-      <div class="problems">
-        &nbsp;&nbsp;&nbsp;&nbsp;{{ industryName + "-description" | transloco }}
-      </div>
+
+<div class="industry-container">
+  <app-toolbar class="sticky"></app-toolbar>
+
+  <div class="use-case">
+    <div class="title">
+      {{ industryName | transloco
+      }}<sub><img src="../../../assets/triangle.svg" /></sub>
     </div>
-    <div class="industry-problem">
-      <div class="subtitle" [innerHTML]="'frequent-use-cases' | transloco">
-        
+    <div class="industry-description">
+      <div class="industry-problem">
+        <div class="subtitle">
+          {{ "industry-problems" | transloco }}
+        </div>
+        <div class="problems">
+          &nbsp;&nbsp;&nbsp;&nbsp;{{
+            industryName + "-description" | transloco
+          }}
+        </div>
       </div>
-      <div class="usecase-name" *ngFor="let usecase of useCases">
-        <span><img src="../../../assets/triangle.svg" class="bullet" /></span
-        >{{ usecase.name | transloco }}
+      <div class="industry-problem">
+        <div
+          class="subtitle"
+          [innerHTML]="'frequent-use-cases' | transloco"
+        ></div>
+        <div class="usecase-name" *ngFor="let usecase of useCases">
+          <span><img src="../../../assets/triangle.svg" class="bullet" /></span
+          >{{ usecase.name | transloco }}
+        </div>
       </div>
-    </div>
-    <div class="industry-problem">
-      <div class="subtitle cost">
-        {{ "cost-decrease" | transloco }}
-      </div>
-      <div class="cost-decrease">
-        <div class="procent">19%</div>
-        <div class="procent-description">
-          &nbsp;&nbsp;&nbsp;&nbsp;{{ 'procent-details' | transloco }}
+      <div class="industry-problem">
+        <div class="subtitle cost">
+          {{ "cost-decrease" | transloco }}
+        </div>
+        <div class="cost-decrease">
+          <div class="procent">19%</div>
+          <div class="procent-description">
+            &nbsp;&nbsp;&nbsp;&nbsp;{{ "procent-details" | transloco }}
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="title second">
-    {{ "case-study" | transloco }} - {{ getFirstUsecase() | transloco
-    }}<sub><img src="../../../assets/triangle.svg" /></sub>
-  </div>
-
-  <div class="usecase-problem">
-    <div class="subtitle problem">
-      {{ "problem" | transloco }}:
-      <span class="description">
-        {{ industryName + "-problem" | transloco }}
-      </span>
+    <div class="title second">
+      {{ "case-study" | transloco }} - {{ getFirstUsecase() | transloco
+      }}<sub><img src="../../../assets/triangle.svg" /></sub>
     </div>
 
-  </div>
-</div>
-
-<app-toolbar class="sticky"></app-toolbar>
-<app-generic-table class="table" [data]="data"></app-generic-table>
-
-<div class="usecase-description">
-  <div class="solution">
-    <div class="subtitle">
-      {{ "solution-data" | transloco }}
-    </div>
-    <div class="description">
-      &nbsp;&nbsp;&nbsp;&nbsp;{{ industryName + "-solution-data" | transloco }}
+    <div class="usecase-problem">
+      <div class="subtitle problem">
+        {{ "problem" | transloco }}:
+        <span class="description">
+          {{ industryName + "-problem" | transloco }}
+        </span>
+      </div>
     </div>
   </div>
 
-  <div class="benefits">
-    <div class="subtitle">
-      {{ "benefits" | transloco }}
+  <app-generic-table class="table" [data]="data"></app-generic-table>
+
+  <div class="usecase-description">
+    <div class="solution">
+      <div class="subtitle">
+        {{ "solution-data" | transloco }}
+      </div>
+      <div class="description">
+        &nbsp;&nbsp;&nbsp;&nbsp;{{
+          industryName + "-solution-data" | transloco
+        }}
+      </div>
     </div>
-    <div class="description">
-      &nbsp;&nbsp;&nbsp;&nbsp;{{ industryName + "-benefits" | transloco }}
+
+    <div class="benefits">
+      <div class="subtitle">
+        {{ "benefits" | transloco }}
+      </div>
+      <div class="description">
+        &nbsp;&nbsp;&nbsp;&nbsp;{{ industryName + "-benefits" | transloco }}
+      </div>
     </div>
   </div>
 </div>

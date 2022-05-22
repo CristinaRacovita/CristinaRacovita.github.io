@@ -23,10 +23,12 @@ export class IndustryUseCaseComponent implements OnInit, OnDestroy {
   public constructor(
     private csvService: CsvService,
     private sectionService: SectionService,
-    public industryService: IndustryService
+    private industryService: IndustryService
   ) {}
 
   public ngOnInit(): void {
+    window.scroll(0, 0);
+
     const indexOfUseCase: number = Object.values(IndustryCsv).indexOf(
       this.sectionService.activeUseCase.value as IndustryCsv
     );

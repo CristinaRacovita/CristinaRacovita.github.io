@@ -1,151 +1,158 @@
 
-.sticky {
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-}
 
-.use-case {
-  display: flex;
-  flex-direction: column;
+.industry-container {
   background: linear-gradient(
     var(--color-gradient-primary),
     var(--color-white),
     var(--color-gradient-secondary),
     var(--color-white)
   );
-
-  .industry-description {
-    display: flex;
-    justify-content: space-between;
-    padding: 50px 110px 50px 110px;
-
-    .industry-problem {
-      width: 25%;
-      font-size: 18px;
-      color: var(--color-primary);
-
-      .usecase-name {
-        margin-bottom: 10px;
-      }
-
-      .bullet {
-        margin-right: 10px;
-      }
-    }
-
-    .cost {
-      margin-bottom: 10px;
-    }
-
-    .cost-decrease {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      .procent {
-        font-size: 84px;
-        font-weight: 800;
-      }
-    }
-  }
-
-  .usecase-problem {
-    padding: 30px 110px 50px 110px;
-    .description {
-      font-size: 18px;
-      color: var(--color-primary);
-    }
-  }
-
-  .title {
-    font-size: 34px;
-    font-weight: 700;
-    color: var(--color-primary);
-    line-height: 40px;
-    padding: 110px 110px 10px 110px;
-  }
-
-  .second {
-    padding-top: 50px;
-  }
-}
-
-.usecase-description {
   display: flex;
-  justify-content: center;
-  padding: 100px 110px 100px 110px;
-  z-index: 1;
-
-  .solution {
-    width: 50%;
-    font-size: 18px;
-    color: var(--color-primary);
-    padding-right: 50px;
-  }
-
-  .benefits {
-    width: 50%;
-    font-size: 18px;
-    color: var(--color-primary);
-  }
-}
-
-.subtitle {
-  z-index: 1;
-  margin-bottom: 30px;
-  font-size: 25px;
-  font-weight: 500;
-  color: var(--color-secondary);
-}
-
-.problem {
-  margin-bottom: 0;
-}
-
-@media only screen and (max-width: 765px) {
-  .use-case {
-    .industry-description {
-      padding: 0px 20px 10px 20px;
-      flex-direction: column;
-      .industry-problem {
-        width: 100%;
-        margin-top: 20px;
-      }
-    }
-
-    .title {
-      padding: 60px 0px 10px 15px;
-      font-size: 24px;
-    }
-
-    .usecase-problem {
-      padding: 10px 20px 20px 20px;
-    }
-  }
-
-  .subtitle {
-    font-size: 20px;
-  }
-
-  .usecase-description {
-    padding: 30px 10px 10px 20px;
-    flex-direction: column;
-
-    .solution {
-      width: 100%;
-      margin-bottom: 20px;
-    }
-
-    .benefits {
-      width: 100%;
-      margin-bottom: 20px;
-    }
-  }
+  flex-direction: column;
 
   .sticky {
     position: fixed;
     top: 0;
     z-index: 1000;
+  }
+
+  .use-case {
+    .industry-description {
+      display: flex;
+      justify-content: space-between;
+      padding: 50px 110px 50px 110px;
+
+      .industry-problem {
+        width: 25%;
+        font-size: 18px;
+        color: var(--color-primary);
+
+        .usecase-name {
+          margin-bottom: 10px;
+        }
+
+        .bullet {
+          margin-right: 10px;
+        }
+      }
+
+      .cost {
+        margin-bottom: 10px;
+      }
+
+      .cost-decrease {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .procent {
+          font-size: 84px;
+          font-weight: 800;
+        }
+      }
+    }
+
+    .usecase-problem {
+      padding: 30px 110px 50px 110px;
+      .description {
+        font-size: 18px;
+        color: var(--color-primary);
+      }
+    }
+
+    .title {
+      font-size: 34px;
+      font-weight: 700;
+      color: var(--color-primary);
+      line-height: 40px;
+      padding: 110px 110px 10px 110px;
+    }
+
+    .second {
+      padding-top: 50px;
+    }
+  }
+
+  .usecase-description {
+    display: flex;
+    justify-content: center;
+    padding: 100px 110px 100px 110px;
+    z-index: 1;
+
+    .solution {
+      width: 50%;
+      font-size: 18px;
+      color: var(--color-primary);
+      padding-right: 50px;
+    }
+
+    .benefits {
+      width: 50%;
+      font-size: 18px;
+      color: var(--color-primary);
+    }
+  }
+
+  .subtitle {
+    z-index: 1;
+    margin-bottom: 30px;
+    font-size: 25px;
+    font-weight: 500;
+    color: var(--color-secondary);
+  }
+
+  .problem {
+    margin-bottom: 0;
+  }
+}
+
+@media only screen and (max-width: 765px) {
+  .industry-container {
+    display: flex;
+    flex-direction: column;
+    .use-case {
+      .industry-description {
+        padding: 0px 20px 10px 20px;
+        flex-direction: column;
+        .industry-problem {
+          width: 100%;
+          margin-top: 20px;
+        }
+      }
+
+      .title {
+        padding: 60px 0px 10px 15px;
+        font-size: 24px;
+      }
+
+      .usecase-problem {
+        padding: 10px 20px 20px 20px;
+      }
+    }
+
+    .subtitle {
+      font-size: 20px;
+    }
+
+    .usecase-description {
+      padding: 30px 10px 10px 20px;
+      flex-direction: column;
+
+      .solution {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      .benefits {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+
+    .sticky {
+      position: fixed;
+      top: 0;
+      z-index: 1000;
+    }
   }
 }
