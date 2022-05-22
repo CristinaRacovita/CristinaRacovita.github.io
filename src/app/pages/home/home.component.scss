@@ -16,12 +16,21 @@
   }
   
   @media only screen and (min-width: 768px) {
-    // .home{
-    //   overflow-x: hidden;
-    // }
-
     .features {
       padding-top: 70px;
+      overflow-x: hidden;
+    }
+
+    .hero{
+      overflow-x: hidden;
+    }
+
+    .steps{
+      overflow-x: hidden;
+    }
+
+    .use-cases{
+      overflow-x: hidden;
     }
   
     .info {
@@ -34,12 +43,14 @@
   
       .our-story {
         margin-left: 113px;
+        overflow-x: hidden;
       }
   
       .contact {
         width: 550px;
         height: 60px;
         margin-right: 187px;
+        overflow-x: hidden;
       }
     }
   }  
