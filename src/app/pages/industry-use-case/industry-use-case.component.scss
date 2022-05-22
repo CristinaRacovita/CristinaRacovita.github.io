@@ -1,5 +1,3 @@
-
-
 .industry-container {
   background: linear-gradient(
     var(--color-gradient-primary),
@@ -154,6 +152,36 @@
       position: fixed;
       top: 0;
       z-index: 1000;
+    }
+  }
+}
+
+@media print {
+  @page {
+    size: auto; 
+    margin: 0; 
+  }
+  .industry-container {
+    .use-case {
+      .title {
+        padding: 90px 110px 10px 110px;
+      }
+
+      .industry-description {
+        padding: 50px 110px 20px 110px;
+      }
+
+      .second {
+        padding-top: 0px;
+      }
+    }
+
+    .usecase-description {
+      padding: 30px 110px 10px 110px;
+    }
+
+    .table {
+      margin-top: 170px;
     }
   }
 }

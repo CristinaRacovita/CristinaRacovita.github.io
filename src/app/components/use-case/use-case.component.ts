@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { Router } from '@angular/router';
+import { NavigationStart, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { take } from 'rxjs/operators';
 import { IndustryCsv } from 'src/app/shared/models/industry-csv.enum';
@@ -24,7 +24,7 @@ export class UseCaseComponent implements OnInit {
   constructor(
     private industryService: IndustryService,
     private dialog: MatDialog,
-    private route: Router,
+    private router: Router,
     private sectionService: SectionService
   ) {}
 
@@ -58,8 +58,8 @@ export class UseCaseComponent implements OnInit {
   }
 
   private navigateToUseCase(csv: string) {
-    this.sectionService.activeUseCase.next(csv);
-    this.route.navigateByUrl('usecase');
+    localStorage.setItem('usecase', csv);
+    this.router.navigateByUrl('usecase');
   }
 
   private openContactUsDialog(): void {

@@ -1,10 +1,5 @@
-import { BreakpointObserver } from '@angular/cdk/layout';
-import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { AngularFireDatabase } from '@angular/fire/compat/database';
-import { NavigationEnd, Router } from '@angular/router';
-import { TranslocoService } from '@ngneat/transloco';
-import { Languages } from './shared/models/languages.enum';
-import { LanguageService } from './shared/services/language.service';
+import { Component } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',

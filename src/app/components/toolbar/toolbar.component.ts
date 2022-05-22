@@ -67,6 +67,7 @@ export class ToolbarComponent implements OnInit, OnDestroy {
   public chooseLanguage(option: string): void {
     this.service.setActiveLang(option.toLowerCase());
     this.languageService.activeLanguage.next(option);
+    localStorage.setItem('activeLanguage', option);
     this.router.navigateByUrl(`/${option.toLowerCase()}`);
   }
 

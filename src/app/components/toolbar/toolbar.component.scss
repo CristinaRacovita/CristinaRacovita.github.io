@@ -14,7 +14,7 @@
       display: flex;
       justify-content: flex-end;
 
-      .language{
+      .language {
         display: flex;
       }
 
@@ -79,13 +79,13 @@
   }
 }
 
-@media only screen and (max-width: 765px) {
-  .homePage{
+@media only screen and (max-width: 767x) {
+  .homePage {
     width: 100%;
   }
 
-  .usecasePage{
-    width: 98%
+  .usecasePage {
+    width: 90%;
   }
 
   .nav {
@@ -98,7 +98,7 @@
     font-size: 14px;
     font-weight: 750;
 
-    .language{
+    .language {
       display: flex;
     }
 
@@ -137,5 +137,24 @@
     font-weight: 700;
     color: var(--color-primary);
     margin-right: 30px;
+  }
+}
+
+@media print {
+  .nav {
+    .logo {
+      margin-left: 115px;
+      margin-top: 20px;
+    }
+    .menu {
+      display: none;
+      .option-menu-button {
+        display: none;
+      }
+
+      .option-menu-text {
+        display: none;
+      }
+    }
   }
 }

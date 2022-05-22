@@ -1,11 +1,11 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { TranslocoService } from '@ngneat/transloco';
 import { Observable, Subscription } from 'rxjs';
 import { IndustryCsv } from 'src/app/shared/models/industry-csv.enum';
 import { Industry } from 'src/app/shared/models/industry.enum';
 import { IUseCase } from 'src/app/shared/models/useCase.model';
 import { CsvService } from 'src/app/shared/services/csv.service';
 import { IndustryService } from 'src/app/shared/services/industry.service';
-import { SectionService } from 'src/app/shared/services/section.service';
 
 @Component({
   selector: 'app-industry-use-case',
@@ -14,7 +14,7 @@ import { SectionService } from 'src/app/shared/services/section.service';
 })
 export class IndustryUseCaseComponent implements OnInit, OnDestroy {
   public data: Observable<any> = this.csvService.processFile(
-    this.sectionService.activeUseCase.value
+    localStorage.getItem('usecase')!!
   );
   public useCases: IUseCase[] = [];
   public industryName: string = '';
@@ -22,15 +22,20 @@ export class IndustryUseCaseComponent implements OnInit, OnDestroy {
 
   public constructor(
     private csvService: CsvService,
-    private sectionService: SectionService,
-    private industryService: IndustryService
+    private industryService: IndustryService,
+    private service: TranslocoService,
   ) {}
 
   public ngOnInit(): void {
     window.scroll(0, 0);
 
+    const activeLanguage = localStorage.getItem('activeLanguage');
+    if (activeLanguage) {
+      this.service.setActiveLang(activeLanguage.toLowerCase());
+    }
+
     const indexOfUseCase: number = Object.values(IndustryCsv).indexOf(
-      this.sectionService.activeUseCase.value as IndustryCsv
+      localStorage.getItem('usecase') as IndustryCsv
     );
 
     const keyUseCase = Object.keys(IndustryCsv)[indexOfUseCase];
