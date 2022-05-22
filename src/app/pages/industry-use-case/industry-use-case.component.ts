@@ -1,4 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { TranslocoService } from '@ngneat/transloco';
 import { Observable, Subscription } from 'rxjs';
 import { IndustryCsv } from 'src/app/shared/models/industry-csv.enum';
@@ -24,15 +25,12 @@ export class IndustryUseCaseComponent implements OnInit, OnDestroy {
     private csvService: CsvService,
     private industryService: IndustryService,
     private service: TranslocoService,
+    private router: Router
   ) {}
 
   public ngOnInit(): void {
-    window.scroll(0, 0);
-
-    const activeLanguage = localStorage.getItem('activeLanguage');
-    if (activeLanguage) {
-      this.service.setActiveLang(activeLanguage.toLowerCase());
-    }
+    this.goOnTop();
+    this.setLanguage();
 
     const indexOfUseCase: number = Object.values(IndustryCsv).indexOf(
       localStorage.getItem('usecase') as IndustryCsv
@@ -44,6 +42,17 @@ export class IndustryUseCaseComponent implements OnInit, OnDestroy {
     );
 
     if (industryName) {
+      if (
+        !this.checkIndustryPath(
+          industryName,
+          this.router.routerState.snapshot.url
+        )
+      ) {
+        localStorage.setItem('usecase', IndustryCsv.Finance);
+        this.router.navigateByUrl('usecase');
+        return;
+      }
+
       this.industryName = industryName.toLowerCase();
       this.subscribeToUseCases(this.industryName);
     }
@@ -65,6 +74,21 @@ export class IndustryUseCaseComponent implements OnInit, OnDestroy {
           this.useCases = useCases;
         }
       });
+  }
+
+  private checkIndustryPath(industryName: string, activeRoute: string) {
+    return activeRoute.includes(industryName.toLowerCase());
+  }
+
+  private setLanguage(): void {
+    const activeLanguage = localStorage.getItem('activeLanguage');
+    if (activeLanguage) {
+      this.service.setActiveLang(activeLanguage.toLowerCase());
+    }
+  }
+
+  private goOnTop(): void {
+    window.scroll(0, 0);
   }
 
   public ngOnDestroy(): void {

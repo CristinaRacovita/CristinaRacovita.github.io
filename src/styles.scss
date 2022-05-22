@@ -19,10 +19,7 @@ $custom-typography: mat-typography-config($font-family: 'avenir');
   --color-gradient-primary:#f6f8ff;
   --color-gradient-secondary:#f2f5ff;
 }
-html,
-body {
-  width: 100%;
-}
+
 body {
   margin: 0;
   font-family: Raleway;
@@ -36,5 +33,18 @@ body {
   background-color: var(--color-white);
   color: var(--color-primary);
 }
-html, body { height: 100%; }
-body { margin: 0; }
+
+html {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  overscroll-behavior: none;
+}
+
+

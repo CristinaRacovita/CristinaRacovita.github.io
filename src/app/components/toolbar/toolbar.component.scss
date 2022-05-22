@@ -80,14 +80,6 @@
 }
 
 @media only screen and (max-width: 767px) {
-  .homePage {
-    width: 100%;
-  }
-
-  .usecasePage {
-    width: 90%;
-  }
-
   .nav {
     position: fixed;
     height: 56px;
@@ -97,6 +89,7 @@
     justify-content: space-between;
     font-size: 14px;
     font-weight: 750;
+    width: 100%;
 
     .language {
       display: flex;

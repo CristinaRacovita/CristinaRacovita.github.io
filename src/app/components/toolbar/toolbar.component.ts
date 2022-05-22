@@ -9,7 +9,6 @@ import { TranslocoService } from '@ngneat/transloco';
 import { Subscription } from 'rxjs';
 import { LanguageService } from 'src/app/shared/services/language.service';
 import { SectionService } from 'src/app/shared/services/section.service';
-import { Page } from 'src/app/shared/models/page.enum';
 
 @Component({
   selector: 'app-toolbar',
@@ -54,14 +53,6 @@ export class ToolbarComponent implements OnInit, OnDestroy {
 
   public isOnHomePage(): boolean {
     return this.activeRoute === '/' || this.activeRoute === '/ro';
-  }
-
-  public getPageClass(): string {
-    if (this.isOnHomePage()) {
-      return Page.Home;
-    }
-
-    return Page.Usecase;
   }
 
   public chooseLanguage(option: string): void {

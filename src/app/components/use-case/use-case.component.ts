@@ -24,8 +24,7 @@ export class UseCaseComponent implements OnInit {
   constructor(
     private industryService: IndustryService,
     private dialog: MatDialog,
-    private router: Router,
-    private sectionService: SectionService
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -39,27 +38,27 @@ export class UseCaseComponent implements OnInit {
     } else {
       switch (industryName) {
         case Industry.Finance:
-          this.navigateToUseCase(IndustryCsv.Finance);
+          this.navigateToUseCase(IndustryCsv.Finance, industryName);
           return;
         case Industry.Manufacturing:
-          this.navigateToUseCase(IndustryCsv.Manufacturing);
+          this.navigateToUseCase(IndustryCsv.Manufacturing, industryName);
           return;
         case Industry.Marketing:
-          this.navigateToUseCase(IndustryCsv.Marketing);
+          this.navigateToUseCase(IndustryCsv.Marketing, industryName);
           return;
         case Industry.Transport:
-          this.navigateToUseCase(IndustryCsv.Transport);
+          this.navigateToUseCase(IndustryCsv.Transport, industryName);
           return;
         default:
-          this.navigateToUseCase(IndustryCsv.Finance);
+          this.navigateToUseCase(IndustryCsv.Finance, industryName);
           return;
       }
     }
   }
 
-  private navigateToUseCase(csv: string) {
+  private navigateToUseCase(csv: string, industryName: string) {
     localStorage.setItem('usecase', csv);
-    this.router.navigateByUrl('usecase');
+    this.router.navigateByUrl(`usecase/${industryName}`);
   }
 
   private openContactUsDialog(): void {

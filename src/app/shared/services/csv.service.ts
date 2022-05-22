@@ -12,10 +12,6 @@ export class CsvService {
     return this.getFile(filename).pipe(
       map((res) => JSON.parse(this.csvJSON(res)))
     );
-    // this.getFile(filename).pipe() => {
-    //   const jsonData = this.csvJSON(res);
-    //   return JSON.parse(jsonData);
-    // }));
   }
 
   private getFile(filename: string): Observable<any> {

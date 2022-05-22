@@ -1,6 +1,5 @@
 import { Injectable } from "@angular/core";
 import { BehaviorSubject } from "rxjs";
-import { IndustryCsv } from "../models/industry-csv.enum";
 
 @Injectable()
 export class SectionService {

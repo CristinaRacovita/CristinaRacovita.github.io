@@ -6,7 +6,11 @@ import { IndustryUseCaseComponent } from './pages/industry-use-case/industry-use
 const routes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'ro', component: HomeComponent },
-  { path: 'usecase', component: IndustryUseCaseComponent },
+  { path: 'usecase/finance', component: IndustryUseCaseComponent },
+  { path: 'usecase/manufacturing', component: IndustryUseCaseComponent },
+  { path: 'usecase/marketing', component: IndustryUseCaseComponent },
+  { path: 'usecase/transport', component: IndustryUseCaseComponent },
+  { path: 'usecase', redirectTo: 'usecase/finance' },
   { path: 'en', redirectTo: '' },
   { path: 'features', redirectTo: '' },
   { path: 'story', redirectTo: '' },
