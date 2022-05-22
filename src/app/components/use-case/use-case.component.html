@@ -7,14 +7,15 @@
     <app-industry-card
       *ngFor="let industry of industries$ | async"
       [cardTitle]="industry.name"
-      [cardUseCases]="industry.useCases"
+      [cardUseCases]="industry.useCases.slice(0,4)"
+      (onClickButton)="goToUseCase($event)"
     ></app-industry-card>
     <app-industry-card
       class="othersCard"
       [cardTitle]="othersCard.name"
       [cardUseCases]="othersCard.useCases"
       [buttonText]="contactButtonText"
-      (onClickButton)="openContactUsDialog()"
+      (onClickButton)="goToUseCase($event)"
     >
     </app-industry-card>
   </div>

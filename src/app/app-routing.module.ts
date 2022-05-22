@@ -1,10 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AppComponent } from './app.component';
+import { HomeComponent } from './pages/home/home.component';
+import { IndustryUseCaseComponent } from './pages/industry-use-case/industry-use-case.component';
 
 const routes: Routes = [
-  { path: 'ro', component: AppComponent },
-  { path: 'en', redirectTo:'' },
+  { path: '', component: HomeComponent},
+  { path: 'ro', component: HomeComponent },
+  { path: 'usecase', component: IndustryUseCaseComponent },
+  { path: 'en', redirectTo: '' },
+  { path: 'features', redirectTo: '' },
+  { path: 'story', redirectTo: '' },
+  { path: 'steps', redirectTo: '' },
+  { path: 'use-cases', redirectTo: '' },
+  { path: 'home', redirectTo: '' },
+  { path: 'steps', redirectTo: '' },
 ];
 
 @NgModule({

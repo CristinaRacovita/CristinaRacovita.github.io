@@ -1,0 +1,28 @@
+Age,Annual income,Home Ownership,Years employed,Loan intent,Loan grade,Loan amount,Interest rate,Loan percent income,Historical default,Credit history length,Loan default
+21,9600,Own,5,Education,B,1000,11.14,0.1,N,2,0
+25,9600,Mortgage,1,Medical,C,5500,12.87,0.57,N,3,1
+23,65500,Rent,4,Medical,C,35000,15.23,0.53,N,2,1
+24,54400,Rent,8,Medical,C,35000,14.27,0.55,Y,4,1
+21,9900,Own,2,Venture,A,2500,7.14,0.25,N,2,1
+26,77100,Rent,8,Education,B,35000,12.42,0.45,N,3,1
+24,78956,Rent,5,Medical,B,35000,11.11,0.44,N,4,1
+24,83000,Rent,8,Personal,A,35000,8.9,0.42,N,2,1
+21,10000,Own,6,Venture,D,1600,14.74,0.16,N,3,1
+22,85000,Rent,6,Venture,B,35000,10.37,0.41,N,4,1
+21,10000,Own,2,Home improvement,A,4500,8.63,0.45,N,2,1
+23,95000,Rent,2,Venture,A,35000,7.9,0.37,N,2,1
+26,108160,Rent,4,Education,E,35000,18.39,0.32,N,4,1
+23,115000,Rent,2,Education,A,35000,7.9,0.3,N,4,0
+23,500000,Mortgage,7,Debt consolidation,B,30000,10.65,0.06,N,3,0
+23,120000,Rent,0,Education,A,35000,7.9,0.29,N,4,0
+23,92111,Rent,7,Medical,F,35000,20.25,0.32,N,4,1
+23,113000,Rent,8,Debt consolidation,D,35000,18.25,0.31,N,4,1
+24,10800,Mortgage,8,Education,B,1750,10.99,0.16,N,2,1
+25,162500,Rent,2,Venture,A,35000,7.49,0.22,N,4,0
+25,137000,Rent,9,Personal,E,34800,16.77,0.25,Y,2,0
+22,65000,Rent,4,Education,D,34000,17.58,0.52,N,4,1
+24,10980,Own,0,Personal,A,1500,7.29,0.14,N,3,0
+22,80000,Rent,3,Personal,D,33950,14.54,0.42,Y,4,1
+24,67746,Rent,8,Home improvement,C,33000,12.68,0.49,N,3,1
+21,11000,Mortgage,3,Venture,E,4575,17.74,0.42,Y,3,1
+23,11000,Own,0,Personal,A,1400,9.32,0.13,N,3,0

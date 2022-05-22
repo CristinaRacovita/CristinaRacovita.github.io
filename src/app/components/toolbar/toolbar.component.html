@@ -1,4 +1,4 @@
-<div *ngIf="!isSmallScreen" class="nav">
+<div *ngIf="!isSmallScreen" class="nav" autoscroll="true">
   <div (click)="goToSection('home')" class="logo">
     <img src="../../../assets/logo.svg" />
   </div>
@@ -11,27 +11,32 @@
     <button class="option-menu-text" (click)="goToSection('story')">
       {{ 'our-story' | transloco }}
     </button>
-    <div [matMenuTriggerFor]="languageMenu" class="menu-item">
-      {{ languageOption }}
-    </div>
-    <mat-menu class="my-menu" #languageMenu="matMenu" [hasBackdrop]="false">
-      <button class="option-menu" *ngFor="let language of languages" mat-menu-item  (click)="chooseLanguage(language)">{{ language }}</button>
-    </mat-menu>
+    <span class="language" *ngIf="isOnHomePage()">
+      <div [matMenuTriggerFor]="languageMenu" class="menu-item">
+        {{ languageOption }}
+      </div>
+      <mat-menu class="my-menu" #languageMenu="matMenu" [hasBackdrop]="false">
+        <button class="option-menu" *ngFor="let language of languages" mat-menu-item  (click)="chooseLanguage(language)">{{ language }}</button>
+      </mat-menu>
+    </span>
     <button class="option-menu-button" (click)="openDialog()">{{ 'demo' | transloco }}</button>
   </div>
 </div>
 
-<div *ngIf="isSmallScreen" class="nav">
+<div *ngIf="isSmallScreen" class="nav" [ngClass] = "getPageClass()">
   <div (click)="goToSection('home')" class="logo">
     <img src="../../../assets/Logo_Dark.svg" />
   </div>
   <div class="options">
-    <div [matMenuTriggerFor]="languageMenu" class="option-menu-text">
-      {{ languageOption }}
-    </div>
-    <mat-menu class="my-menu" #languageMenu="matMenu" [hasBackdrop]="false">
-      <button class="option-menu" *ngFor="let language of languages" mat-menu-item  (click)="chooseLanguage(language)">{{ language }}</button>
-    </mat-menu>
+    <span class="language" *ngIf="isOnHomePage()">
+      <div [matMenuTriggerFor]="languageMenu" class="option-menu-text">
+        {{ languageOption }}
+      </div>
+      <mat-menu class="my-menu" #languageMenu="matMenu" [hasBackdrop]="false">
+        <button class="option-menu" *ngFor="let language of languages" mat-menu-item  (click)="chooseLanguage(language)">{{ language }}</button>
+      </mat-menu>
+    </span>
+
 
     <div [matMenuTriggerFor]="menu" class="menu">
       <img src="../../../assets/menu.svg" />
