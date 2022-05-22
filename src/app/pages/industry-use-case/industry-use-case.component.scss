@@ -109,6 +109,8 @@
   .industry-container {
     display: flex;
     flex-direction: column;
+    width: 100%;
+
     .use-case {
       .industry-description {
         padding: 0px 20px 10px 20px;
