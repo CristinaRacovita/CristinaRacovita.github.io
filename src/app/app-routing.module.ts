@@ -18,6 +18,7 @@ const routes: Routes = [
   { path: 'use-cases', redirectTo: '' },
   { path: 'home', redirectTo: '' },
   { path: 'steps', redirectTo: '' },
+  { path: 'http://odin-ai.net/#/', redirectTo: 'https://odin-ai.net/#/' },
 ];
 
 @NgModule({
