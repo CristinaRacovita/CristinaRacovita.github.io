@@ -12,10 +12,8 @@
         <div class="subtitle">
           {{ "industry-problems" | transloco }}
         </div>
-        <div class="problems">
-          &nbsp;&nbsp;&nbsp;&nbsp;{{
-            industryName + "-description" | transloco
-          }}
+        <div class="problems" [innerHtml]="industryName + '-description' | transloco">
+          &nbsp;&nbsp;&nbsp;&nbsp;
         </div>
       </div>
       <div class="industry-problem">
@@ -28,14 +26,14 @@
           >{{ usecase.name | transloco }}
         </div>
       </div>
-      <div class="industry-problem">
+      <div class="industry-problem" >
         <div class="subtitle cost">
           {{ "cost-decrease" | transloco }}
         </div>
         <div class="cost-decrease">
           <div class="procent">19%</div>
-          <div class="procent-description">
-            &nbsp;&nbsp;&nbsp;&nbsp;{{ "procent-details" | transloco }}
+          <div class="procent-description" [innerHtml]="industryName + '-procent-details' | transloco">
+            &nbsp;&nbsp;&nbsp;&nbsp;
           </div>
         </div>
       </div>
@@ -49,8 +47,8 @@
     <div class="usecase-problem">
       <div class="subtitle problem">
         {{ "problem" | transloco }}:
-        <span class="description">
-          {{ industryName + "-problem" | transloco }}
+        <span class="description"  [innerHtml]="industryName + '-problem' | transloco">
+          
         </span>
       </div>
     </div>
@@ -63,10 +61,8 @@
       <div class="subtitle">
         {{ "solution-data" | transloco }}
       </div>
-      <div class="description">
-        &nbsp;&nbsp;&nbsp;&nbsp;{{
-          industryName + "-solution-data" | transloco
-        }}
+      <div class="description" [innerHtml]="industryName + '-solution-data' | transloco">
+        &nbsp;&nbsp;&nbsp;&nbsp;
       </div>
     </div>
 
@@ -74,8 +70,8 @@
       <div class="subtitle">
         {{ "benefits" | transloco }}
       </div>
-      <div class="description">
-        &nbsp;&nbsp;&nbsp;&nbsp;{{ industryName + "-benefits" | transloco }}
+      <div class="description" [innerHtml]="industryName + '-benefits' | transloco">
+        &nbsp;&nbsp;&nbsp;&nbsp;
       </div>
     </div>
   </div>
