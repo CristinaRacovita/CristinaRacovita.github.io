@@ -109,6 +109,7 @@
   .industry-container {
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
     width: 100%;
 
     .use-case {
