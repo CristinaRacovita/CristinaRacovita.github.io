@@ -1,3 +1,10 @@
+
+.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
 .use-case {
   display: flex;
   flex-direction: column;
@@ -64,12 +71,6 @@
   }
 }
 
-.sticky {
-  position: fixed;
-  top: 0;
-  z-index: 1000;
-}
-
 .usecase-description {
   display: flex;
   justify-content: center;
@@ -98,6 +99,53 @@
   color: var(--color-secondary);
 }
 
-.problem{
+.problem {
   margin-bottom: 0;
+}
+
+@media only screen and (max-width: 765px) {
+  .use-case {
+    .industry-description {
+      padding: 0px 20px 10px 20px;
+      flex-direction: column;
+      .industry-problem {
+        width: 100%;
+        margin-top: 20px;
+      }
+    }
+
+    .title {
+      padding: 60px 0px 10px 15px;
+      font-size: 24px;
+    }
+
+    .usecase-problem {
+      padding: 10px 20px 20px 20px;
+    }
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+
+  .usecase-description {
+    padding: 30px 10px 10px 20px;
+    flex-direction: column;
+
+    .solution {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .benefits {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+  }
 }

@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   height: 50vh;
-  overflow-x: hidden;
+  overflow-x: scroll;
 
   &::-webkit-scrollbar {
     display: none;
@@ -20,8 +20,6 @@
     font-weight: 800;
     color: var(--color-primary);
     position: fixed;
-    top: 0;
-    z-index: 100;
     background-color: var(--color-white);
     padding: 5px;
   }
@@ -33,5 +31,22 @@
     color: var(--color-primary);
     text-align: center;
     padding: 5px;
+  }
+}
+
+@media only screen and (max-width: 765px) {
+  .table-container {
+    display: block;
+    
+    .mat-header-cell {
+      padding: 0px;
+      font-size: 16px;
+
+    }
+
+    .mat-cell {
+      padding: 0px;
+      font-size: 12px;
+    }
   }
 }

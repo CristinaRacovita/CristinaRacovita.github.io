@@ -20,6 +20,7 @@ export class ToolbarComponent implements OnInit, OnDestroy{
   public languageOption: string = '';
   public languages = Object.values(Languages);
   private subscription= new Subscription();
+  private activeRoute = '';
 
   public constructor(
     public dialog: MatDialog,
@@ -35,6 +36,7 @@ export class ToolbarComponent implements OnInit, OnDestroy{
  
   public ngOnInit(): void {
     this.subscribeToActiveLanguage();
+    this.activeRoute = this.router.routerState.snapshot.url;
   }
 
   public goToSection(section: string) {
@@ -47,6 +49,13 @@ export class ToolbarComponent implements OnInit, OnDestroy{
   public openDialog(): void {
     this.db.list('demo').push('Press demo ' + new Date());
     this.dialog.open(RequestDemoDialogComponent);
+  }
+
+  public isOnHomePage(): boolean {
+    return (
+      this.activeRoute === '/' ||
+      this.activeRoute === '/ro'
+    );
   }
 
   public chooseLanguage(option: string): void {

@@ -13,8 +13,8 @@
       </div>
     </div>
     <div class="industry-problem">
-      <div class="subtitle">
-        {{ "frequent-use-cases" | transloco }}
+      <div class="subtitle" [innerHTML]="'frequent-use-cases' | transloco">
+        
       </div>
       <div class="usecase-name" *ngFor="let usecase of useCases">
         <span><img src="../../../assets/triangle.svg" class="bullet" /></span
