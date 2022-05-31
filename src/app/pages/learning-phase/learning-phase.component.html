@@ -1,0 +1,21 @@
+<div class="learning-phase">
+  <app-toolbar class="sticky"></app-toolbar>
+  <div class="learning-container">
+    <div class="title">Learning Phase</div>
+    <app-upload-file></app-upload-file>
+    <app-generic-table class="table" [data]="data"></app-generic-table>
+
+    <mat-form-field class="form" appearance="fill">
+      <mat-label class="label">Column for learning</mat-label>
+      <mat-select>
+        <mat-option class="option" value="option1">Column 1</mat-option>
+        <mat-option class="option" value="option2">Column 2 </mat-option>
+        <mat-option class="option" value="option3">Column 3</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <button class="button">Start Learning</button>
+
+    <mat-progress-bar mode="indeterminate" class="progress-bar"></mat-progress-bar>
+  </div>
+</div>

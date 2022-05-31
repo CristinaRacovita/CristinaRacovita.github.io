@@ -38,8 +38,15 @@ import { IndustryUseCaseComponent } from './pages/industry-use-case/industry-use
 import { HomeComponent } from './pages/home/home.component';
 import { SectionService } from './shared/services/section.service';
 import { CsvService } from './shared/services/csv.service';
-import {MatTableModule} from '@angular/material/table';
+import { MatTableModule } from '@angular/material/table';
 import { CdkTableModule } from '@angular/cdk/table';
+import { LearningPhaseComponent } from './pages/learning-phase/learning-phase.component';
+import { UploadFileComponent } from './components/upload-file/upload-file.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatOptionModule } from '@angular/material/core';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
@@ -60,6 +67,8 @@ import { CdkTableModule } from '@angular/cdk/table';
     GenericTableComponent,
     IndustryUseCaseComponent,
     HomeComponent,
+    LearningPhaseComponent,
+    UploadFileComponent,
   ],
   imports: [
     BrowserModule,
@@ -81,6 +90,12 @@ import { CdkTableModule } from '@angular/cdk/table';
     BrowserAnimationsModule,
     HttpClientModule,
     CdkTableModule,
+    MatIconModule,
+    MatFormFieldModule,
+    MatTableModule,
+    MatSelectModule,
+    MatOptionModule,
+    MatProgressBarModule,
   ],
   providers: [
     SiteService,

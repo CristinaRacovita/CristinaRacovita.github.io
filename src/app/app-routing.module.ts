@@ -2,9 +2,10 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { IndustryUseCaseComponent } from './pages/industry-use-case/industry-use-case.component';
+import { LearningPhaseComponent } from './pages/learning-phase/learning-phase.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent},
+  { path: '', component: HomeComponent },
   { path: 'ro', component: HomeComponent },
   { path: 'usecase/finance', component: IndustryUseCaseComponent },
   { path: 'usecase/manufacturing', component: IndustryUseCaseComponent },
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'use-cases', redirectTo: '' },
   { path: 'home', redirectTo: '' },
   { path: 'steps', redirectTo: '' },
+  { path: 'demo', component: LearningPhaseComponent },
   { path: 'http://odin-ai.net/#/', redirectTo: 'https://odin-ai.net/#/' },
 ];
 

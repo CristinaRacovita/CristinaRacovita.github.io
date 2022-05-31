@@ -1,0 +1,124 @@
+.learning-phase {
+  background: linear-gradient(
+    var(--color-gradient-primary),
+    var(--color-white),
+    var(--color-gradient-secondary),
+    var(--color-white)
+  );
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .learning-container {
+    width: 85%;
+    height: 85vh;
+    background-color: white;
+    box-shadow: 2px 2px 2px 2px hsl(180deg 0% 0% / 0.3);
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin-top: 85px;
+    border-radius: 20px;
+
+    .title {
+      font-size: 30px;
+      font-weight: 700;
+      color: var(--color-primary);
+      line-height: 40px;
+      margin: 20px;
+      margin-bottom: 10px;
+    }
+
+    .button {
+      border-radius: 24px;
+      font-size: 14px;
+      height: 40px;
+      font-weight: 800;
+      padding: 0px 32px 0px 32px;
+      color: var(--color-grey-light);
+      background-color: var(--color-secondary);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-self: center;
+      align-items: center;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      &:hover {
+        opacity: 70%;
+      }
+    }
+
+    .table {
+      ::ng-deep {
+        .table-container {
+          height: 40vh;
+          .mat-header-cell {
+            font-size: 14px;
+          }
+
+          .mat-cell {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+
+    .form {
+      width: 150px;
+      margin-left: 70px;
+      margin-top: 20px;
+
+      .label {
+        font-size: 12px;
+        color: var(--color-primary);
+      }
+    }
+
+    .progress-bar {
+      width: 90%;
+      display: flex;
+      align-self: center;
+      margin-top: 10px;
+    }
+  }
+}
+
+::ng-deep {
+  .mat-select-value-text {
+    font-size: 14px;
+    color: var(--color-primary);
+  }
+
+  .mat-option-text {
+    font-size: 14px;
+    color: var(--color-primary);
+  }
+
+  .mat-form-field-appearance-fill .mat-form-field-flex {
+    background-color: transparent;
+  }
+
+  .mat-form-field-outline,
+  .mat-form-field-empty.mat-form-field-label,
+  .mat-form-field-label,
+  .mat-form-field-underline,
+  .mat-input-element,
+  ::placeholder {
+    color: white;
+  }
+
+  .mat-progress-bar-fill::after {
+    background-color: var(--color-primary);
+  }
+
+  .mat-progress-bar-buffer {
+    background-color: #d2d6e0;
+  }
+}
