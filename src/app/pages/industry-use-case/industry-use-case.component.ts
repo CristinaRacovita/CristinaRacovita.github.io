@@ -14,7 +14,7 @@ import { IndustryService } from 'src/app/shared/services/industry.service';
   styleUrls: ['./industry-use-case.component.scss'],
 })
 export class IndustryUseCaseComponent implements OnInit, OnDestroy {
-  public data: Observable<any> = this.csvService.processFile(
+  public data: Observable<any> = this.csvService.processFileByName(
     localStorage.getItem('usecase')!!
   );
   public useCases: IUseCase[] = [];

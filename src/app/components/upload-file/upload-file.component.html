@@ -4,6 +4,11 @@
     <span class="material-icons upload-icon"> upload </span>
   </label>
 
-  <input id="file-upload" type="file" accept=".csv" />
-  <span class="filename"> dataset.csv </span>
+  <input
+    id="file-upload"
+    type="file"
+    accept=".csv"
+    (change)="changeListener($event)"
+  />
+  <span class="filename"> {{ filename }} </span>
 </div>

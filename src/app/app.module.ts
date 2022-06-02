@@ -47,6 +47,8 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { TestingPhaseComponent } from './pages/testing-phase/testing-phase.component';
 
 @NgModule({
   declarations: [
@@ -69,6 +71,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     HomeComponent,
     LearningPhaseComponent,
     UploadFileComponent,
+    TestingPhaseComponent,
   ],
   imports: [
     BrowserModule,
@@ -96,6 +99,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatSelectModule,
     MatOptionModule,
     MatProgressBarModule,
+    MatProgressSpinnerModule
   ],
   providers: [
     SiteService,

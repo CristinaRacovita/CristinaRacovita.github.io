@@ -1,3 +1,12 @@
+.spinner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+}
+
 .learning-phase {
   background: linear-gradient(
     var(--color-gradient-primary),
@@ -120,5 +129,10 @@
 
   .mat-progress-bar-buffer {
     background-color: #d2d6e0;
+  }
+
+  app-generic-table.table-container {
+    margin: 10px !important;
+    padding: 90px !important;
   }
 }
