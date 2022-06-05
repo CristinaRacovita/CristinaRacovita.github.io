@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { CsvService } from 'src/app/shared/services/csv.service';
 
@@ -14,7 +15,7 @@ export class TestingPhaseComponent {
   public columns: string[] = [];
   public isLoading = false;
 
-  public constructor(private csvService: CsvService) {}
+  public constructor(private csvService: CsvService, private router: Router) {}
 
   public isFileSelected(): boolean {
     return !(this.file === undefined);
@@ -38,7 +39,7 @@ export class TestingPhaseComponent {
     this.isLoading = true;
     setTimeout(() => {
       this.isLoading = false;
-      //send file to backend
+      this.router.navigateByUrl('demo/testing-report')
     }, 5000);
   }
 }

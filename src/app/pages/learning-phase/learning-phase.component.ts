@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { CsvService } from 'src/app/shared/services/csv.service';
 
 @Component({
@@ -41,7 +41,7 @@ export class LearningPhaseComponent {
       this.isLoading = false;
       //send file to backend
 
-      this.router.navigateByUrl('demo/testing');
+      this.router.navigateByUrl('demo/learning-report');
     }, 5000);
   }
 }

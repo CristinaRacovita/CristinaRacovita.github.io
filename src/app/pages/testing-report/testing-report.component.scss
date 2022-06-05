@@ -1,0 +1,103 @@
+.spinner {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+}
+
+.learning-report {
+  background: linear-gradient(
+    var(--color-gradient-primary),
+    var(--color-white),
+    var(--color-gradient-secondary),
+    var(--color-white)
+  );
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .sticky {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+  }
+
+  .learning-container {
+    width: 85%;
+    height: 85vh;
+    background-color: white;
+    box-shadow: 2px 2px 2px 2px hsl(180deg 0% 0% / 0.3);
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    margin-top: 85px;
+    border-radius: 20px;
+    justify-content: space-between;
+
+    .report-container {
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      width: 100%;
+
+      .title {
+        font-size: 30px;
+        font-weight: 700;
+        color: var(--color-primary);
+        line-height: 40px;
+        margin: 20px;
+        margin-bottom: 10px;
+      }
+
+      .table {
+        ::ng-deep {
+          .table-container {
+            height: 30vh;
+            .mat-header-cell {
+              font-size: 14px;
+            }
+
+            .mat-cell {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+    }
+
+    .button {
+      border-radius: 24px;
+      font-size: 14px;
+      height: 40px;
+      font-weight: 800;
+      padding: 0px 32px 0px 32px;
+      color: var(--color-grey-light);
+      background-color: var(--color-secondary);
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-self: center;
+      align-items: center;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      &:hover {
+        opacity: 70%;
+      }
+    }
+  }
+}
+
+@media print {
+  @page {
+    size: auto;
+    margin: 0;
+  }
+
+  .table,
+  .button {
+    display: none;
+    color: white;
+  }
+}

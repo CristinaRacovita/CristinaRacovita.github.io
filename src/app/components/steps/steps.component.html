@@ -1,9 +1,24 @@
 <div class="how-it-works-content">
   <div class="title">
-    {{ 'how-it-works' | transloco }}<sub><img src="../../../assets/triangle.svg" /></sub>
+    {{ "how-it-works" | transloco
+    }}<sub><img src="../../../assets/triangle.svg" /></sub>
   </div>
   <div class="steps-content">
-    <img *ngIf="!isSmallScreen" src="../../../assets/schema_web.svg" />
-    <img *ngIf="isSmallScreen" src="../../../assets/schema_mobile.svg" />
+    <img
+      *ngIf="!isSmallScreen && isEnglishActive()"
+      src="../../../assets/schema-01.svg"
+    />
+    <img
+      *ngIf="isSmallScreen && isEnglishActive()"
+      src="../../../assets/schema-03.svg"
+    />
+    <img
+      *ngIf="!isSmallScreen && !isEnglishActive()"
+      src="../../../assets/schema-02.svg"
+    />
+    <img
+      *ngIf="isSmallScreen && !isEnglishActive()"
+      src="../../../assets/schema-04.svg"
+    />
   </div>
 </div>

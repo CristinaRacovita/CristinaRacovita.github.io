@@ -47,8 +47,12 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatOptionModule } from '@angular/material/core';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { TestingPhaseComponent } from './pages/testing-phase/testing-phase.component';
+import { TestingReportComponent } from './pages/testing-report/testing-report.component';
+import { LearningReportComponent } from './pages/learning-report/learning-report.component';
+import { ReportComponent } from './components/report/report.component';
+import { AutoMLService } from './shared/services/autoML.service';
 
 @NgModule({
   declarations: [
@@ -72,6 +76,9 @@ import { TestingPhaseComponent } from './pages/testing-phase/testing-phase.compo
     LearningPhaseComponent,
     UploadFileComponent,
     TestingPhaseComponent,
+    TestingReportComponent,
+    LearningReportComponent,
+    ReportComponent,
   ],
   imports: [
     BrowserModule,
@@ -99,7 +106,7 @@ import { TestingPhaseComponent } from './pages/testing-phase/testing-phase.compo
     MatSelectModule,
     MatOptionModule,
     MatProgressBarModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
   ],
   providers: [
     SiteService,
@@ -107,6 +114,7 @@ import { TestingPhaseComponent } from './pages/testing-phase/testing-phase.compo
     LanguageService,
     SectionService,
     CsvService,
+    AutoMLService,
     { provide: LocationStrategy, useClass: HashLocationStrategy },
   ],
   bootstrap: [AppComponent],

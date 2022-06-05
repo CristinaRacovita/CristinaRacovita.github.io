@@ -10,15 +10,19 @@
       (file)="getFile($event)"
       (csvContent)="getCsvContent($event)"
     ></app-upload-file>
-    <ng-container *ngIf="isFileSelected()">
-      <app-generic-table class="table" [data]="data"></app-generic-table>
+    <div *ngIf="isFileSelected()" class="container">
+      <div class="testing-content">
+        <app-generic-table class="table" [data]="data"></app-generic-table>
+      </div>
 
-      <button class="button" (click)="startTesting()">Start testing</button>
-      <mat-progress-bar
-        mode="indeterminate"
-        class="progress-bar"
-        *ngIf="isLoading"
-      ></mat-progress-bar>
-    </ng-container>
+      <div class="testing-button">
+        <button class="button" (click)="startTesting()">Start testing</button>
+        <mat-progress-bar
+          mode="indeterminate"
+          class="progress-bar"
+          *ngIf="isLoading"
+        ></mat-progress-bar>
+      </div>
+    </div>
   </div>
 </div>
