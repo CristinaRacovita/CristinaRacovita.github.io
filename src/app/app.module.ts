@@ -53,6 +53,7 @@ import { TestingReportComponent } from './pages/testing-report/testing-report.co
 import { LearningReportComponent } from './pages/learning-report/learning-report.component';
 import { ReportComponent } from './components/report/report.component';
 import { AutoMLService } from './shared/services/autoML.service';
+import { DemoGuard } from './guards/demo.guard';
 
 @NgModule({
   declarations: [
@@ -115,6 +116,7 @@ import { AutoMLService } from './shared/services/autoML.service';
     SectionService,
     CsvService,
     AutoMLService,
+    DemoGuard,
     { provide: LocationStrategy, useClass: HashLocationStrategy },
   ],
   bootstrap: [AppComponent],

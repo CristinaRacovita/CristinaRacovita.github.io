@@ -4,8 +4,22 @@
       *ngFor="let column of columns"
       [cdkColumnDef]="column.columnDef"
     >
-      <th mat-header-cell *cdkHeaderCellDef class="mat-header-cell">{{ column.header }}</th>
-      <td mat-cell *cdkCellDef="let row" class="mat-cell">{{ column.cell(row) }}</td>
+      <th
+        mat-header-cell
+        *cdkHeaderCellDef
+        class="mat-header-cell"
+        [ngClass]="getClassForColumn(column.header)"
+      >
+        {{ column.header }}
+      </th>
+      <td
+        mat-cell
+        *cdkCellDef="let row"
+        class="mat-cell"
+        [ngClass]="getClassForColumn(column.header)"
+      >
+        {{ column.cell(row) }}
+      </td>
     </ng-container>
     <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>

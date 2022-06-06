@@ -3,7 +3,6 @@ import {
   Input,
   OnChanges,
   OnDestroy,
-  OnInit,
   SimpleChanges,
 } from '@angular/core';
 import { Observable, Subscription } from 'rxjs';
@@ -16,6 +15,8 @@ import { Observable, Subscription } from 'rxjs';
 export class GenericTableComponent implements OnChanges, OnDestroy {
   @Input()
   data: Observable<any> | undefined;
+  @Input()
+  selectedColumn: string = '';
   columns: any[] = [];
   displayedColumns: any[] = [];
   dataSource: any;
@@ -24,7 +25,8 @@ export class GenericTableComponent implements OnChanges, OnDestroy {
   public ngOnChanges(changes: SimpleChanges): void {
     if (this.data) {
       this.subscription = this.data.subscribe((res) => {
-        const columns = res
+        const firstElements = res.slice(0, 100);
+        const columns = firstElements
           .reduce((columns: any, row: any) => {
             return [...columns, ...Object.keys(row)];
           }, [])
@@ -40,9 +42,19 @@ export class GenericTableComponent implements OnChanges, OnDestroy {
           };
         });
         this.displayedColumns = this.columns.map((c) => c.columnDef);
-        this.dataSource = this.data;
+        this.dataSource = firstElements;
       });
     }
+  }
+
+  public getClassForColumn(column: string): string {
+    if (column === this.selectedColumn) return 'selected-column';
+
+    return '';
+  }
+
+  public getFirst100Rows(): any {
+    return this.dataSource.l;
   }
 
   public ngOnDestroy(): void {

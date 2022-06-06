@@ -7,7 +7,7 @@
     <app-industry-card
       *ngFor="let industry of industries$ | async"
       [cardTitle]="industry.name"
-      [cardUseCases]="industry.useCases.slice(0,4)"
+      [cardUseCases]="industry.useCases.slice(0, 4)"
       (onClickButton)="goToUseCase($event)"
     ></app-industry-card>
     <app-industry-card

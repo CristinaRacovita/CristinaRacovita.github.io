@@ -2,10 +2,10 @@
   <app-toolbar class="sticky"></app-toolbar>
   <div class="learning-container">
     <div class="report-container">
-      <div class="title">Learning Report</div>
+      <div class="title">{{ 'learning-report' | transloco }}</div>
       <app-report></app-report>
     </div>
 
-    <button class="button" (click)="startTest()">Let's test it</button>
+    <button class="button" (click)="startTest()">{{ 'let-s-test-it' | transloco }}</button>
   </div>
 </div>

@@ -1,14 +1,12 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
-import { NavigationStart, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { take } from 'rxjs/operators';
 import { IndustryCsv } from 'src/app/shared/models/industry-csv.enum';
 import { Industry } from 'src/app/shared/models/industry.enum';
 import { IIndustry } from 'src/app/shared/models/industry.model';
 import { IUseCase } from 'src/app/shared/models/useCase.model';
 import { IndustryService } from 'src/app/shared/services/industry.service';
-import { SectionService } from 'src/app/shared/services/section.service';
 import { ContactUsDialogComponent } from '../contact-us-dialog/contact-us-dialog.component';
 
 @Component({

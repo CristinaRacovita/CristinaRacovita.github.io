@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { DemoGuard } from './guards/demo.guard';
 import { HomeComponent } from './pages/home/home.component';
 import { IndustryUseCaseComponent } from './pages/industry-use-case/industry-use-case.component';
 import { LearningPhaseComponent } from './pages/learning-phase/learning-phase.component';
@@ -23,9 +24,21 @@ const routes: Routes = [
   { path: 'home', redirectTo: '' },
   { path: 'steps', redirectTo: '' },
   { path: 'demo/learning', component: LearningPhaseComponent },
-  { path: 'demo/learning-report', component: LearningReportComponent },
-  { path: 'demo/testing', component: TestingPhaseComponent },
-  { path: 'demo/testing-report', component: TestingReportComponent },
+  {
+    path: 'demo/learning-report',
+    component: LearningReportComponent,
+    canActivate: [DemoGuard],
+  },
+  {
+    path: 'demo/testing',
+    component: TestingPhaseComponent,
+    canActivate: [DemoGuard],
+  },
+  {
+    path: 'demo/testing-report',
+    component: TestingReportComponent,
+    canActivate: [DemoGuard],
+  },
   { path: 'http://odin-ai.net/#/', redirectTo: 'https://odin-ai.net/#/' },
 ];
 

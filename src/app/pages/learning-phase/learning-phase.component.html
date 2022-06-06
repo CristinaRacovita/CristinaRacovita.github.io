@@ -1,36 +1,56 @@
-<div class="spinner" *ngIf="isFileContentNotExists()">
+<div class="spinner" mode="indeterminate" *ngIf="isFileNotLoadedCompletly()">
   <mat-spinner></mat-spinner>
 </div>
 
 <div class="learning-phase">
   <app-toolbar class="sticky"></app-toolbar>
   <div class="learning-container">
-    <div class="title">Learning Phase</div>
+    <div class="title">{{ 'learning-phase' | transloco }}</div>
     <app-upload-file
       (file)="getFile($event)"
       (csvContent)="getCsvContent($event)"
     ></app-upload-file>
     <ng-container *ngIf="isFileSelected()">
-      <app-generic-table class="table" [data]="data"></app-generic-table>
+      <div class="content">
+        <div class="begin-part">
+          <app-generic-table
+            class="table"
+            [data]="data"
+            [selectedColumn]="selectedColumn"
+          ></app-generic-table>
 
-      <mat-form-field class="form" appearance="fill">
-        <mat-label class="label">Column for learning</mat-label>
-        <mat-select>
-          <mat-option
-            class="option"
-            value="option1"
-            *ngFor="let column of columns"
-            >{{ column }}</mat-option
+          <mat-form-field class="form" appearance="fill">
+            <mat-label class="label">{{ 'column-learning' | transloco }}</mat-label>
+            <mat-select
+              [(ngModel)]="selectedColumn"
+              (change)="eventSelection($event)"
+            >
+              <mat-option
+                class="option"
+                [value]="column"
+                *ngFor="let column of columns"
+                >{{ column }}</mat-option
+              >
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="end-part">
+          <button
+            class="button"
+            (click)="startLearning()"
+            [disabled]="isButtonDisabled()"
+            [ngClass]="{ disabled: isButtonDisabled() }"
           >
-        </mat-select>
-      </mat-form-field>
-
-      <button class="button" (click)="startLearning()">Start Learning</button>
-      <mat-progress-bar
-        mode="indeterminate"
-        class="progress-bar"
-        *ngIf="isLoading"
-      ></mat-progress-bar>
+            {{ 'start-learning' | transloco }}
+          </button>
+          <mat-progress-bar
+            mode="indeterminate"
+            class="progress-bar"
+            *ngIf="isLoading"
+          ></mat-progress-bar>
+        </div>
+      </div>
     </ng-container>
   </div>
 </div>

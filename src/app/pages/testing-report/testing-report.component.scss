@@ -67,23 +67,30 @@
       }
     }
 
-    .button {
-      border-radius: 24px;
-      font-size: 14px;
-      height: 40px;
-      font-weight: 800;
-      padding: 0px 32px 0px 32px;
-      color: var(--color-grey-light);
-      background-color: var(--color-secondary);
-      border: none;
-      cursor: pointer;
+    .buttons {
       display: flex;
-      align-self: center;
-      align-items: center;
-      margin-bottom: 10px;
-      margin-top: 10px;
-      &:hover {
-        opacity: 70%;
+      flex-direction: row;
+      justify-content: center;
+
+      .button {
+        border-radius: 24px;
+        font-size: 14px;
+        height: 40px;
+        font-weight: 800;
+        padding: 0px 32px 0px 32px;
+        color: var(--color-grey-light);
+        background-color: var(--color-secondary);
+        border: none;
+        cursor: pointer;
+        display: flex;
+        align-self: center;
+        align-items: center;
+        margin-bottom: 30px;
+        margin-top: 10px;
+        margin-right: 15px;
+        &:hover {
+          opacity: 70%;
+        }
       }
     }
   }

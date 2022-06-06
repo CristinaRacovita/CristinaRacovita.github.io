@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { AutoMLService } from 'src/app/shared/services/autoML.service';
 import { CsvService } from 'src/app/shared/services/csv.service';
 
 @Component({
@@ -8,14 +9,23 @@ import { CsvService } from 'src/app/shared/services/csv.service';
   templateUrl: './testing-phase.component.html',
   styleUrls: ['./testing-phase.component.scss'],
 })
-export class TestingPhaseComponent {
+export class TestingPhaseComponent implements OnInit {
   public csvContent = '';
   public file: File | undefined;
   public data = new Observable<any>();
   public columns: string[] = [];
   public isLoading = false;
+  public predictedColumn: string = '';
 
-  public constructor(private csvService: CsvService, private router: Router) {}
+  public constructor(
+    private csvService: CsvService,
+    private router: Router,
+    private autoMlService: AutoMLService
+  ) {}
+
+  public ngOnInit(): void {
+    this.predictedColumn = this.autoMlService.predictedColumn.value;
+  }
 
   public isFileSelected(): boolean {
     return !(this.file === undefined);
@@ -39,7 +49,7 @@ export class TestingPhaseComponent {
     this.isLoading = true;
     setTimeout(() => {
       this.isLoading = false;
-      this.router.navigateByUrl('demo/testing-report')
+      this.router.navigateByUrl('demo/testing-report');
     }, 5000);
   }
 }
