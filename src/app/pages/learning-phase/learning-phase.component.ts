@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslocoService } from '@ngneat/transloco';
 import { Observable } from 'rxjs';
+import { TrainingModel } from 'src/app/shared/models/training.model';
 import { AutoMLService } from 'src/app/shared/services/autoML.service';
 import { CsvService } from 'src/app/shared/services/csv.service';
 
@@ -74,12 +75,22 @@ export class LearningPhaseComponent implements OnInit {
     this.autoMlService.predictedColumn.next(this.selectedColumn);
     this.autoMlService.trainingDatasetName.next(this.file?.name!!);
 
-    setTimeout(() => {
-      this.isLoading = false;
-      //send file to backend
-
-      this.router.navigateByUrl('demo/learning-report');
-    }, 5000);
+    this.autoMlService
+      .startLearning(
+        new TrainingModel(
+          this.selectedColumn,
+          btoa(this.csvContent),
+          this.file?.name!!
+        )
+      )
+      .subscribe(
+        (res) => {
+          console.log(res);
+          this.isLoading = false;
+          this.router.navigateByUrl('demo/learning-report');
+        },
+        (err) => console.log(err)
+      );
   }
 
   private setLanguage(): void {
@@ -88,5 +99,4 @@ export class LearningPhaseComponent implements OnInit {
       this.service.setActiveLang(activeLanguage.toLowerCase());
     }
   }
-  
 }

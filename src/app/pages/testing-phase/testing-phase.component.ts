@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { TestingModel } from 'src/app/shared/models/testing.model';
 import { AutoMLService } from 'src/app/shared/services/autoML.service';
 import { CsvService } from 'src/app/shared/services/csv.service';
 
@@ -47,9 +48,25 @@ export class TestingPhaseComponent implements OnInit {
 
   public startTesting(): void {
     this.isLoading = true;
-    setTimeout(() => {
-      this.isLoading = false;
-      this.router.navigateByUrl('demo/testing-report');
-    }, 5000);
+    const trainingDataset = this.autoMlService.trainingDatasetName.value;
+    this.autoMlService.trainingDatasetName.next(trainingDataset);
+
+    this.autoMlService
+      .predict(
+        new TestingModel(
+          this.predictedColumn,
+          btoa(this.csvContent),
+          this.file?.name!!,
+          trainingDataset
+        )
+      )
+      .subscribe(
+        (res) => {
+          console.log(res);
+          this.isLoading = false;
+          this.router.navigateByUrl('demo/testing-report');
+        },
+        (err) => console.log(err)
+      );
   }
 }

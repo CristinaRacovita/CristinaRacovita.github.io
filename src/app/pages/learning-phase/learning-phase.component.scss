@@ -52,7 +52,7 @@
         .table {
           ::ng-deep {
             .table-container {
-              height: 40vh;
+              height: 30vh;
               .mat-header-cell {
                 font-size: 14px;
               }
@@ -115,7 +115,7 @@
           width: 90%;
           display: flex;
           align-self: center;
-          margin-top: 10px;
+          margin: 10px;
         }
       }
     }
