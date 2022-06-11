@@ -11,6 +11,15 @@
       {{ "error-occured" | transloco }}
     </div>
 
-    <div class="content text" [innerHtml]="'error-check' | transloco"></div>
+    <div
+      class="content text"
+      *ngIf="!data.isTest"
+      [innerHtml]="'error-check-train' | transloco"
+    ></div>
+    <div
+      class="content text"
+      *ngIf="data.isTest"
+      [innerHtml]="'error-check-test' | transloco"
+    ></div>
   </div>
 </div>

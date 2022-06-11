@@ -17,8 +17,8 @@ import { TrainingModel } from '../models/training.model';
 @Injectable()
 export class AutoMLService {
   private baseUrl = 'https://odin-ai-backend-on.azurewebsites.net/backend/';
-  public learningReport = new BehaviorSubject<string>('');
-  public testingReport = new BehaviorSubject<string>('');
+  public learningReport = new BehaviorSubject<TrainingResultModel | null>(null);
+  public testingReport = new BehaviorSubject<TestingResultModel | null>(null);
   public predictedColumn = new BehaviorSubject<string>('');
   public trainingDatasetName = new BehaviorSubject<string>('');
 
@@ -39,15 +39,18 @@ export class AutoMLService {
         map((res: TrainingResultDto) =>
           this.trainingResultDtoToTrainingResultModel(res)
         ),
-
         catchError((err) => {
-          this.dialog.open(ErrorDialogComponent);
+          this.dialog.open(ErrorDialogComponent, {
+            data: { isTest: false },
+          });
           return of(null);
         })
       );
   }
 
-  public predict(testingModel: TestingModel): Observable<TestingResultModel> {
+  public predict(
+    testingModel: TestingModel
+  ): Observable<TestingResultModel | null> {
     testingModel.targetColumn = testingModel.targetColumn.replace('\r', '');
 
     return this.http
@@ -58,7 +61,13 @@ export class AutoMLService {
       .pipe(
         map((res: TestingResultDto) =>
           this.testingResultDtoToTestingResultModel(res)
-        )
+        ),
+        catchError((err) => {
+          this.dialog.open(ErrorDialogComponent, {
+            data: { isTest: true },
+          });
+          return of(null);
+        })
       );
   }
 

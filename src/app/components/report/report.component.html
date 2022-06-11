@@ -1,1 +1,5 @@
-<div class="report"></div>
+<div class="report">
+  <div class="metric" *ngIf="existsMetric()">
+    {{ "metric" | transloco }}: <span>{{ transformMetric() }}%</span>
+  </div>
+</div>

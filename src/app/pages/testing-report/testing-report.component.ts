@@ -1,7 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { Observable } from 'rxjs';
-import { IndustryCsv } from 'src/app/shared/models/industry-csv.enum';
 import { AutoMLService } from 'src/app/shared/services/autoML.service';
 import { CsvService } from 'src/app/shared/services/csv.service';
 
@@ -10,12 +8,13 @@ import { CsvService } from 'src/app/shared/services/csv.service';
   templateUrl: './testing-report.component.html',
   styleUrls: ['./testing-report.component.scss'],
 })
-export class TestingReportComponent implements OnInit {
-  public data: Observable<any> = this.csvService.processFileByName(
-    IndustryCsv.Manufacturing
+export class TestingReportComponent {
+  public testingReport = this.autoMlService.testingReport.value;
+  public predictionFileContent = this.csvService.transformFromb64(
+    this.testingReport?.file!!
   );
-  public reportContent = this.autoMlService.learningReport.value;
-  public predictedColumn: string = '';
+  public data = this.csvService.processFile(this.predictionFileContent);
+  public predictedColumn = this.autoMlService.predictedColumn.value;
 
   public constructor(
     private autoMlService: AutoMLService,
@@ -23,16 +22,12 @@ export class TestingReportComponent implements OnInit {
     private router: Router
   ) {}
 
-  public ngOnInit(): void {
-    this.predictedColumn = this.autoMlService.predictedColumn.value;
-  }
-
   public save(): void {
-    window.print();
-    this.autoMlService.downloadCSV('Id,Name\n1,Bogdan');
+    this.autoMlService.downloadCSV(this.predictionFileContent);
   }
 
   public testAgain(): void {
+    this.autoMlService.predictedColumn.next(this.predictedColumn);
     this.router.navigateByUrl('demo/testing');
   }
 }

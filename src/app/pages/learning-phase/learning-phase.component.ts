@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslocoService } from '@ngneat/transloco';
 import { Observable } from 'rxjs';
+import { TrainingResultModel } from 'src/app/shared/models/training-result.model';
 import { TrainingModel } from 'src/app/shared/models/training.model';
 import { AutoMLService } from 'src/app/shared/services/autoML.service';
 import { CsvService } from 'src/app/shared/services/csv.service';
@@ -89,9 +90,9 @@ export class LearningPhaseComponent implements OnInit {
         )
       )
 
-      .subscribe((res) => {
+      .subscribe((res: TrainingResultModel | null) => {
         if (res) {
-          console.log(res);
+          this.autoMlService.learningReport.next(res);
           this.router.navigateByUrl('demo/learning-report');
         }
         this.isLoading = false;

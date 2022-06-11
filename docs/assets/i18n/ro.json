@@ -112,6 +112,8 @@
   "upload-database": "Încarcă Setul De Date",
   "error-occured": "A apărut o eroare!",
   "ups": "Upss...",
-  "error-check": "Te rugăm să verifici calitatea datelor.<br> Coloana prezisă nu poate conține valori lipsă.",
-  "mobile-availability": "Acest conținut este disponibil doar pentru versiunea desktop a aplicației."
+  "error-check-train": "Te rugăm să verifici calitatea datelor.<br> Coloana prezisă nu poate conține valori lipsă.",
+  "error-check-test": "Te rugăm să verifici calitatea datelor.",
+  "mobile-availability": "Acest conținut este disponibil doar pentru versiunea desktop a aplicației.",
+  "metric": "Metrică"
 }

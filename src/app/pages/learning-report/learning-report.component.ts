@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AutoMLService } from 'src/app/shared/services/autoML.service';
 
@@ -8,7 +8,7 @@ import { AutoMLService } from 'src/app/shared/services/autoML.service';
   styleUrls: ['./learning-report.component.scss'],
 })
 export class LearningReportComponent {
-  public reportContent = this.autoMlService.learningReport.value;
+  public trainingReport = this.autoMlService.learningReport.value;
 
   public constructor(
     private router: Router,

@@ -3,4 +3,18 @@
   border-radius: 20px;
   margin: 30px;
   height: 200px;
+
+  .metric {
+    color: var(--color-primary);
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 24px;
+    padding: 20px;
+
+    span {
+      font-size: 20px;
+      color: var(--color-secondary);
+      font-weight: 500;
+    }
+  }
 }

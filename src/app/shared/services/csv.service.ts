@@ -42,4 +42,8 @@ export class CsvService {
 
     return JSON.stringify(result);
   }
+
+  public transformFromb64(file: string): string {
+    return atob(file);
+  }
 }

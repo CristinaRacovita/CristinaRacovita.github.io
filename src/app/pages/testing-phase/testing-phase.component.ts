@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
+import { TestingResultModel } from 'src/app/shared/models/testing-result.model';
 import { TestingModel } from 'src/app/shared/models/testing.model';
 import { AutoMLService } from 'src/app/shared/services/autoML.service';
 import { CsvService } from 'src/app/shared/services/csv.service';
@@ -60,13 +61,12 @@ export class TestingPhaseComponent implements OnInit {
           trainingDataset
         )
       )
-      .subscribe(
-        (res) => {
-          console.log(res);
-          this.isLoading = false;
+      .subscribe((res: TestingResultModel | null) => {
+        if (res) {
+          this.autoMlService.testingReport.next(res);
           this.router.navigateByUrl('demo/testing-report');
-        },
-        (err) => console.log(err)
-      );
+        }
+        this.isLoading = false;
+      });
   }
 }
