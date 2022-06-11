@@ -29,7 +29,8 @@ export class LearningPhaseComponent implements OnInit {
     private router: Router,
     private autoMlService: AutoMLService,
     private service: TranslocoService,
-    breakpointObserver: BreakpointObserver
+    breakpointObserver: BreakpointObserver,
+    private translocoService: TranslocoService
   ) {
     this.isSmallScreen = breakpointObserver.isMatched('(max-width: 765px)');
   }
@@ -74,6 +75,10 @@ export class LearningPhaseComponent implements OnInit {
     this.isContent = true;
     this.data = this.csvService.processFile(content);
     this.columns = content.split('\n')[0].split(',');
+  }
+
+  public isEnglishActive(): boolean {
+    return this.translocoService.getActiveLang() === 'en';
   }
 
   public startLearning(): void {

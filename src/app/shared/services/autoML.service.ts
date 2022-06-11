@@ -28,7 +28,6 @@ export class AutoMLService {
     trainingModel: TrainingModel
   ): Observable<TrainingResultModel | null> {
     trainingModel.targetColumn = trainingModel.targetColumn.replace('\r', '');
-    console.log(this.trainingModelToTrainingDto(trainingModel));
 
     return this.http
       .post<TrainingResultDto>(

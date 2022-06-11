@@ -11,6 +11,16 @@
         (file)="getFile($event)"
         (csvContent)="getCsvContent($event)"
       ></app-upload-file>
+      <div class="instructions" *ngIf="!isFileSelected()">
+        <img
+          src="../../../assets/instructions_en.png"
+          *ngIf="isEnglishActive()"
+        />
+        <img
+          src="../../../assets/instructions_ro.png"
+          *ngIf="!isEnglishActive()"
+        />
+      </div>
       <ng-container *ngIf="isFileSelected()">
         <div class="content">
           <div class="begin-part">
