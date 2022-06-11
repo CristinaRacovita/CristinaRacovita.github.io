@@ -9,10 +9,9 @@ import {
   ViewChild,
 } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
-import { Router, NavigationEnd, NavigationStart } from '@angular/router';
+import { Router } from '@angular/router';
 import { TranslocoService } from '@ngneat/transloco';
 import { Subscription } from 'rxjs';
-import { Languages } from 'src/app/shared/models/languages.enum';
 import { LanguageService } from 'src/app/shared/services/language.service';
 import { SectionService } from 'src/app/shared/services/section.service';
 
@@ -60,8 +59,6 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
       this.languageService.activeLanguage.next(activeLanguage);
       this.service.setActiveLang(activeLanguage.toLowerCase());
     }
-
-
   }
 
   public ngAfterViewInit(): void {

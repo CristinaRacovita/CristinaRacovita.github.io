@@ -4,22 +4,43 @@
   </div>
   <div class="menu">
     <button class="option-menu-text" (click)="goToSection('features')">
-      {{ 'features' | transloco }}
+      {{ "features" | transloco }}
     </button>
-    <button class="option-menu-text" (click)="goToSection('use-cases')">{{ 'use-cases' | transloco }}</button>
-    <button class="option-menu-text" (click)="goToSection('steps')">{{ 'how-it-works' | transloco }}</button>
-    <button class="option-menu-text" (click)="goToSection('story')">
-      {{ 'our-story' | transloco }}
+    <button class="option-menu-text" (click)="goToSection('use-cases')">
+      {{ "use-cases" | transloco }}
+    </button>
+    <button class="option-menu-text" (click)="goToSection('steps')">
+      {{ "how-it-works" | transloco }}
+    </button>
+    <button
+      class="option-menu-text"
+      (click)="goToSection('story')"
+      [ngClass]="{ margin: !isDemoButtonActive() }"
+    >
+      {{ "our-story" | transloco }}
     </button>
     <span class="language" *ngIf="isOnHomePage()">
       <div [matMenuTriggerFor]="languageMenu" class="menu-item">
         {{ languageOption }}
       </div>
       <mat-menu class="my-menu" #languageMenu="matMenu" [hasBackdrop]="false">
-        <button class="option-menu" *ngFor="let language of languages" mat-menu-item  (click)="chooseLanguage(language)">{{ language }}</button>
+        <button
+          class="option-menu"
+          *ngFor="let language of languages"
+          mat-menu-item
+          (click)="chooseLanguage(language)"
+        >
+          {{ language }}
+        </button>
       </mat-menu>
     </span>
-    <button class="option-menu-button" (click)="openDialog()">{{ 'demo' | transloco }}</button>
+    <button
+      class="option-menu-button"
+      (click)="startDemo()"
+      [ngClass]="{ none: !isDemoButtonActive() }"
+    >
+      {{ "demo" | transloco }}
+    </button>
   </div>
 </div>
 
@@ -33,19 +54,41 @@
         {{ languageOption }}
       </div>
       <mat-menu class="my-menu" #languageMenu="matMenu" [hasBackdrop]="false">
-        <button class="option-menu" *ngFor="let language of languages" mat-menu-item  (click)="chooseLanguage(language)">{{ language }}</button>
+        <button
+          class="option-menu"
+          *ngFor="let language of languages"
+          mat-menu-item
+          (click)="chooseLanguage(language)"
+        >
+          {{ language }}
+        </button>
       </mat-menu>
     </span>
-
 
     <div [matMenuTriggerFor]="menu" class="menu">
       <img src="../../../assets/menu.svg" />
     </div>
     <mat-menu class="my-menu" #menu="matMenu">
-      <button class="option-menu" mat-menu-item (click)="goToSection('features')">{{ 'features' | transloco }}</button>
-      <button class="option-menu" mat-menu-item (click)="goToSection('use-cases')">{{ 'use-cases' | transloco }}</button>
-      <button class="option-menu" mat-menu-item (click)="goToSection('steps')">{{ 'how-it-works' | transloco }}</button>
-      <button class="option-menu" mat-menu-item (click)="goToSection('story')">{{ 'our-story' | transloco }}</button>
+      <button
+        class="option-menu"
+        mat-menu-item
+        (click)="goToSection('features')"
+      >
+        {{ "features" | transloco }}
+      </button>
+      <button
+        class="option-menu"
+        mat-menu-item
+        (click)="goToSection('use-cases')"
+      >
+        {{ "use-cases" | transloco }}
+      </button>
+      <button class="option-menu" mat-menu-item (click)="goToSection('steps')">
+        {{ "how-it-works" | transloco }}
+      </button>
+      <button class="option-menu" mat-menu-item (click)="goToSection('story')">
+        {{ "our-story" | transloco }}
+      </button>
     </mat-menu>
   </div>
 </div>

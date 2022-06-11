@@ -4,11 +4,11 @@ import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { MatDialog } from '@angular/material/dialog';
 import { Languages } from 'src/app/shared/models/languages.enum';
 import { RequestDemoDialogComponent } from '../request-demo-dialog/request-demo-dialog.component';
-import { Router } from '@angular/router';
 import { TranslocoService } from '@ngneat/transloco';
 import { Subscription } from 'rxjs';
 import { LanguageService } from 'src/app/shared/services/language.service';
 import { SectionService } from 'src/app/shared/services/section.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-toolbar',
@@ -40,10 +40,10 @@ export class ToolbarComponent implements OnInit, OnDestroy {
   }
 
   public goToSection(section: string) {
-    this.sectionService.activeSection.next(section);
-
-    window.location.hash = '';
-    window.location.hash = section;
+    if (`/${section}` !== this.router.routerState.snapshot.url) {
+      this.sectionService.activeSection.next(section);
+      window.location.hash = section;
+    }
   }
 
   public openDialog(): void {
@@ -59,7 +59,14 @@ export class ToolbarComponent implements OnInit, OnDestroy {
     this.service.setActiveLang(option.toLowerCase());
     this.languageService.activeLanguage.next(option);
     localStorage.setItem('activeLanguage', option);
-    this.router.navigateByUrl(`/${option.toLowerCase()}`);
+  }
+
+  public startDemo(): void {
+    this.router.navigateByUrl('demo');
+  }
+
+  public isDemoButtonActive(): boolean {
+    return !this.activeRoute.startsWith('/demo');
   }
 
   private subscribeToActiveLanguage(): void {
