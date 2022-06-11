@@ -1,8 +1,10 @@
 <div class="dialog-content">
   <div class="subscribe-text">
-    {{ 'subscribe-text' | transloco }}
+    {{ "no-industry" | transloco }}
   </div>
-  <img src="../../../assets/demo.svg" />
+  <div class="email-text">
+    {{ "enter-your-email" | transloco }}
+  </div>
   <div class="subscribe-input">
     <input
       name="search"
@@ -12,10 +14,10 @@
       [(ngModel)]="email"
     />
     <button class="subscribe-button" (click)="requestDemo()">
-      {{ 'subscribe' | transloco }}
+      {{ "sent" | transloco }}
     </button>
   </div>
   <div class="error" *ngIf="isEmailErrorsVisibile()">
-    {{ 'email-invalid' | transloco }}
+    {{ "email-invalid" | transloco }}
   </div>
 </div>

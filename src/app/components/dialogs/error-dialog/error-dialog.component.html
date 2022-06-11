@@ -1,0 +1,16 @@
+<div class="error-dialog">
+  <div class="odin-image">
+    <img src="../../../assets/odin.png" />
+  </div>
+  <div class="dialog-content">
+    <div class="title">
+      {{ "ups" | transloco }}
+    </div>
+
+    <div class="content">
+      {{ "error-occured" | transloco }}
+    </div>
+
+    <div class="content text" [innerHtml]="'error-check' | transloco"></div>
+  </div>
+</div>

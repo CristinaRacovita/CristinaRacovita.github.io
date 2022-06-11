@@ -109,5 +109,9 @@
   "report-testing": "Raport testare",
   "save-results": "Salvează rezultate",
   "test-again": "Testează din nou",
-  "upload-database": "Încarcă Setul De Date"
+  "upload-database": "Încarcă Setul De Date",
+  "error-occured": "A apărut o eroare!",
+  "ups": "Upss...",
+  "error-check": "Te rugăm să verifici calitatea datelor.<br> Coloana prezisă nu poate conține valori lipsă.",
+  "mobile-availability": "Acest conținut este disponibil doar pentru versiunea desktop a aplicației."
 }

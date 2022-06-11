@@ -18,12 +18,6 @@
   flex-direction: column;
   width: 100%;
 
-  .sticky {
-    position: fixed;
-    top: 0;
-    z-index: 1000;
-  }
-
   .learning-container {
     width: 85%;
     height: 85vh;
@@ -70,7 +64,7 @@
           margin-top: 20px;
 
           .label {
-            font-size: 12px;
+            font-size: 14px;
             color: var(--color-primary);
           }
         }
@@ -167,4 +161,41 @@
     margin: 10px !important;
     padding: 90px !important;
   }
+}
+
+.learning-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 20px;
+
+  .mobile-content {
+    color: var(--color-primary);
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  .odin-image {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+    }
+  }
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
 }

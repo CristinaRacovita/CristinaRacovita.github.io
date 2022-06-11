@@ -42,7 +42,7 @@ export class WorkInProgressDialogComponent {
   }
 
   public isEmailErrorsVisibile(): boolean {
-    if(this.isEmailValid()){
+    if (this.isEmailValid()) {
       return false;
     }
     return this.isVisible || this.isEmailValid();

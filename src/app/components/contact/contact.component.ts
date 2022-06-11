@@ -14,36 +14,39 @@ const formUrl = 'https://forms.gle/Aw9i53FDkYWd3KXr9';
 })
 export class ContactComponent {
   public isSmallScreen = false;
-  
-  constructor(private siteService: SiteService, breakpointObserver: BreakpointObserver){
-    this.isSmallScreen = breakpointObserver.isMatched('(max-width: 765px)');
-  }  
 
-  public openForm(): void{
+  constructor(
+    private siteService: SiteService,
+    breakpointObserver: BreakpointObserver
+  ) {
+    this.isSmallScreen = breakpointObserver.isMatched('(max-width: 765px)');
+  }
+
+  public openForm(): void {
     this.siteService.openSite(formUrl);
   }
 
-  public openCristinaLinkeIn(): void{
+  public openCristinaLinkeIn(): void {
     this.siteService.openSite(LinkedIn.Cristina);
   }
 
-  public openBogdanLinkeIn(): void{
+  public openBogdanLinkeIn(): void {
     this.siteService.openSite(LinkedIn.Bogdan);
   }
 
-  public get cristinasName(): string{
+  public get cristinasName(): string {
     return Name.Cristina;
   }
 
-  public get bogdansName(): string{
+  public get bogdansName(): string {
     return Name.Bogdan;
   }
 
-  public get cristinasPicture(): string{
+  public get cristinasPicture(): string {
     return Profile.Cristina;
   }
 
-  public get bogdansPicture(): string{
+  public get bogdansPicture(): string {
     return Profile.Bogdan;
   }
 }

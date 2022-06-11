@@ -1,8 +1,8 @@
 <div class="dialog-content">
-  <div class="title">{{ 'demo-request' | transloco }}</div>
+  <div class="title">{{ "demo-request" | transloco }}</div>
   <img src="../../../assets/demo.svg" />
   <div class="questions">
-    {{ 'email-contact' | transloco }}
+    {{ "email-contact" | transloco }}
   </div>
   <div class="subscribe-input">
     <input
@@ -13,10 +13,10 @@
       [(ngModel)]="email"
     />
     <button class="subscribe-button" (click)="subscribe()">
-      {{ 'request' | transloco }}
+      {{ "request" | transloco }}
     </button>
   </div>
   <div class="error" *ngIf="isEmailErrorsVisibile()">
-    {{ 'email-invalid' | transloco }}
+    {{ "email-invalid" | transloco }}
   </div>
 </div>

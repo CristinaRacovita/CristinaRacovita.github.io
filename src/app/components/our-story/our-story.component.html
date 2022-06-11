@@ -1,12 +1,18 @@
 <div class="story-content">
   <div class="title">
-    {{ 'our-story' | transloco }}<sub><img src="../../../assets/triangle.svg" /></sub>
+    {{ "our-story" | transloco
+    }}<sub><img src="../../../assets/triangle.svg" /></sub>
   </div>
   <div class="past-description">
-    {{ 'story-description-1' | transloco }}<a href="https://ieeexplore.ieee.org/document/9733439"> {{ 'story-description-2' | transloco }}</a>{{ 'story-description-3' | transloco }}
+    {{ "story-description-1" | transloco
+    }}<a href="https://ieeexplore.ieee.org/document/9733439">
+      {{ "story-description-2" | transloco }}</a
+    >{{ "story-description-3" | transloco }}
   </div>
   <div class="future-description">
-    {{ 'fix-description' | transloco }}
+    {{ "fix-description" | transloco }}
   </div>
-  <button (click)="subscribe()" class="subscribe">{{ 'subscribe' | transloco }}</button>
+  <button (click)="subscribe()" class="subscribe">
+    {{ "subscribe" | transloco }}
+  </button>
 </div>

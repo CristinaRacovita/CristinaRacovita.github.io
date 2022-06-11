@@ -109,5 +109,9 @@
   "report-testing": "Testing Report",
   "save-results": "Save Results",
   "test-again": "Test Again",
-  "upload-database": "Upload Dataset"
+  "upload-database": "Upload Dataset",
+  "error-occured": "An error occured!",
+  "ups": "Upss...",
+  "error-check": "Please check your quality of data.<br> Predicted column should not contained missing values.",
+  "mobile-availability": "This content is available only for desktop version."
 }

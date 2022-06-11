@@ -5,7 +5,7 @@ export class IIndustry {
   public useCases: IUseCase[];
 
   public constructor(name: string, useCases: IUseCase[]) {
-      this.name = name;
-      this.useCases = useCases;
+    this.name = name;
+    this.useCases = useCases;
   }
 }

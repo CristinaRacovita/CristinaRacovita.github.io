@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { MatDialog } from '@angular/material/dialog';
 import { TranslocoService } from '@ngneat/transloco';
-import { RequestDemoDialogComponent } from '../request-demo-dialog/request-demo-dialog.component';
-import { WorkInProgressDialogComponent } from '../work-in-progress-dialog/work-in-progress-dialog.component';
+import { RequestDemoDialogComponent } from '../dialogs/request-demo-dialog/request-demo-dialog.component';
+import { WorkInProgressDialogComponent } from '../dialogs/work-in-progress-dialog/work-in-progress-dialog.component';
 
 @Component({
   selector: 'app-hero',

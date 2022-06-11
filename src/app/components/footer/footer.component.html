@@ -4,10 +4,10 @@
       <img src="../../../assets/logo.svg" />
     </div>
     <div class="text">
-      {{ 'footer-description' | transloco }}
+      {{ "footer-description" | transloco }}
     </div>
     <div *ngIf="!isSmallScreen" class="legal text">
-      <div>© 2022 Odin AI. {{ 'all-rights-reserved' | transloco }}</div>
+      <div>© 2022 Odin AI. {{ "all-rights-reserved" | transloco }}</div>
     </div>
   </div>
 
@@ -23,12 +23,12 @@
       </div>
       <div class="contact-image">
         <span><img class="email" src="../../../assets/email.png" /></span>
-        <a href="mailto:{{email}}">{{ email }}</a>
+        <a href="mailto:{{ email }}">{{ email }}</a>
       </div>
     </div>
   </div>
 
   <div *ngIf="isSmallScreen" class="legal text">
-    <div>© 2022 Odin AI. {{ 'all-rights-reserved' | transloco }}</div>
+    <div>© 2022 Odin AI. {{ "all-rights-reserved" | transloco }}</div>
   </div>
 </div>

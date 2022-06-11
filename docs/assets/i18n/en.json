@@ -6,7 +6,7 @@
   "tool-description-2": "optimizes products and business processes",
   "tool-description-3": " by automatically generating in a few minutes, artificial intelligence-based solutions that solve data prediction problems in tabular format. This whole process is a replacement for experts in the field.",
   "subscribe": "Subscribe",
-  "demo": "Get the demo",
+  "demo": "Demo",
   "our-story": "Our story",
   "story-description-1": "Odin AI has started as a research project that makes artificial intelligence easily accessible for everyone. After publishing a ",
   "story-description-2": "paper within ICCP 2021",
@@ -109,5 +109,9 @@
   "report-testing": "Testing Report",
   "save-results": "Save Results",
   "test-again": "Test Again",
-  "upload-database": "Upload Dataset"
+  "upload-database": "Upload Dataset",
+  "error-occured": "An error occured!",
+  "ups": "Upss...",
+  "error-check": "Please check your quality of data.<br> Predicted column should not contained missing values.",
+  "mobile-availability": "This content is available only for desktop version."
 }

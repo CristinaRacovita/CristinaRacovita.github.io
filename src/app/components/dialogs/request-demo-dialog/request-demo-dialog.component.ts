@@ -33,7 +33,6 @@ export class RequestDemoDialogComponent {
       this.snackBar.open('Thank you for your interest', 'OK', config);
       this.dialogRef.close();
       this.isVisible = false;
-
     }
   }
 
@@ -42,7 +41,7 @@ export class RequestDemoDialogComponent {
   }
 
   public isEmailErrorsVisibile(): boolean {
-    if(this.isEmailValid()){
+    if (this.isEmailValid()) {
       return false;
     }
     return this.isVisible || this.isEmailValid();

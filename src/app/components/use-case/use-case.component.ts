@@ -7,7 +7,7 @@ import { Industry } from 'src/app/shared/models/industry.enum';
 import { IIndustry } from 'src/app/shared/models/industry.model';
 import { IUseCase } from 'src/app/shared/models/useCase.model';
 import { IndustryService } from 'src/app/shared/services/industry.service';
-import { ContactUsDialogComponent } from '../contact-us-dialog/contact-us-dialog.component';
+import { ContactUsDialogComponent } from '../dialogs/contact-us-dialog/contact-us-dialog.component';
 
 @Component({
   selector: 'app-use-case',

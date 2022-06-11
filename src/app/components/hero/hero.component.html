@@ -1,17 +1,24 @@
 <div class="hero">
   <div class="hero-content">
     <div class="tagline">
-      <span>{{ 'tagline-1' | transloco }}</span>
-      <span class="border-line">{{ 'tagline-2' | transloco }}</span><span *ngIf="!isEnglishActive()">{{ 'tagline-4' | transloco }}</span>
-      <br/>
-      <span>{{ 'tagline-3' | transloco }}</span>
+      <span>{{ "tagline-1" | transloco }}</span>
+      <span class="border-line">{{ "tagline-2" | transloco }}</span
+      ><span *ngIf="!isEnglishActive()">{{ "tagline-4" | transloco }}</span>
+      <br />
+      <span>{{ "tagline-3" | transloco }}</span>
     </div>
     <div class="tool-description">
-      {{ 'tool-description-1' | transloco }}<span>{{ 'tool-description-2' | transloco }}</span>{{ 'tool-description-3' | transloco }}
+      {{ "tool-description-1" | transloco
+      }}<span>{{ "tool-description-2" | transloco }}</span
+      >{{ "tool-description-3" | transloco }}
     </div>
     <div class="buttons">
-      <button (click)="demo()" class="demo button">{{ 'demo' | transloco }}</button>
-      <button (click)="subscribe()" class="subscribe button">{{ 'subscribe' | transloco }}</button>
+      <button (click)="demo()" class="demo button">
+        {{ "demo" | transloco }}
+      </button>
+      <button (click)="subscribe()" class="subscribe button">
+        {{ "subscribe" | transloco }}
+      </button>
     </div>
   </div>
 

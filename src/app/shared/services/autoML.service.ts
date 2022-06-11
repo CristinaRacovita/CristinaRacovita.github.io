@@ -1,8 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import * as saveAs from 'file-saver';
-import { BehaviorSubject, Observable } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { BehaviorSubject, Observable, of } from 'rxjs';
+import { catchError, map } from 'rxjs/operators';
+import { ErrorDialogComponent } from 'src/app/components/dialogs/error-dialog/error-dialog.component';
 import { TestingResultDto } from '../dtos/testing-result.dto';
 import { TestingDto } from '../dtos/testing.dto';
 import { TrainingResultDto } from '../dtos/training-result.dto';
@@ -20,11 +22,11 @@ export class AutoMLService {
   public predictedColumn = new BehaviorSubject<string>('');
   public trainingDatasetName = new BehaviorSubject<string>('');
 
-  public constructor(private http: HttpClient) {}
+  public constructor(private http: HttpClient, private dialog: MatDialog) {}
 
   public startLearning(
     trainingModel: TrainingModel
-  ): Observable<TrainingResultModel> {
+  ): Observable<TrainingResultModel | null> {
     trainingModel.targetColumn = trainingModel.targetColumn.replace('\r', '');
     console.log(this.trainingModelToTrainingDto(trainingModel));
 
@@ -36,7 +38,12 @@ export class AutoMLService {
       .pipe(
         map((res: TrainingResultDto) =>
           this.trainingResultDtoToTrainingResultModel(res)
-        )
+        ),
+
+        catchError((err) => {
+          this.dialog.open(ErrorDialogComponent);
+          return of(null);
+        })
       );
   }
 

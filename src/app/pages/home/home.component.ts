@@ -38,19 +38,6 @@ export class HomeComponent implements AfterViewInit, OnInit, OnDestroy {
   ) {
     this.db.list('homePage').push('Home ' + new Date());
     this.isSmallScreen = breakpointObserver.isMatched('(max-width: 765px)');
-
-    // this.subscription = this.router.events.subscribe((event) => {
-    //   if (event instanceof NavigationEnd) {
-    //     if (event.url.includes(Languages.Romanian.toLowerCase())) {
-    //       this.service.setActiveLang(Languages.Romanian.toLowerCase());
-    //       this.languageService.activeLanguage.next(Languages.Romanian);
-    //     }
-    //     if (event.url.includes(Languages.English.toLowerCase())) {
-    //       this.service.setActiveLang(Languages.English.toLowerCase());
-    //       this.languageService.activeLanguage.next(Languages.English);
-    //     }
-    //   }
-    // });
   }
 
   public ngOnInit(): void {

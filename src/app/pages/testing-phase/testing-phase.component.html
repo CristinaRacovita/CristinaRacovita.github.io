@@ -5,18 +5,24 @@
 <div class="testing-phase">
   <app-toolbar class="sticky"></app-toolbar>
   <div class="testing-container">
-    <div class="title">{{ 'testing-phase' | transloco }}</div>
+    <div class="title">{{ "testing-phase" | transloco }}</div>
     <app-upload-file
       (file)="getFile($event)"
       (csvContent)="getCsvContent($event)"
     ></app-upload-file>
     <div *ngIf="isFileSelected()" class="container">
       <div class="testing-content">
-        <app-generic-table class="table" [data]="data" [selectedColumn]="predictedColumn"></app-generic-table>
+        <app-generic-table
+          class="table"
+          [data]="data"
+          [selectedColumn]="predictedColumn"
+        ></app-generic-table>
       </div>
 
       <div class="testing-button">
-        <button class="button" (click)="startTesting()">{{ 'start-testing' | transloco }}</button>
+        <button class="button" (click)="startTesting()">
+          {{ "start-testing" | transloco }}
+        </button>
         <mat-progress-bar
           mode="indeterminate"
           class="progress-bar"

@@ -1,18 +1,40 @@
 <div class="contact-content">
-    <img *ngIf="!isSmallScreen" src="../../../assets/Shapes.svg" />
-    <img class="graphics" *ngIf="isSmallScreen" src="../../../assets/Graphics.png" />
-    <div *ngIf="!isSmallScreen" class="profiles">
-        <app-profile-picture (click)="openBogdanLinkeIn()" class="first" [imageUrl]="bogdansPicture" [name]="bogdansName"></app-profile-picture>
-        <app-profile-picture (click)="openCristinaLinkeIn()" class="second" [imageUrl]="cristinasPicture" [name]="cristinasName"></app-profile-picture>
+  <img *ngIf="!isSmallScreen" src="../../../assets/Shapes.svg" />
+  <img
+    class="graphics"
+    *ngIf="isSmallScreen"
+    src="../../../assets/Graphics.png"
+  />
+  <div *ngIf="!isSmallScreen" class="profiles">
+    <app-profile-picture
+      (click)="openBogdanLinkeIn()"
+      class="first"
+      [imageUrl]="bogdansPicture"
+      [name]="bogdansName"
+    ></app-profile-picture>
+    <app-profile-picture
+      (click)="openCristinaLinkeIn()"
+      class="second"
+      [imageUrl]="cristinasPicture"
+      [name]="cristinasName"
+    ></app-profile-picture>
+  </div>
+  <div *ngIf="isSmallScreen" class="profiles">
+    <img
+      class="first"
+      (click)="openBogdanLinkeIn()"
+      src="../../../assets/Group 354.svg"
+    />
+    <img
+      class="second"
+      (click)="openCristinaLinkeIn()"
+      src="../../../assets/Group 355.svg"
+    />
+  </div>
+  <div class="form">
+    <div class="question">
+      {{ "free-access" | transloco }}
     </div>
-    <div *ngIf="isSmallScreen" class="profiles">
-        <img class="first" (click)="openBogdanLinkeIn()" src="../../../assets/Group 354.svg" />
-        <img class="second" (click)="openCristinaLinkeIn()" src="../../../assets/Group 355.svg" />
-    </div>
-    <div class="form">
-        <div class="question">
-            {{ 'free-access' | transloco }}
-        </div>
-        <button (click)="openForm()">{{ 'form' | transloco }}</button>
-    </div>
+    <button (click)="openForm()">{{ "form" | transloco }}</button>
+  </div>
 </div>

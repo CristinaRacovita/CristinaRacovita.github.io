@@ -3,7 +3,7 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { MatDialog } from '@angular/material/dialog';
 import { Languages } from 'src/app/shared/models/languages.enum';
-import { RequestDemoDialogComponent } from '../request-demo-dialog/request-demo-dialog.component';
+import { RequestDemoDialogComponent } from '../dialogs/request-demo-dialog/request-demo-dialog.component';
 import { TranslocoService } from '@ngneat/transloco';
 import { Subscription } from 'rxjs';
 import { LanguageService } from 'src/app/shared/services/language.service';

@@ -7,10 +7,9 @@ import { RequestDemoDialogComponent } from '../request-demo-dialog/request-demo-
 @Component({
   selector: 'app-contact-us-dialog',
   templateUrl: './contact-us-dialog.component.html',
-  styleUrls: ['./contact-us-dialog.component.scss']
+  styleUrls: ['./contact-us-dialog.component.scss'],
 })
-export class ContactUsDialogComponent{
-
+export class ContactUsDialogComponent {
   public email: string = '';
   private regexp = new RegExp(
     /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
@@ -43,10 +42,9 @@ export class ContactUsDialogComponent{
   }
 
   public isEmailErrorsVisibile(): boolean {
-    if(this.isEmailValid()){
+    if (this.isEmailValid()) {
       return false;
     }
     return this.isVisible || this.isEmailValid();
   }
-
 }

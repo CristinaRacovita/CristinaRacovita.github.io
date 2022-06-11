@@ -12,8 +12,8 @@ import { OurStoryComponent } from './components/our-story/our-story.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ProfilePictureComponent } from './components/profile-picture/profile-picture.component';
-import { RequestDemoDialogComponent } from './components/request-demo-dialog/request-demo-dialog.component';
-import { WorkInProgressDialogComponent } from './components/work-in-progress-dialog/work-in-progress-dialog.component';
+import { RequestDemoDialogComponent } from './components/dialogs/request-demo-dialog/request-demo-dialog.component';
+import { WorkInProgressDialogComponent } from './components/dialogs/work-in-progress-dialog/work-in-progress-dialog.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
@@ -32,7 +32,7 @@ import { IndustryCardComponent } from './components/industry-card/industry-card.
 import { UseCaseComponent } from './components/use-case/use-case.component';
 import { IndustryService } from './shared/services/industry.service';
 import { LanguageService } from './shared/services/language.service';
-import { ContactUsDialogComponent } from './components/contact-us-dialog/contact-us-dialog.component';
+import { ContactUsDialogComponent } from './components/dialogs/contact-us-dialog/contact-us-dialog.component';
 import { GenericTableComponent } from './components/generic-table/generic-table.component';
 import { IndustryUseCaseComponent } from './pages/industry-use-case/industry-use-case.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -54,6 +54,7 @@ import { LearningReportComponent } from './pages/learning-report/learning-report
 import { ReportComponent } from './components/report/report.component';
 import { AutoMLService } from './shared/services/autoML.service';
 import { DemoGuard } from './guards/demo.guard';
+import { ErrorDialogComponent } from './components/dialogs/error-dialog/error-dialog.component';
 
 @NgModule({
   declarations: [
@@ -80,6 +81,7 @@ import { DemoGuard } from './guards/demo.guard';
     TestingReportComponent,
     LearningReportComponent,
     ReportComponent,
+    ErrorDialogComponent,
   ],
   imports: [
     BrowserModule,

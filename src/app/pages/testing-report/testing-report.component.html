@@ -2,7 +2,7 @@
   <app-toolbar class="sticky"></app-toolbar>
   <div class="learning-container">
     <div class="report-container">
-      <div class="title">{{ 'report-testing' | transloco }}</div>
+      <div class="title">{{ "report-testing" | transloco }}</div>
       <app-generic-table
         class="table"
         [data]="data"
@@ -13,8 +13,12 @@
     </div>
 
     <div class="buttons">
-      <button class="button" (click)="save()">{{ 'save-results' | transloco }}</button>
-      <button class="button" (click)="testAgain()">{{ 'test-again' | transloco }}</button>
+      <button class="button" (click)="save()">
+        {{ "save-results" | transloco }}
+      </button>
+      <button class="button" (click)="testAgain()">
+        {{ "test-again" | transloco }}
+      </button>
     </div>
   </div>
 </div>

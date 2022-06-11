@@ -1,4 +1,4 @@
-export enum Name{
-    Cristina = 'Cristina Racoviță',
-    Bogdan = 'Bogdan Bîndilă'
+export enum Name {
+  Cristina = 'Cristina Racoviță',
+  Bogdan = 'Bogdan Bîndilă',
 }

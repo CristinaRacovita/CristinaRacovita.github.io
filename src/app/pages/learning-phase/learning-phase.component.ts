@@ -1,3 +1,4 @@
+import { BreakpointObserver } from '@angular/cdk/layout';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { TranslocoService } from '@ngneat/transloco';
@@ -20,13 +21,17 @@ export class LearningPhaseComponent implements OnInit {
   public isContent = false;
   public isFileLoaded = false;
   public selectedColumn: string = '';
+  public isSmallScreen = false;
 
   public constructor(
     private csvService: CsvService,
     private router: Router,
     private autoMlService: AutoMLService,
-    private service: TranslocoService
-  ) {}
+    private service: TranslocoService,
+    breakpointObserver: BreakpointObserver
+  ) {
+    this.isSmallScreen = breakpointObserver.isMatched('(max-width: 765px)');
+  }
 
   public ngOnInit(): void {
     this.setLanguage();
@@ -83,14 +88,14 @@ export class LearningPhaseComponent implements OnInit {
           this.file?.name!!
         )
       )
-      .subscribe(
-        (res) => {
+
+      .subscribe((res) => {
+        if (res) {
           console.log(res);
-          this.isLoading = false;
           this.router.navigateByUrl('demo/learning-report');
-        },
-        (err) => console.log(err)
-      );
+        }
+        this.isLoading = false;
+      });
   }
 
   private setLanguage(): void {
