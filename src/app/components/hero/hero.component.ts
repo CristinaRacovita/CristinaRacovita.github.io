@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { MatDialog } from '@angular/material/dialog';
+import { Router } from '@angular/router';
 import { TranslocoService } from '@ngneat/transloco';
 import { RequestDemoDialogComponent } from '../dialogs/request-demo-dialog/request-demo-dialog.component';
 import { WorkInProgressDialogComponent } from '../dialogs/work-in-progress-dialog/work-in-progress-dialog.component';
@@ -14,7 +15,8 @@ export class HeroComponent {
   constructor(
     private dialog: MatDialog,
     private db: AngularFireDatabase,
-    private translocoService: TranslocoService
+    private translocoService: TranslocoService,
+    private router: Router
   ) {}
 
   public subscribe(): void {
@@ -24,7 +26,7 @@ export class HeroComponent {
 
   public demo(): void {
     this.db.list('demo').push('Press demo ' + new Date());
-    this.dialog.open(RequestDemoDialogComponent);
+    this.router.navigateByUrl('demo');
   }
 
   public isEnglishActive(): boolean {

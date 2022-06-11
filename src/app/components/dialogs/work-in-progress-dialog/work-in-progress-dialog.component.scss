@@ -6,7 +6,7 @@
 
   .subscribe-text {
     color: var(--color-grey-medium);
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 400;
     line-height: 24px;
     margin-bottom: 32px;
@@ -29,12 +29,13 @@
     }
 
     .email-box {
-      border-color: var(--color-grey-medium);
+      border-color: var(--color-grey-light);
       border-radius: 24px;
       color: var(--color-grey-medium);
       font-size: 16px;
       margin-right: 5px;
       width: 250px;
+      cursor: pointer;
     }
   }
 
