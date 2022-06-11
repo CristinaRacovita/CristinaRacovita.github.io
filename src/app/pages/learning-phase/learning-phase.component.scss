@@ -7,6 +7,10 @@
   position: fixed;
 }
 
+.loading {
+  pointer-events: none;
+}
+
 .learning-phase {
   background: linear-gradient(
     var(--color-gradient-primary),

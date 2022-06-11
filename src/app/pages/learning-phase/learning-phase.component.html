@@ -3,7 +3,7 @@
     <mat-spinner></mat-spinner>
   </div>
 
-  <div class="learning-phase">
+  <div class="learning-phase" [ngClass]="{ loading: isLoading }">
     <app-toolbar class="sticky"></app-toolbar>
     <div class="learning-container">
       <div class="title">{{ "learning-phase" | transloco }}</div>
