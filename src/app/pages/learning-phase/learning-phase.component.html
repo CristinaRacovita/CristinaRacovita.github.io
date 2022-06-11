@@ -69,14 +69,17 @@
   </div>
 </ng-container>
 <ng-container *ngIf="isSmallScreen">
-  <app-toolbar class="sticky"></app-toolbar>
+  <div class="learning">
+    <app-toolbar class="sticky"></app-toolbar>
 
-  <div class="learning-content">
-    <div class="odin-image">
-      <img src="../../../assets/odin.png" />
-    </div>
-    <div class="mobile-content">
-      {{ "mobile-availability" | transloco }}
+    <div class="learning-content">
+      <div class="odin-image">
+        <img src="../../../assets/odin.png" />
+      </div>
+      <div class="mobile-content">
+        {{ "mobile-availability" | transloco }}
+      </div>
     </div>
   </div>
+ 
 </ng-container>

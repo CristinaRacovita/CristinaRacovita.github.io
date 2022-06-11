@@ -180,33 +180,48 @@
   }
 }
 
-.learning-content {
+.learning {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
-  margin: 20px;
+  width: 100%;
+  background: linear-gradient(
+    var(--color-gradient-primary),
+    var(--color-white),
+    var(--color-gradient-secondary),
+    var(--color-white)
+  );
 
-  .mobile-content {
-    color: var(--color-primary);
-    font-size: 24px;
-    font-weight: 800;
-    line-height: 24px;
-    margin-bottom: 10px;
-    text-align: center;
-  }
-
-  .odin-image {
-    width: 200px;
-    height: 200px;
+  .learning-content {
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 20px;
 
-    img {
-      max-width: 100%;
-      max-height: 100%;
+    .mobile-content {
+      color: var(--color-primary);
+      font-size: 24px;
+      font-weight: 800;
+      line-height: 24px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .odin-image {
+      width: 200px;
+      height: 200px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
     }
   }
 }
