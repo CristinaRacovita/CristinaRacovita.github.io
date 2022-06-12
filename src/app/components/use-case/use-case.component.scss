@@ -13,9 +13,10 @@
     .useCases {
       display: flex;
       flex-flow: row wrap;
-      justify-content: center;
-      margin-left: 50px;
-      margin-right: 50px;
+      justify-content: space-around;
+      align-items: center;
+      margin-left: 120px;
+      margin-right: 120px;
 
       .othersCard {
         ::ng-deep {
