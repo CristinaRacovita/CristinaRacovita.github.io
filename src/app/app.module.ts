@@ -55,6 +55,7 @@ import { ReportComponent } from './components/report/report.component';
 import { AutoMLService } from './shared/services/autoML.service';
 import { DemoGuard } from './guards/demo.guard';
 import { ErrorDialogComponent } from './components/dialogs/error-dialog/error-dialog.component';
+import { ImageService } from './shared/services/image.service';
 
 @NgModule({
   declarations: [
@@ -118,6 +119,7 @@ import { ErrorDialogComponent } from './components/dialogs/error-dialog/error-di
     SectionService,
     CsvService,
     AutoMLService,
+    ImageService,
     DemoGuard,
     { provide: LocationStrategy, useClass: HashLocationStrategy },
   ],

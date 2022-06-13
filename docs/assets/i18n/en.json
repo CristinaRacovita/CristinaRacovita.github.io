@@ -112,8 +112,12 @@
   "upload-database": "Upload Dataset",
   "error-occured": "An error occured!",
   "ups": "Upss...",
-  "error-check-train": "Please check your quality of data.<br> Predicted column should not contained missing values.",
+  "error-check-train": "Please check your quality of data.<br> Predicted column should not contain missing values.",
   "error-check-test": "Please check your quality of data.",
   "mobile-availability": "This content is available only for desktop version.",
-  "metric": "Metric"
+  "metric": "Metric",
+  "dataset-size": "Dataset Size",
+  "useless-columns": "Columns which were not needed",
+  "duplicated-rows": "Duplicated Rows",
+  "features-title": "Features Description"
 }

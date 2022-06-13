@@ -2,7 +2,7 @@ import { BreakpointObserver } from '@angular/cdk/layout';
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { MatDialog } from '@angular/material/dialog';
-import { Languages } from 'src/app/shared/models/languages.enum';
+import { Languages } from 'src/app/shared/enums/languages.enum';
 import { RequestDemoDialogComponent } from '../dialogs/request-demo-dialog/request-demo-dialog.component';
 import { TranslocoService } from '@ngneat/transloco';
 import { Subscription } from 'rxjs';

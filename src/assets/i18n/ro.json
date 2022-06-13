@@ -115,5 +115,9 @@
   "error-check-train": "Te rugăm să verifici calitatea datelor.<br> Coloana prezisă nu poate conține valori lipsă.",
   "error-check-test": "Te rugăm să verifici calitatea datelor.",
   "mobile-availability": "Acest conținut este disponibil doar pentru versiunea desktop a aplicației.",
-  "metric": "Metrică"
+  "metric": "Metrică",
+  "dataset-size": "Mărime dataset",
+  "useless-columns": "Coloane de care nu avem nevoie",
+  "duplicated-rows": "Rânduri duplicate",
+  "features-title": "Descriere caracteristici"
 }

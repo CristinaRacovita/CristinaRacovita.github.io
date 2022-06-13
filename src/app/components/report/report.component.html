@@ -1,5 +1,29 @@
 <div class="report">
-  <div class="metric" *ngIf="existsMetric()">
-    {{ "metric" | transloco }}: <span>{{ transformMetric() }}%</span>
+  <div class="general-info">
+    <div class="feature">
+      {{ "metric" | transloco }}:
+      <div>{{ transformMetric() }}%</div>
+    </div>
+    <div *ngIf="isTrainingMode()">
+      <div class="feature">
+        {{ "dataset-size" | transloco }}:
+        <div>{{ trainingReport?.shape!! }}</div>
+      </div>
+      <div class="feature">
+        {{ "useless-columns" | transloco }}:
+        <div>{{ trainingReport?.uselessColumns!! }}</div>
+      </div>
+      <div class="feature">
+        {{ "duplicated-rows" | transloco }}:
+        <div>{{ trainingReport?.duplicatedRows!! }}</div>
+      </div>
+      <app-generic-table [data]="data" class="table"></app-generic-table>
+    </div>
+  </div>
+  <div class="features-image" *ngIf="isTrainingMode()">
+    <div class="feature">
+      {{ "features-title" | transloco }}
+    </div>
+    <img [src]="imageBlobUrl" />
   </div>
 </div>

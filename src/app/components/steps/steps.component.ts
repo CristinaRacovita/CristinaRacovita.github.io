@@ -1,7 +1,7 @@
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { Component } from '@angular/core';
 import { TranslocoService } from '@ngneat/transloco';
-import { Languages } from 'src/app/shared/models/languages.enum';
+import { Languages } from 'src/app/shared/enums/languages.enum';
 
 @Component({
   selector: 'app-steps',

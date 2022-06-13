@@ -3,7 +3,10 @@
   <div class="learning-container">
     <div class="report-container">
       <div class="title">{{ "learning-report" | transloco }}</div>
-      <app-report [metric]="trainingReport?.score!!"></app-report>
+      <app-report
+        [metric]="trainingReport?.score!!"
+        [trainingReport]="trainingReport"
+      ></app-report>
     </div>
 
     <button class="button" (click)="startTest()">

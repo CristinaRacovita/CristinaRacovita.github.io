@@ -18,6 +18,10 @@ export class CsvService {
     return of(JSON.parse(this.csvJSON(content)));
   }
 
+  public processB64File(content: string): Observable<any> {
+    return this.processFile(this.transformFromb64(content));
+  }
+
   private getFile(filename: string): Observable<any> {
     return this.http.get(`${environment.baseUrl}/assets/${filename}.csv`, {
       responseType: 'text',

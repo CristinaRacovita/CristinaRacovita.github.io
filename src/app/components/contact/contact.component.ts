@@ -1,8 +1,8 @@
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { Component } from '@angular/core';
-import { LinkedIn } from 'src/app/shared/models/linkedIns.enum';
-import { Name } from 'src/app/shared/models/names.enum';
-import { Profile } from 'src/app/shared/models/profiles.enum';
+import { LinkedIn } from 'src/app/shared/enums/linkedIns.enum';
+import { Name } from 'src/app/shared/enums/names.enum';
+import { Profile } from 'src/app/shared/enums/profiles.enum';
 import { SiteService } from 'src/app/shared/services/site.service';
 
 const formUrl = 'https://forms.gle/Aw9i53FDkYWd3KXr9';

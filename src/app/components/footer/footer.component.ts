@@ -1,6 +1,6 @@
 import { BreakpointObserver } from '@angular/cdk/layout';
 import { Component } from '@angular/core';
-import { LinkedIn } from 'src/app/shared/models/linkedIns.enum';
+import { LinkedIn } from 'src/app/shared/enums/linkedIns.enum';
 import { SiteService } from 'src/app/shared/services/site.service';
 
 @Component({

@@ -91,7 +91,8 @@ export class LearningPhaseComponent implements OnInit {
         new TrainingModel(
           this.selectedColumn,
           btoa(this.csvContent),
-          this.file?.name!!
+          this.file?.name!!,
+          this.translocoService.getActiveLang()
         )
       )
 
