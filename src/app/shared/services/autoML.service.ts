@@ -16,7 +16,7 @@ import { TrainingModel } from '../models/training.model';
 
 @Injectable()
 export class AutoMLService {
-  private baseUrl = 'http://127.0.0.1:8000/backend';//'https://odin-ai-backend-on.azurewebsites.net/backend/';
+  private baseUrl = 'http://127.0.0.1:8000/backend/';//'https://odin-ai-backend-on.azurewebsites.net/backend/';
   public learningReport = new BehaviorSubject<TrainingResultModel | null>(null);
   public testingReport = new BehaviorSubject<TestingResultModel | null>(null);
   public predictedColumn = new BehaviorSubject<string>('');
