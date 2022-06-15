@@ -33,6 +33,10 @@ export class ReportComponent implements OnInit, OnDestroy {
     );
   }
 
+  public metricZero(): boolean{
+    return this.metric === 0;
+  }
+
   public isTrainingMode(): boolean {
     return !(this.trainingReport === null);
   }

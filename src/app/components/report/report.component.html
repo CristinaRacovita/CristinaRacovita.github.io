@@ -1,5 +1,5 @@
 <div class="report">
-  <div class="general-info">
+  <div class="general-info" *ngIf="!metricZero()">
     <div class="feature">
       {{ "metric" | transloco }}:
       <div>{{ transformMetric() }}%</div>

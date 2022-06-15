@@ -96,7 +96,7 @@ export class AutoMLService {
   ): TrainingResultModel {
     return new TrainingResultModel(
       trainingResultDto.score,
-      trainingResultDto.shape,
+      trainingResultDto.sizes,
       trainingResultDto.useless_columns,
       trainingResultDto.duplicated_rows,
       trainingResultDto.features_report_file,
