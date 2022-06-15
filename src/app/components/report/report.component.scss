@@ -11,6 +11,10 @@
   }
 
   .general-info {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+
     .feature {
       color: var(--color-primary);
       font-size: 16px;
@@ -26,12 +30,17 @@
     }
 
     .table {
+      display: flex;
+
       ::ng-deep {
         .table-container {
           height: 30vh;
-          margin-left: 20px;
-          justify-content: start;
+          margin: 0 20px 0 20px;
           padding-bottom: 20px;
+
+          .table {
+            width: 100%;
+          }
 
           .mat-header-cell {
             font-size: 14px;
@@ -40,6 +49,10 @@
           .mat-cell {
             font-size: 12px;
           }
+          .mat-header-cell,
+          .mat-cell {
+            min-width: 50px;
+          }
         }
       }
     }
@@ -47,12 +60,11 @@
 
   .features-image {
     display: flex;
-    align-items: center;
     width: 950px;
-    overflow-y: scroll;
     margin-top: 10px;
     flex-direction: column;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    width: 50%;
 
     .feature {
       color: var(--color-primary);
@@ -62,9 +74,14 @@
       width: 100%;
     }
 
-    img {
-      max-width: 100%;
-      max-height: 100%;
+    .image-container {
+      overflow: auto;
+      height: 65vh;
+      position: relative;
+
+      .img {
+        width: 95%;
+      }
     }
 
     &::-webkit-scrollbar {

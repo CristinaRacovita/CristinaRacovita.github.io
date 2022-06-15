@@ -22,8 +22,10 @@
   </div>
   <div class="features-image" *ngIf="isTrainingMode()">
     <div class="feature">
-      {{ "features-title" | transloco }}
+      {{ "features-title" | transloco }} {{ columnToPredict }}
     </div>
-    <img [src]="imageBlobUrl" />
+    <div class="image-container">
+      <img class="img" [src]="imageBlobUrl" />
+    </div>
   </div>
 </div>

@@ -26,7 +26,8 @@
 
   .learning-container {
     width: 85%;
-    height: 85vh;
+    max-height: fit-content;
+    min-height: 85vh;
     background-color: white;
     box-shadow: 2px 2px 2px 2px hsl(180deg 0% 0% / 0.3);
     display: flex;
@@ -35,6 +36,7 @@
     margin-top: 85px;
     border-radius: 20px;
     justify-content: space-between;
+    margin-bottom: 20px;
 
     .report-container {
       display: flex;

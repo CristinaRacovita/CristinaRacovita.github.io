@@ -59,6 +59,9 @@
         width: 100%;
 
         .table {
+          display: flex;
+          justify-content: center;
+          width: 100%;
           ::ng-deep {
             .table-container {
               height: 40vh;

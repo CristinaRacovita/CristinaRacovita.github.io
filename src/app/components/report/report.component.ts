@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { SafeResourceUrl } from '@angular/platform-browser';
 import { TrainingResultModel } from 'src/app/shared/models/training-result.model';
 import { AutoMLService } from 'src/app/shared/services/autoML.service';
@@ -10,7 +10,7 @@ import { ImageService } from 'src/app/shared/services/image.service';
   templateUrl: './report.component.html',
   styleUrls: ['./report.component.scss'],
 })
-export class ReportComponent implements OnInit {
+export class ReportComponent implements OnInit, OnDestroy {
   @Input()
   public metric: number = -1;
   @Input()
@@ -19,6 +19,7 @@ export class ReportComponent implements OnInit {
     this.autoMlService.learningReport.value?.featuresReportFile!!
   );
   public imageBlobUrl: SafeResourceUrl = '';
+  public columnToPredict = this.autoMlService.predictedColumn.value;
 
   public constructor(
     public csvService: CsvService,
@@ -30,12 +31,6 @@ export class ReportComponent implements OnInit {
     this.imageBlobUrl = this.imageService.createImageFromBlob(
       this.trainingReport?.featureImportanceImage!!
     );
-
-    // this.imageService.imageBlobUrl.subscribe((url) => {
-    //   if (url) {
-    //     this.imageBlobUrl = url;
-    //   }
-    // });
   }
 
   public isTrainingMode(): boolean {
@@ -44,5 +39,9 @@ export class ReportComponent implements OnInit {
 
   public transformMetric(): string {
     return (this.metric * 100).toFixed(2);
+  }
+
+  public ngOnDestroy(): void {
+    this.autoMlService.predictedColumn.next(this.columnToPredict);
   }
 }
