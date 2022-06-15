@@ -146,12 +146,12 @@
 
 ::ng-deep {
   .mat-select-value-text {
-    font-size: 14px;
+    font-size: 15px;
     color: var(--color-primary);
   }
 
   .mat-option-text {
-    font-size: 14px;
+    font-size: 15px;
     color: var(--color-primary);
   }
 
@@ -166,6 +166,10 @@
   .mat-input-element,
   ::placeholder {
     color: white;
+  }
+
+  .mat-form-field-wrapper {
+    width: 175px;
   }
 
   .mat-progress-bar-fill::after {
