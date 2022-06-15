@@ -111,13 +111,13 @@
   "test-again": "Testează din nou",
   "upload-database": "Încarcă Setul De Date",
   "error-occured": "A apărut o eroare!",
-  "ups": "Upss...",
-  "error-check-train": "Te rugăm să verifici calitatea datelor.<br> Coloana prezisă nu poate conține valori lipsă.",
+  "ups": "Permisiune Refuzată",
+  "error-check-train": "Contactează odin.automl.ai@gmail.com pentru a primi acces.",
   "error-check-test": "Te rugăm să verifici calitatea datelor.",
   "mobile-availability": "Acest conținut este disponibil doar pentru versiunea desktop a aplicației.",
   "metric": "Metrică",
   "dataset-size": "Mărime dataset",
   "useless-columns": "Coloane de care nu avem nevoie",
   "duplicated-rows": "Rânduri duplicate",
-  "features-title": "Descriere caracteristici"
+  "features-title": "Importanța caracteristicilor pentru a prezice:"
 }

@@ -111,13 +111,13 @@
   "test-again": "Test Again",
   "upload-database": "Upload Dataset",
   "error-occured": "An error occured!",
-  "ups": "Upss...",
-  "error-check-train": "Please check your quality of data.<br> Predicted column should not contain missing values.",
+  "ups": "Permission Denied",
+  "error-check-train": "Contact odin.automl.ai@gmail.com to get access.",
   "error-check-test": "Please check your quality of data.",
   "mobile-availability": "This content is available only for desktop version.",
   "metric": "Metric",
   "dataset-size": "Dataset Size",
   "useless-columns": "Columns which were not needed",
   "duplicated-rows": "Duplicated Rows",
-  "features-title": "Features Description"
+  "features-title": "Features importance to predict:"
 }
