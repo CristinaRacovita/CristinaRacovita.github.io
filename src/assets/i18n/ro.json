@@ -115,7 +115,7 @@
   "error-check-train": "Contactează odin.automl.ai@gmail.com pentru a primi acces.",
   "error-check-test": "Te rugăm să verifici calitatea datelor.",
   "mobile-availability": "Acest conținut este disponibil doar pentru versiunea desktop a aplicației.",
-  "metric": "Metrică",
+  "metric": "Metrică performanță",
   "dataset-size": "Mărime dataset",
   "useless-columns": "Coloane de care nu avem nevoie",
   "duplicated-rows": "Rânduri duplicate",
