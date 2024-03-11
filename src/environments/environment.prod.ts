@@ -1,5 +1,5 @@
 export const environment = {
-  baseUrl: 'https://odin-ai.net',
+  baseUrl: 'https://cristinaracovita.github.io',
   production: true,
   firebaseConfig: {
     apiKey: 'AIzaSyDBinS6CbtKtptEE-idN7AfYuMuOk5SV00',

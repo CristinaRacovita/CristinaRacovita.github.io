@@ -47,7 +47,7 @@ const routes: Routes = [
     component: TestingReportComponent,
     canActivate: [DemoGuard],
   },
-  { path: 'http://odin-ai.net/#/', redirectTo: 'https://odin-ai.net/#/' },
+  { path: 'http://cristinaracovita.github.io/#/', redirectTo: 'https://cristinaracovita.github.io/#/' },
 ];
 
 @NgModule({

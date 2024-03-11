@@ -1,7 +1,7 @@
 # Odin AI
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.11.
-- This project is deployed on www.odin-ai.net
+- This project is deployed on www.cristinaracovita.github.io
 - This responsive app is created for [FIX Cluj](https://fixcluj.eu/), one of the highest entrepreneurship contests in Romania, in which my team placed 7 out of 145 teams.
 - Integrated an AutoML model
 - Implemented the landing page for our startup idea

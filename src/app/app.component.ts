@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public schema = {
-    '@context': 'https://odin-ai.net',
+    '@context': 'https://cristinaracovita.github.io',
     '@type': 'WebSite',
     name: 'odin-ai',
-    url: 'https://odin-ai.net',
+    url: 'https://cristinaracovita.github.io',
   };
 }
